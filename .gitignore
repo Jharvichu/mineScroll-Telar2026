@@ -1,0 +1,105 @@
+# ------------------------------------
+# UNITY CORE
+# ------------------------------------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size.
+/[Mm]emoryCaptures/
+
+# Recordings can get excessive in size
+/[Rr]ecordings/
+
+# Backups
+_Recovery/
+_Recovery*
+
+# ------------------------------------
+# IDE & EDITORS (VS, Rider, VSCode)
+# ------------------------------------
+# Visual Studio
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.slnx
+.vsconfig
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# ------------------------------------
+# OS GENERATED FILES (Junk)
+# ------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ------------------------------------
+# BUILDS & OUTPUTS
+# ------------------------------------
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.zip
+*.tar.gz
+
+# ------------------------------------
+# PLUGINS & ASSETS SPECIFIC
+# ------------------------------------
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Asset Store Tools
+/[Aa]ssets/AssetStoreTools*
+
+# ------------------------------------
+# VERSION CONTROL METADATA
+# ------------------------------------
+# PlasticSCM (Unity Version Control) local workspace files
+/Assets/Plugins/PlasticSCM/
+*.private
+*.private.meta
+^*.private.[0-9]+$
+^*.private.[0-9]+.meta$
+
+# ------------------------------------
+# MISC
+# ------------------------------------
+# Archivos de backup accidentales
+*.bak
+*.rar
+sysinfo.txt
