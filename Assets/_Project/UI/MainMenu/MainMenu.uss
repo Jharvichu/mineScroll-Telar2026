@@ -1,0 +1,40 @@
+.root {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#titleLabel {
+    font-size: 70px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    width: 20%;
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+Button {
+    width: 20%;
+    height: 80px;
+    margin: 20px;
+    font-size: 60px;
+    background-color: white;
+    color: black;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+Button:hover {
+    background-color: #ffd966;
+    scale: 1.05;
+}
+
+Button:active {
+    background-color: orange;
+    scale: 0.95;
+}
