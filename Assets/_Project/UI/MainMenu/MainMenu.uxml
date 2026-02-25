@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=3d73478b890a4ea449336862cab02f8a&amp;type=3#MainMenu" />
+    <ui:VisualElement name="main-container" style="flex-grow: 1;">
+        <ui:VisualElement name="button-container" style="flex-grow: 1; -unity-background-image-tint-color: rgb(248, 248, 248); flex-direction: column-reverse; flex-wrap: nowrap; align-self: center; align-content: center; justify-content: center; align-items: center; width: 1715px;">
+            <ui:Button text="Exit" name="ExitButton" style="position: relative; align-content: center; align-self: center;" />
+            <ui:Button text="Credits" name="CreditsButton" style="align-self: center;" />
+            <ui:Button text="Controls" name="ControlsButton" style="align-self: center;" />
+            <ui:Button text="Play" name="PlayButton" style="align-self: center; -unity-background-image-tint-color: rgb(243, 243, 243); -unity-text-align: middle-center;" />
+            <ui:Label text="ILLEGAL MINING " name="titleLabel" parse-escape-sequences="true" style="align-self: center; align-items: center; justify-content: space-between; align-content: center; flex-direction: column; flex-wrap: nowrap;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
