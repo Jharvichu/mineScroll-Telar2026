@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/BackButton/BackButton.uss?fileID=7433441132597879392&amp;guid=8394f864893f2f14da68c65ebb194e8b&amp;type=3#BackButton" />
+    <ui:Button text="X" name="back-button" style="justify-content: center; align-self: center; align-content: flex-start; align-items: flex-start; right: auto; position: relative; -unity-font-style: bold; font-size: 80px; white-space: pre; padding-top: 10px; -unity-text-align: middle-center; background-position-x: center 0; background-position-y: center 0; -unity-background-scale-mode: scale-to-fit; translate: 846px 32px; width: 157px;" />
+</ui:UXML>

@@ -1,0 +1,19 @@
+#back-button {
+    width: 20%;
+    height: 80px;
+    margin: 20px;
+    font-size: 60px;
+    background-color: white;
+    color: black;
+}
+
+#back-button:hover {
+    background-color: rgb(255, 217, 102);
+    scale: 1.1;
+    color: rgb(0, 0, 0);
+}
+
+#back-button:active {
+    background-color: orange;
+    scale: 0.95;
+}
