@@ -1,26 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using System.Collections;
 
 public class MainMenuController : MonoBehaviour
 {
+    public GameObject transition;
+    public float transitionTime = 1f;
+
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         root.Q<Button>("PlayButton").clicked += () =>
         {
-            SceneManager.LoadScene("GameScene");
+            StartCoroutine(Transicion("GameScene"));
         };
 
         root.Q<Button>("CreditsButton").clicked += () =>
         {
-            SceneManager.LoadScene("CreditsScene");
+            StartCoroutine(Transicion("CreditsScene"));
         };
 
         root.Q<Button>("ControlsButton").clicked += () =>
         {
-            SceneManager.LoadScene("ControlsScene");
+            StartCoroutine(Transicion("ControlsScene"));
         };
 
         root.Q<Button>("ExitButton").clicked += () =>
@@ -28,5 +32,12 @@ public class MainMenuController : MonoBehaviour
             Application.Quit();
             Debug.Log("Salí del juego");
         };
+    }
+
+    IEnumerator Transicion(string escena)
+    {
+        transition.SetActive(true);
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(escena);
     }
 }
