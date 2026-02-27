@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GroundState
   m_EditorClassIdentifier: 
   HorizontalVelocity: 2
-  GroundLayer:
+  HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 8
-  GroundRaycastDistance: 0.1
-  GroundRaycastAmplitude: 0.505
+    m_Bits: 64
+  DetectionRaycastDistance: 0.2
+  DetectionRaycastAmplitude: 0.5

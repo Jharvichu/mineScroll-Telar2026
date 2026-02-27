@@ -16,8 +16,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.1
-  GroundRaycastAmplitude: 0.505
+  GroundRaycastDistance: 0.2
+  GroundRaycastAmplitude: 0.3
   LedgeLayer:
     serializedVersion: 2
     m_Bits: 8

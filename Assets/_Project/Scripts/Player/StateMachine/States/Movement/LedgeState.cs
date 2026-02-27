@@ -100,7 +100,7 @@ namespace Player.Movement.States {
 				_ledgeData.WallLayer
 			);
 
-			if (!_isClimbingUp) return;
+			if (!_isClimbingUp || _wallDetectionHit) return;
 
 			RaycastHit2D groundHitLeft = Physics2D.Raycast(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,
@@ -140,7 +140,9 @@ namespace Player.Movement.States {
 
 		private void DrawGroundRaycastDebug()
 		{
-			Debug.DrawLine(
+            if (!_isClimbingUp || _wallDetectionHit) return;
+
+            Debug.DrawLine(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,
 				(Vector2)_player.transform.position -
 				Vector2.right * _ledgeData.GroundRaycastAmplitude +

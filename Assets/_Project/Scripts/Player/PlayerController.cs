@@ -38,7 +38,7 @@ namespace Player {
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Arbusto"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HidingSpot"))
             {
                 canHide = true;
                 CurrentHidingSpotSprite = collision.GetComponent<SpriteRenderer>();
@@ -47,7 +47,7 @@ namespace Player {
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Arbusto"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HidingSpot"))
             {
                 canHide = false;
                 CurrentHidingSpotSprite = null;
