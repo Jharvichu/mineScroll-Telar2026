@@ -9,6 +9,10 @@ namespace StateMachine {
 		protected SO_StateMachine _stateMachineData;
 		protected Dictionary<System.Enum, SO_Node> _statesDict;
 
+		protected bool _upInput;
+		protected bool _downInput;
+		protected bool _modeInput;
+
 		public AStateMachine(SO_StateMachine data) {
 			_stateMachineData = data;
 		}
@@ -18,6 +22,7 @@ namespace StateMachine {
 		}
 
 		public virtual void UpdateState() {
+			GetInputs();
 			_stateMachineData.CurrentState.UpdateState();
 		}
 
@@ -79,6 +84,13 @@ namespace StateMachine {
 			}
 
 			return _statesDict[nodeType];
+		}
+
+		private void GetInputs()
+		{
+			_upInput 	= Input.GetKey(KeyCode.W);
+			_downInput 	= Input.GetKey(KeyCode.S);
+			_modeInput 	= Input.GetKeyDown(KeyCode.Space);
 		}
 	}
 }
