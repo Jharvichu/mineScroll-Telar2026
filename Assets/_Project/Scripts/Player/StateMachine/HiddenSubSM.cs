@@ -66,6 +66,7 @@ namespace Player {
 
         private void ShowPlayerInFront()
         {
+			Debug.Log("Salio del escondite");
             _player.SpriteRenderer.sortingOrder = _originalSortingOrder;
         }
 
