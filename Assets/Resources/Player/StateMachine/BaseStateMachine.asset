@@ -16,3 +16,4 @@ MonoBehaviour:
   CurrentState: {fileID: 11400000, guid: ebd990d5a1a41f14a8f2d74538106bc3, type: 2}
   States:
   - {fileID: 11400000, guid: ebd990d5a1a41f14a8f2d74538106bc3, type: 2}
+  - {fileID: 11400000, guid: 6c8eb427b35face468c38eda084aa5fc, type: 2}

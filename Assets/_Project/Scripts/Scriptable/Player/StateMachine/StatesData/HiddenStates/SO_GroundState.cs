@@ -1,10 +1,10 @@
 using UnityEngine;
 using StateMachine;
 
-namespace Player.Movement.States{
+namespace Player.Hidden.States{
 	[CreateAssetMenu(
 	fileName = "SO_GroundState", 
-	menuName = "Player/Movement States/Ground State",
+	menuName = "Player/Hidden States/Ground State",
 	order = 0)]
 	public class SO_GroundState : SO_State {
 		
@@ -15,17 +15,11 @@ namespace Player.Movement.States{
 		public float GroundRaycastDistance;
 		public float GroundRaycastAmplitude;
 
-		[Header("Ledge Raycast")]
-		public LayerMask LedgeLayer;	 
-		public float LedgeRaycastDistance;
-		public float LedgeRaycastAmplitude;
-
 		public SO_GroundState()
 		{
 			State = new GroundState(this);
-			NodeType = MovementState.Ground;
+			NodeType = HiddenState.Ground;
 		}
 
 	}
 }
-

@@ -28,5 +28,13 @@ namespace StateMachine {
 			_parent = parent;
 		}
 
+		protected void GetInputs()
+		{
+			_rightInput = Input.GetKey(KeyCode.D);
+			_leftInput = Input.GetKey(KeyCode.A);
+			_upInput = Input.GetKey(KeyCode.W);
+			_downInput = Input.GetKey(KeyCode.S);
+		}
+
 	}
 }
