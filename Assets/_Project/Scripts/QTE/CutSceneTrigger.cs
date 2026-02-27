@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CutSceneTrigger : MonoBehaviour
 {
@@ -9,7 +11,10 @@ public class CutSceneTrigger : MonoBehaviour
 
     [Header("Opciones de QTE")]
     public bool hasTimeLimit = false; 
-    public float qteDuration = 2f;   
+    public float qteDuration = 2f;
+
+    [Header("UI")]
+    public Text timerText;
 
     private bool inCutscene = false;  
     private bool waitingForPhoto = false;
@@ -22,19 +27,13 @@ public class CutSceneTrigger : MonoBehaviour
             StartCutscene();
         }
     }
-
     void StartCutscene()
     {
         inCutscene = true;
-
         characterp.GetComponent<CharacterMovement>().canMove = false;
-
         Debug.Log("Cutscene iniciada");
-
-        // Delay hasta el momento de la foto
         Invoke(nameof(ShowPhotoPopup), 2f);
     }
-
     void ShowPhotoPopup()
     {
         popupF.SetActive(true);
@@ -42,7 +41,6 @@ public class CutSceneTrigger : MonoBehaviour
         qteTimer = 0f; 
         Debug.Log("Momento de tomar la foto");
     }
-
     void Update()
     {
         if (waitingForPhoto)
@@ -54,6 +52,10 @@ public class CutSceneTrigger : MonoBehaviour
             else if (hasTimeLimit)
             {
                 qteTimer += Time.deltaTime;
+
+                float timeLeft = qteDuration - qteTimer;
+                timerText.text = "Tiempo: " + timeLeft.ToString("F1");
+
                 if (qteTimer >= qteDuration)
                 {
                     Debug.Log("No presionó F a tiempo. Reiniciando escena");
@@ -62,17 +64,19 @@ public class CutSceneTrigger : MonoBehaviour
             }
         }
     }
-
     void TakePhoto()
     {
         waitingForPhoto = false;
         popupF.SetActive(false);
+
+        if (timerText != null)
+            timerText.text = "";
+
         Destroy(gameObject);
 
         Debug.Log("Foto tomada");
         EndCutscene();
     }
-
     void EndCutscene()
     {
         characterp.GetComponent<CharacterMovement>().canMove = true;
