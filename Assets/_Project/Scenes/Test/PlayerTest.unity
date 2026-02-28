@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 1223108779}
   - component: {fileID: 1223108778}
   - component: {fileID: 1223108780}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Arbusto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
