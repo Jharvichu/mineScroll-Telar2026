@@ -13,6 +13,7 @@ namespace Player {
 		public float _grabCooldownTimer = 0f;
 
 		public bool modoLedge = false;			// Importante cambiar nombre o ver otra forma
+		public bool isHidding = false;
 
 		public MovementSubSM(SO_StateMachine data) : base(data)
 		{
@@ -35,8 +36,8 @@ namespace Player {
 		public override void UpdateState()
 		{
 			DrawDebug();
-			CheckHiddenMode();
-			if (_cliffCooldownTimer > 0f) _cliffCooldownTimer -= Time.deltaTime;
+			TryEnterHiddenState();
+            if (_cliffCooldownTimer > 0f) _cliffCooldownTimer -= Time.deltaTime;
 			if (_grabCooldownTimer > 0f) _grabCooldownTimer -= Time.deltaTime;
 			base.UpdateState();
 		}
@@ -58,20 +59,41 @@ namespace Player {
 			if (!_movementData.EnableDebug) return;
 			DrawGroundLines();
 			DrawCliffLines();
-		}
+			DrawDetectionLines();
 
-		private void CheckHiddenMode()
-		{
-			if (GetCurrentState() as MovementState? != MovementState.Ground) return;
+        }
 
-			if (_modeInput && _player.canHide)
-			{
-				_player.isHidden = true;
-				_parent.ChangeState(PlayerState.Hidden);
-			}
-		}
+        private void TryEnterHiddenState()
+        {
+            if (GetCurrentState() as MovementState? != MovementState.Ground) return;
+            if (_player.CurrentHidingSpotCollider == null) return;
 
-		private void CheckGround()
+            RaycastHit2D hiddenSpotHitLeft = Physics2D.Raycast(
+                (Vector2)_player.transform.position - Vector2.right * _movementData.GroundRaycastAmplitude,
+                Vector2.down,
+                _movementData.GroundRaycastDistance,
+                _movementData.HiddenSpotLayer);
+
+            RaycastHit2D hiddenSpotHitRight = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.right * _movementData.GroundRaycastAmplitude,
+                Vector2.down,
+                _movementData.GroundRaycastDistance,
+                _movementData.HiddenSpotLayer);
+
+            if (( _modeInput && _player.canHide && (hiddenSpotHitLeft || hiddenSpotHitRight) ) || isHidding)
+            {
+				isHidding = true;
+
+                if (hiddenSpotHitLeft && hiddenSpotHitRight)
+				{
+                    isHidding = false;
+                    _player.isHidden = true;
+                    _parent.ChangeState(PlayerState.Hidden);
+                }
+            }
+        }
+
+        private void CheckGround()
 		{
 			if (GetCurrentState() as MovementState? == MovementState.Ledge) return;
 
@@ -87,7 +109,11 @@ namespace Player {
 				_movementData.GroundRaycastDistance,
 				_movementData.GroundLayer);
 
-			if (groundHitLeft || groundHitRight || _grabCooldownTimer > 0)
+			if (groundHitLeft && groundHitRight && _ctrlInput)
+			{
+                ChangeState(MovementState.Crouch);
+            }
+			else if ( groundHitLeft || groundHitRight || _grabCooldownTimer > 0 )
 			{
 				ChangeState(MovementState.Ground);
 			}
@@ -96,6 +122,8 @@ namespace Player {
 				ChangeState(MovementState.Air);
 			}
 		}
+
+
 
 		private void CheckCliff()
 		{
@@ -171,5 +199,24 @@ namespace Player {
 				Color.cyan
 			);
 		}
-	}
+
+        private void DrawDetectionLines()
+        {
+            Debug.DrawLine(
+                (Vector2)_player.transform.position - Vector2.right * _movementData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position -
+                Vector2.right * _movementData.DetectionRaycastAmplitude +
+                Vector2.up * _movementData.DetectionRaycastDistance,
+                Color.cyan
+            );
+
+            Debug.DrawLine(
+                (Vector2)_player.transform.position + Vector2.right * _movementData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position +
+                Vector2.right * _movementData.DetectionRaycastAmplitude +
+                Vector2.up * _movementData.DetectionRaycastDistance,
+                Color.cyan
+            );
+        }
+    }
 }

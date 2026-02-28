@@ -53,10 +53,24 @@ namespace Player.Movement.States {
 			if (_isGrabbing) return;
 
 			float horizontalDirection = 0;
-			if (_rightInput) horizontalDirection += 1;
-			if (_leftInput) horizontalDirection += -1;
 
-			_player.FlipSprite(horizontalDirection);
+			if (_movementSM.isHidding)
+			{
+                float directionToSpot = _player.CurrentHidingSpotCollider.transform.position.x - _player.transform.position.x;
+                horizontalDirection = Mathf.Sign(directionToSpot) / 3;
+            }
+			else if (_rightInput)
+			{
+                if (!groundHitRight && groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection += 1;
+			}
+            else if (_leftInput)
+            {
+                if (groundHitRight && !groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection -= 1;
+            }
+
+            _player.FlipSprite(horizontalDirection);
 			_rb.linearVelocityX = horizontalDirection * _groundData.HorizontalVelocity;
 		}
 
