@@ -38,6 +38,6 @@ MonoBehaviour:
   HiddenSpotLayer:
     serializedVersion: 2
     m_Bits: 320
-  DetectionRaycastDistance: 0.4
-  DetectionRaycastAmplitude: 0.225
+  DetectionRaycastDistance: 0.2
+  DetectionRaycastAmplitude: 0.24
   EnableDebug: 1
