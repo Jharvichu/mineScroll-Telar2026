@@ -1,11 +1,11 @@
 using UnityEngine;
 using StateMachine;
 
-namespace Player.Hidden.States
+namespace Player.Movement.States
 {
     [CreateAssetMenu(
     fileName = "SO_CrouchState",
-    menuName = "Player/Hidden States/Crouch State",
+    menuName = "Player/Movement States/Crouch State",
     order = 2)]
     public class SO_CrouchState : SO_State
     {
@@ -20,7 +20,7 @@ namespace Player.Hidden.States
         public SO_CrouchState()
         {
             State = new CrouchState(this);
-            NodeType = HiddenState.Crouch;
+            NodeType = MovementState.Crouch;
         }
 
     }

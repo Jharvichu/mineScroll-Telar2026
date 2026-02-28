@@ -46,18 +46,22 @@ namespace Player.Hidden.States {
 		private void HorizontalMove() {
 			float horizontalDirection = 0;
 
-            if (_rightInput)
+            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
             {
-                if (!groundHitRight && groundHitLeft) return;
-                horizontalDirection += 1;
+                horizontalDirection = 0;
+            }
+            else if (_rightInput)
+            {
+                if (!groundHitRight && groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection += 1;
             }
             else if (_leftInput)
             {
-                if (groundHitRight && !groundHitLeft) return;
-                horizontalDirection -= 1;
+                if (groundHitRight && !groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection -= 1;
             }
 
-			_player.FlipSprite(horizontalDirection);
+            _player.FlipSprite(horizontalDirection);
 			_rb.linearVelocityX = horizontalDirection * _groundData.HorizontalVelocity;
 		}
 

@@ -11,7 +11,6 @@ namespace Player {
 		private PlayerController _player;
 
 		private int _originalSortingOrder;
-        private bool _shouldCrouch = false;
 
 		public HiddenSubSM(SO_StateMachine data) : base(data)
 		{
@@ -27,20 +26,21 @@ namespace Player {
 		public override void EnterState()
 		{
             Debug.Log("Enter to Hidden State");
-			HidePlayerBehindObstacle(_player.CurrentHidingSpotSprite);
+			HidePlayerBehindObstacle(_player.CurrentHidingSpotCollider);
             ChangeState(HiddenState.Ground);
 			base.EnterState();
 		}
 		public override void UpdateState()
 		{
             DrawDebug();
-			CheckMovementMode();
-			base.UpdateState();
+			TryExitHiddenState();
+            base.UpdateState();
 		}
 
 		public override void FixedUpdateState()
 		{
-			base.FixedUpdateState();
+			CheckGround();
+            base.FixedUpdateState();
 		}
 
         public override void ExitState()
@@ -49,8 +49,8 @@ namespace Player {
             base.ExitState();
         }
 
-		private void CheckMovementMode()
-		{
+		private void TryExitHiddenState()
+        {
 			if (_modeInput && _player.isHidden)
 			{
 				_player.isHidden = false;
@@ -58,15 +58,14 @@ namespace Player {
 			}
 		}
 
-        private void HidePlayerBehindObstacle(SpriteRenderer obstacleSprite)
+        private void HidePlayerBehindObstacle(Collider2D obstacleCollision)
         {
             _originalSortingOrder = _player.SpriteRenderer.sortingOrder;
-            _player.SpriteRenderer.sortingOrder = obstacleSprite.sortingOrder - 1;
+            _player.SpriteRenderer.sortingOrder = obstacleCollision.GetComponent<SpriteRenderer>().sortingOrder - 1;
         }
 
         private void ShowPlayerInFront()
         {
-			Debug.Log("Salio del escondite");
             _player.SpriteRenderer.sortingOrder = _originalSortingOrder;
         }
 
@@ -90,11 +89,11 @@ namespace Player {
 				_hiddenData.GroundRaycastDistance,
 				_hiddenData.GroundLayer);
 
-			if ((groundHitLeft || groundHitRight) && _shouldCrouch)
-			{
-				ChangeState(HiddenState.Crouch);
-			}
-            else if ((groundHitLeft || groundHitRight) && !_shouldCrouch)
+            if (groundHitLeft && groundHitRight && _ctrlInput)
+            {
+                ChangeState(HiddenState.Crouch);
+            }
+            else if (groundHitLeft || groundHitRight)
             {
                 ChangeState(HiddenState.Ground);
             }
@@ -108,7 +107,7 @@ namespace Player {
 				(Vector2)_player.transform.position -
 				Vector2.right * _hiddenData.GroundRaycastAmplitude +
 				Vector2.down * _hiddenData.GroundRaycastDistance,
-				Color.magenta
+				Color.cyan
 			);
 
 			//RightLine
@@ -117,17 +116,8 @@ namespace Player {
 				(Vector2)_player.transform.position +
 				Vector2.right * _hiddenData.GroundRaycastAmplitude +
 				Vector2.down * _hiddenData.GroundRaycastDistance,
-				Color.magenta
+				Color.cyan
 			);
 		}
-
-        private void GetCrouchInput()
-        {
-            if (_modeInput)
-            {
-                _shouldCrouch = !_shouldCrouch;
-            }
-        }
-
 	}
 }

@@ -11,6 +11,7 @@ namespace Player {
 	public enum MovementState {
 		Ground,
 		Air,
+		Crouch,
 		Ledge
 	}
 

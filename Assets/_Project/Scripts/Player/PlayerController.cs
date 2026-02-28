@@ -10,11 +10,11 @@ namespace Player {
 		public Animator Animator { private set; get; }
 
         public SpriteRenderer SpriteRenderer { private set; get; }
-        public SpriteRenderer CurrentHidingSpotSprite { private set; get; }
+        public Collider2D CurrentHidingSpotCollider { private set; get; }
 
         public float FacingDirection => transform.localScale.x > 0 ? 1f : -1f;
 
-        public bool canHide, isHidden;
+        public bool canHide, isHidden, isCrouching, isHanging, isClimbing, isDroppingToLedge;
 
 		protected override void Awake() {
 			Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,19 +38,31 @@ namespace Player {
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("HidingSpot"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotDynamic"))
             {
                 canHide = true;
-                CurrentHidingSpotSprite = collision.GetComponent<SpriteRenderer>();
+                CurrentHidingSpotCollider = collision;
+            }
+
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
+            {
+                canHide = true;
+                CurrentHidingSpotCollider = collision;
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("HidingSpot"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotDynamic"))
             {
                 canHide = false;
-                CurrentHidingSpotSprite = null;
+                CurrentHidingSpotCollider = collision;
+            }
+
+            if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
+            {
+                canHide = false;
+                CurrentHidingSpotCollider = null;
             }
         }
 

@@ -16,9 +16,11 @@ MonoBehaviour:
   CurrentState: {fileID: 11400000, guid: c7f489a65853c8e47b849f914e87c6a0, type: 2}
   States:
   - {fileID: 11400000, guid: c7f489a65853c8e47b849f914e87c6a0, type: 2}
+  - {fileID: 11400000, guid: 93e599015ce6e7748ba18fa407f1f5c0, type: 2}
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.1
+  GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.45
+  OrderSpriteofPlayer: 0
   EnableDebug: 1
