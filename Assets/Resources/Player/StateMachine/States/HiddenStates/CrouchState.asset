@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aab470fac705d549afa71c8bc281498, type: 3}
-  m_Name: GroundState
+  m_Script: {fileID: 11500000, guid: 22144a04d29af204aa7c66beabd4cf53, type: 3}
+  m_Name: CrouchState
   m_EditorClassIdentifier: 
-  HorizontalVelocity: 3
-  HidingSpotLayer:
+  HorizontalVelocity: 1
+  GroundLayer:
     serializedVersion: 2
-    m_Bits: 320
-  DetectionRaycastDistance: 0.1
-  DetectionRaycastAmplitude: 0.3
+    m_Bits: 8
+  GroundRaycastDistance: 0.2
+  GroundRaycastAmplitude: 0.25

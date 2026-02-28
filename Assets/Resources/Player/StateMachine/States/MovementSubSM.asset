@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60e1ad5a6cf9e6845aeaaa3151511620, type: 2}
   - {fileID: 11400000, guid: 1625514bddfde1a4c9d81d7d29fc34ac, type: 2}
   - {fileID: 11400000, guid: 26baeb7b6ed69bb4aa27398e3bf81518, type: 2}
+  - {fileID: 11400000, guid: f6ca7f3396a3e374ea940c3065e83719, type: 2}
   ColldownTime: 0.5
   OcultarLayer:
     serializedVersion: 2
@@ -34,4 +35,9 @@ MonoBehaviour:
   CliffMiddleHeight: 0.4
   CliffRaycastTopDistance: 0.95
   CliffTopHeight: 0.4
+  HiddenSpotLayer:
+    serializedVersion: 2
+    m_Bits: 320
+  DetectionRaycastDistance: 0.4
+  DetectionRaycastAmplitude: 0.225
   EnableDebug: 1
