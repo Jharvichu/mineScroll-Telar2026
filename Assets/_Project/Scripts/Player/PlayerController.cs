@@ -56,7 +56,7 @@ namespace Player {
             if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotDynamic"))
             {
                 canHide = false;
-                CurrentHidingSpotCollider = collision;
+                CurrentHidingSpotCollider = null;
             }
 
             if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
