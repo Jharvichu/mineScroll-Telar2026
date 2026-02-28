@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aab470fac705d549afa71c8bc281498, type: 3}
   m_Name: GroundState
   m_EditorClassIdentifier: 
-  HorizontalVelocity: 2
-  GroundLayer:
+  HorizontalVelocity: 3
+  HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 8
-  GroundRaycastDistance: 0.1
-  GroundRaycastAmplitude: 0.505
+    m_Bits: 320
+  DetectionRaycastDistance: 0.1
+  DetectionRaycastAmplitude: 0.3

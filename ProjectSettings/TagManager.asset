@@ -3,17 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Character
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HidingSpot
   - Water
   - UI
-  - Ground
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 

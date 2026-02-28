@@ -9,19 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b476f378e2f2f424a9ab9f5e734f70c9, type: 3}
-  m_Name: LedgeState
+  m_Script: {fileID: 11500000, guid: ac30e144e0c907247884246af3a157c8, type: 3}
+  m_Name: CrouchState
   m_EditorClassIdentifier: 
-  CliffTime: 5
-  raiseSpeed: 5
-  WallLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  WallBoxSize: {x: 0.5, y: 1.2}
-  WallBoxOffset: 0.5
-  WallBoxDistance: 0.25
+  HorizontalVelocity: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.3
-  GroundRaycastAmplitude: 0.2
+  GroundRaycastDistance: 0.2
+  GroundRaycastAmplitude: 0.25

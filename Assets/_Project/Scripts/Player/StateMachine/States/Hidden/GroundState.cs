@@ -29,7 +29,9 @@ namespace Player.Hidden.States {
 
 		public override void UpdateState() {
             GetInputs();
-			base.UpdateState();
+            DetectObstacule();
+            DrawGroundRaycastDebug();
+            base.UpdateState();
 		}
 
 		public override void FixedUpdateState() {
@@ -43,12 +45,59 @@ namespace Player.Hidden.States {
 
 		private void HorizontalMove() {
 			float horizontalDirection = 0;
-			if (_rightInput) horizontalDirection += 1;
-			if (_leftInput) horizontalDirection += -1;
 
-			_player.FlipSprite(horizontalDirection);
+            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
+            {
+                horizontalDirection = 0;
+            }
+            else if (_rightInput)
+            {
+                if (!groundHitRight && groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection += 1;
+            }
+            else if (_leftInput)
+            {
+                if (groundHitRight && !groundHitLeft) _rb.linearVelocityX = 0;
+                else horizontalDirection -= 1;
+            }
+
+            _player.FlipSprite(horizontalDirection);
 			_rb.linearVelocityX = horizontalDirection * _groundData.HorizontalVelocity;
 		}
 
-	}
+        private void DetectObstacule()
+        {
+            groundHitLeft = Physics2D.Raycast(
+                (Vector2)_player.transform.position - Vector2.right * _groundData.DetectionRaycastAmplitude,
+                Vector2.up,
+                _groundData.DetectionRaycastDistance,
+                _groundData.HidingSpotLayer);
+
+            groundHitRight = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.right * _groundData.DetectionRaycastAmplitude,
+                Vector2.up,
+                _groundData.DetectionRaycastDistance,
+                _groundData.HidingSpotLayer);
+        }
+
+        private void DrawGroundRaycastDebug()
+        {
+            Debug.DrawLine(
+                (Vector2)_player.transform.position - Vector2.right * _groundData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position -
+                Vector2.right * _groundData.DetectionRaycastAmplitude +
+                Vector2.up * _groundData.DetectionRaycastDistance,
+                Color.yellow
+            );
+
+            Debug.DrawLine(
+                (Vector2)_player.transform.position + Vector2.right * _groundData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position +
+                Vector2.right * _groundData.DetectionRaycastAmplitude +
+                Vector2.up * _groundData.DetectionRaycastDistance,
+                Color.yellow
+            );
+        }
+
+    }
 }
