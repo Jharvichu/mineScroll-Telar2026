@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyController : MonoBehaviour
+public class RifleGuardController : MonoBehaviour
 {
-   
-    public enum State { Patrol, SuspicionWait, Investigate, AlertWait, Chase, Search, Return }
+    
+    public enum State { Patrol, SuspicionWait, Investigate, Aiming, Search, Return }
     public State currentState = State.Patrol;
 
     [Header("Referencias")]
@@ -14,18 +14,17 @@ public class EnemyController : MonoBehaviour
 
     [Header("Configuración de Velocidad")]
     public float patrolSpeed = 2f;
-    public float suspiciousSpeed = 3f; // Velocidad al ir a investigar (?)
-    public float chaseSpeed = 6f;    // Velocidad de persecución (!)
+    public float suspiciousSpeed = 3f;
 
-    [Header("Configuración de Visión")]
-    public float farVisionDistance = 5f;   // Distancia de sospecha (?)
-    public float nearVisionDistance = 8f;  // Distancia de alerta (!)
+    [Header("Configuración de Visión (Francotirador)")]
+    public float farVisionDistance = 12f;  // Rango largo para sospechar (?)
+    public float nearVisionDistance = 8f;  // Rango para disparar (!)
     public LayerMask playerLayer;
-    public float catchDistance = 1.2f;
 
-    [Header("Temporizadores (MGS)")]
-    public float reactionTime = 0.3f; 
-    public float searchTime = 3f;   
+    [Header("Temporizadores")]
+    public float suspicionTime = 0.5f; 
+    public float aimTime = 0.2f;    
+    public float searchTime = 3f;    
     private float timer = 0f;
 
     private int facingDirection = 1;
@@ -48,45 +47,35 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.SuspicionWait:
-                
                 timer += Time.deltaTime;
-                if (timer >= reactionTime) ChangeState(State.Investigate);
+                if (timer >= suspicionTime) ChangeState(State.Investigate);
                 DetectPlayer(); 
                 break;
 
             case State.Investigate:
-                
                 MoveTowards(lastKnownPosition, suspiciousSpeed);
                 if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
                 {
-                    ChangeState(State.Search); 
+                    ChangeState(State.Search);
                 }
                 DetectPlayer(); 
                 break;
 
-            case State.AlertWait:
+            case State.Aiming:
                 
                 timer += Time.deltaTime;
-                if (timer >= reactionTime) ChangeState(State.Chase);
-                break;
-
-            case State.Chase:
-                if (targetPlayer != null)
+                if (timer >= aimTime)
                 {
-                    MoveTowards(targetPlayer.transform.position, chaseSpeed);
-                    lastKnownPosition = targetPlayer.transform.position;
-
-                    // Te atrapó
-                    if (Vector2.Distance(transform.position, targetPlayer.transform.position) <= catchDistance)
+                    
+                    if (targetPlayer != null && !targetPlayer.isHidden)
                     {
-                        Debug.Log("¡GAME OVER! El guardia te atrapó.");
+                        Debug.Log("¡BANG! Un solo tiro. GAME OVER.");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
-
-                    // Te escondiste a tiempo
-                    if (targetPlayer.isHidden)
+                    else
                     {
-                        Debug.Log("¡Se escondió! Buscando...");
+                        
+                        Debug.Log("¡Lo perdí de vista en la maleza! Voy a investigar...");
                         ChangeState(State.Search);
                     }
                 }
@@ -128,14 +117,14 @@ public class EnemyController : MonoBehaviour
                 float distance = Vector2.Distance(transform.position, player.transform.position);
 
                 
-                if (currentState != State.Chase && currentState != State.AlertWait)
+                if (currentState != State.Aiming)
                 {
-                    // Si entra en la zona roja de cerca (!)
+                    
                     if (distance <= nearVisionDistance)
                     {
-                        Debug.Log("¡ALERTA (!)");
+                        Debug.Log("¡TE VEO! Apuntando...");
                         lastKnownPosition = player.transform.position;
-                        ChangeState(State.AlertWait);
+                        ChangeState(State.Aiming); 
                     }
                     
                     else if (distance <= farVisionDistance && currentState != State.Investigate && currentState != State.SuspicionWait)
@@ -152,7 +141,6 @@ public class EnemyController : MonoBehaviour
     void MoveTowards(Vector2 target, float speed)
     {
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed * Time.deltaTime);
-        
         if (target.x > transform.position.x + 0.1f) Flip(1);
         else if (target.x < transform.position.x - 0.1f) Flip(-1);
     }

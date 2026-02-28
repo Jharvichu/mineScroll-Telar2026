@@ -1109,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casillero
       objectReference: {fileID: 0}
+    - target: {fileID: 8372970167688377016, guid: 8db79d77542605a4e97a244a34813e37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1170,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8811994471509445602, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1186,6 +1194,10 @@ PrefabInstance:
     - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_Name
       value: Arbusto
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4684335757260090342, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_LocalPosition.x
