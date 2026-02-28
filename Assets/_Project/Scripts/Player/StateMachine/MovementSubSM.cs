@@ -113,11 +113,11 @@ namespace Player {
 			{
                 ChangeState(MovementState.Crouch);
             }
-			else if ( groundHitLeft || groundHitRight || _grabCooldownTimer > 0 )
-			{
+			else if ( groundHitLeft || groundHitRight || _player.isClimbing || _player.isDroppingToLedge) // || _grabCooldownTimer > 0 
+            {
 				ChangeState(MovementState.Ground);
 			}
-			else
+			else if (!_player.isClimbing || !_player.isDroppingToLedge)
 			{
 				ChangeState(MovementState.Air);
 			}
@@ -143,8 +143,9 @@ namespace Player {
 				_movementData.CliffLayer
 			);
 
-			if (cliffHitMiddle && !cliffHitTop && (_player.Rigidbody2D.linearVelocityY < 0 || _upInput))
-			{
+			if (cliffHitMiddle && !cliffHitTop) // && (_player.Rigidbody2D.linearVelocityY < 0 || _upInput)
+            {
+				_player.isHanging = true;
 				ChangeState(MovementState.Ledge);
 			}
 		}

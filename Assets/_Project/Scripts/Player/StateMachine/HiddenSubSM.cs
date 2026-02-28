@@ -11,7 +11,6 @@ namespace Player {
 		private PlayerController _player;
 
 		private int _originalSortingOrder;
-        private bool _shouldCrouch = false;
 
 		public HiddenSubSM(SO_StateMachine data) : base(data)
 		{
