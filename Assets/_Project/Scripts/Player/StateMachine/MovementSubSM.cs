@@ -109,7 +109,7 @@ namespace Player {
 				_movementData.GroundRaycastDistance,
 				_movementData.GroundLayer);
 
-			if (groundHitLeft && groundHitRight && _ctrlInput)
+			if (groundHitLeft && groundHitRight && (_ctrlInput || _player.isCeilingBlocked))
 			{
                 ChangeState(MovementState.Crouch);
             }
@@ -122,8 +122,6 @@ namespace Player {
 				ChangeState(MovementState.Air);
 			}
 		}
-
-
 
 		private void CheckCliff()
 		{

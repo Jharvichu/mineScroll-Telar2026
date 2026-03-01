@@ -10,6 +10,7 @@ namespace Player.Hidden.States
         private Rigidbody2D _rb;
 
         private RaycastHit2D groundHitLeft, groundHitRight;
+        private RaycastHit2D hidingSpotHitLeft, hidingSpotHitRight;
 
         public CrouchState(SO_State data) : base(data)
         {
@@ -33,7 +34,9 @@ namespace Player.Hidden.States
         {
             GetInputs();
             DetectGround();
+            DetectHidingSpots();
             DrawGroundRaycastDebug();
+            DrawHidingSpotRaycastsDebug();
             base.UpdateState();
         }
 
@@ -67,14 +70,18 @@ namespace Player.Hidden.States
         {
             float horizontalDirection = 0;
 
-            if (_rightInput)
+            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
             {
-                if (!groundHitRight && groundHitLeft) _rb.linearVelocityX = 0;
+                horizontalDirection = 0;
+            }
+            else if (_rightInput)
+            {
+                if ((!groundHitRight && groundHitLeft) || (!hidingSpotHitRight && hidingSpotHitLeft)) _rb.linearVelocityX = 0;
                 else horizontalDirection += 1;
             }
             else if (_leftInput)
             {
-                if (groundHitRight && !groundHitLeft) _rb.linearVelocityX = 0;
+                if ((groundHitRight && !groundHitLeft) || (hidingSpotHitRight && !hidingSpotHitLeft)) _rb.linearVelocityX = 0;
                 else horizontalDirection -= 1;
             }
 
@@ -97,6 +104,21 @@ namespace Player.Hidden.States
                 _crouchData.GroundLayer);
         }
 
+        private void DetectHidingSpots()
+        {
+            hidingSpotHitLeft = Physics2D.Raycast(
+                (Vector2)_player.transform.position - Vector2.right * _crouchData.DetectionRaycastAmplitude,
+                Vector2.up,
+                _crouchData.DetectionRaycastDistance,
+                _crouchData.HidingSpotLayer);
+
+            hidingSpotHitRight = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.right * _crouchData.DetectionRaycastAmplitude,
+                Vector2.up,
+                _crouchData.DetectionRaycastDistance,
+                _crouchData.HidingSpotLayer);
+        }
+
         private void DrawGroundRaycastDebug()
         {
             Debug.DrawLine(
@@ -113,6 +135,25 @@ namespace Player.Hidden.States
                 Vector2.right * _crouchData.GroundRaycastAmplitude +
                 Vector2.down * _crouchData.GroundRaycastDistance,
                 Color.green
+            );
+        }
+
+        private void DrawHidingSpotRaycastsDebug()
+        {
+            Debug.DrawLine(
+                (Vector2)_player.transform.position - Vector2.right * _crouchData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position -
+                Vector2.right * _crouchData.DetectionRaycastAmplitude +
+                Vector2.up * _crouchData.DetectionRaycastDistance,
+                Color.yellow
+            );
+
+            Debug.DrawLine(
+                (Vector2)_player.transform.position + Vector2.right * _crouchData.DetectionRaycastAmplitude,
+                (Vector2)_player.transform.position +
+                Vector2.right * _crouchData.DetectionRaycastAmplitude +
+                Vector2.up * _crouchData.DetectionRaycastDistance,
+                Color.yellow
             );
         }
     }

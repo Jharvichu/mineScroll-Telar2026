@@ -14,7 +14,7 @@ namespace Player {
 
         public float FacingDirection => transform.localScale.x > 0 ? 1f : -1f;
 
-        public bool canHide, isHidden, isCrouching, isHanging, isClimbing, isDroppingToLedge;
+        public bool canHide, isHidden, isCrouching, isHanging, isClimbing, isDroppingToLedge, isCeilingBlocked;
 
 		protected override void Awake() {
 			Rigidbody2D = GetComponent<Rigidbody2D>();
