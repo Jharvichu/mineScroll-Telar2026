@@ -33,10 +33,8 @@ namespace Player.Hidden.States
         public override void UpdateState()
         {
             GetInputs();
-            DetectGround();
-            DetectHidingSpots();
-            DrawGroundRaycastDebug();
-            DrawHidingSpotRaycastsDebug();
+            DetectHidingAndGround();
+            DrawDetectionDebugLines();
             base.UpdateState();
         }
 
@@ -89,6 +87,12 @@ namespace Player.Hidden.States
             _rb.linearVelocityX = horizontalDirection * _crouchData.HorizontalVelocity;
         }
 
+        private void DetectHidingAndGround()
+        {
+            DetectGround();
+            DetectHidingSpots();
+        }
+
         private void DetectGround()
         {
             groundHitLeft = Physics2D.Raycast(
@@ -117,6 +121,12 @@ namespace Player.Hidden.States
                 Vector2.up,
                 _crouchData.DetectionRaycastDistance,
                 _crouchData.HidingSpotLayer);
+        }
+
+        private void DrawDetectionDebugLines()
+        {
+            DrawHidingSpotRaycastsDebug();
+            DrawGroundRaycastDebug();
         }
 
         private void DrawGroundRaycastDebug()

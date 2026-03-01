@@ -70,11 +70,7 @@ namespace Player.Movement.States
         {
             float horizontalDirection = 0;
 
-            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
-            {
-                horizontalDirection = 0;
-            }
-            else if(_rightInput)
+            if(_rightInput)
             {
                 if ( !groundHitRight && groundHitLeft ) _rb.linearVelocityX = 0;
                 else horizontalDirection += 1;

@@ -18,10 +18,10 @@ namespace Player.Movement.States
         public float GroundRaycastAmplitude;
 
         [Header("Ceiling Boxcast")]
-        public LayerMask CeilingLayer;      // Qué capa representa el techo o los obstáculos sobre el jugador
-        public Vector2 CeilingBoxSize;      // Tamaño del BoxCast usado para detectar el techo
-        public float CeilingBoxOffset;     // Desplazamiento vertical desde el centro del jugador (hacia arriba)
-        public float CeilingCheckDistance;  // Distancia máxima del BoxCast hacia arriba
+        public LayerMask CeilingLayer;
+        public Vector2 CeilingBoxSize;
+        public float CeilingBoxOffset;
+        public float CeilingCheckDistance;
 
         public SO_CrouchState()
         {
