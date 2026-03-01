@@ -26,7 +26,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.2
+  GroundRaycastDistance: 0.3
   GroundRaycastAmplitude: 0.225
   CliffLayer:
     serializedVersion: 2
@@ -39,5 +39,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   DetectionRaycastDistance: 0.2
-  DetectionRaycastAmplitude: 0.24
+  DetectionRaycastAmplitude: 0.25
   EnableDebug: 1
