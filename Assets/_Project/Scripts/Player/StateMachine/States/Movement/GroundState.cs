@@ -100,7 +100,7 @@ namespace Player.Movement.States {
 
 		private void Grab()
 		{
-			if ( (_upInput && isLedgeAboveDetected) || _player.isClimbing)
+			if ( (_spaceInput && isLedgeAboveDetected) || _player.isClimbing)
 			{
 				_player.isClimbing = true;
                 _rb.linearVelocityY = _groundData.VerticalVelocity;

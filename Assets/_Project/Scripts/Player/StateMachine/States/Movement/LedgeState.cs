@@ -67,7 +67,7 @@ namespace Player.Movement.States {
 
         private void Checkledge()
 		{
-			if(_player.isClimbing || _upInput)
+			if(_player.isClimbing || _spaceInput)
             {
 				_player.isClimbing = true;
                 Raise();

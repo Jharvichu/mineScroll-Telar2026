@@ -69,18 +69,18 @@ namespace Player {
             if (_player.CurrentHidingSpotCollider == null) return;
 
             RaycastHit2D hiddenSpotHitLeft = Physics2D.Raycast(
-                (Vector2)_player.transform.position - Vector2.right * _movementData.GroundRaycastAmplitude,
+                (Vector2)_player.transform.position - Vector2.right * _movementData.DetectionRaycastAmplitude,
                 Vector2.down,
-                _movementData.GroundRaycastDistance,
+                _movementData.DetectionRaycastDistance,
                 _movementData.HiddenSpotLayer);
 
             RaycastHit2D hiddenSpotHitRight = Physics2D.Raycast(
-                (Vector2)_player.transform.position + Vector2.right * _movementData.GroundRaycastAmplitude,
+                (Vector2)_player.transform.position + Vector2.right * _movementData.DetectionRaycastAmplitude,
                 Vector2.down,
-                _movementData.GroundRaycastDistance,
+                _movementData.DetectionRaycastDistance,
                 _movementData.HiddenSpotLayer);
 
-            if (( _modeInput && _player.canHide && (hiddenSpotHitLeft || hiddenSpotHitRight) ) || isHidding)
+            if (( _upInput && _player.canHide && (hiddenSpotHitLeft || hiddenSpotHitRight) ) || isHidding)
             {
 				isHidding = true;
 
