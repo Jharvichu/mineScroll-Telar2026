@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
     private float timer = 0f;
 
     private int facingDirection = 1;
-    private DummyPlayerTest targetPlayer; 
+    private Player.PlayerController targetPlayer; // angie 
     private Vector2 lastKnownPosition;
 
     void Start()
@@ -120,7 +120,7 @@ public class EnemyController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            DummyPlayerTest player = hit.collider.GetComponent<DummyPlayerTest>();
+            Player.PlayerController player = hit.collider.GetComponent<Player.PlayerController>(); // angie
 
             if (player != null && !player.isHidden)
             {
@@ -162,6 +162,7 @@ public class EnemyController : MonoBehaviour
         if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
         {
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
+            Debug.Log("Cambiando punto");
         }
     }
 

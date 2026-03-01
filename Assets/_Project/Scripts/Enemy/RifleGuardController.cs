@@ -28,7 +28,7 @@ public class RifleGuardController : MonoBehaviour
     private float timer = 0f;
 
     private int facingDirection = 1;
-    private DummyPlayerTest targetPlayer; 
+    private Player.PlayerController targetPlayer; // angie 
     private Vector2 lastKnownPosition;
 
     void Start()
@@ -109,7 +109,7 @@ public class RifleGuardController : MonoBehaviour
 
         if (hit.collider != null)
         {
-            DummyPlayerTest player = hit.collider.GetComponent<DummyPlayerTest>();
+            Player.PlayerController player =    hit.collider.GetComponent<Player.PlayerController>(); // angie 
 
             if (player != null && !player.isHidden)
             {

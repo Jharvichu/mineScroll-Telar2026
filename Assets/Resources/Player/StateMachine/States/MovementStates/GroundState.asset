@@ -16,18 +16,18 @@ MonoBehaviour:
   VerticalVelocity: 3
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 512
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.25
   LedgeAboveLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 512
   LedgeRaycastMiddleDistance: 0.9
   LedgeMiddleHeight: 0.4
   LedgeRaycastTopDistance: 2
   LedgeTopHeight: 0.4
   LedgeBelowLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 512
   LedgeBelowRaycastAmplitude: 0.35
   LedgeBelowRaycastDistance: 0.2

@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Player;
 
 public class CutSceneTrigger : MonoBehaviour
 {
@@ -30,7 +31,17 @@ public class CutSceneTrigger : MonoBehaviour
     void StartCutscene()
     {
         inCutscene = true;
-        characterp.GetComponent<CharacterMovement>().canMove = false;
+
+        PlayerController controller = characterp.GetComponent<PlayerController>();
+
+        if (controller != null)
+        {
+            controller.canControl = false;
+            controller.Rigidbody2D.linearVelocity = Vector2.zero;
+
+
+        }
+
         Debug.Log("Cutscene iniciada");
         Invoke(nameof(ShowPhotoPopup), 2f);
     }
@@ -79,7 +90,13 @@ public class CutSceneTrigger : MonoBehaviour
     }
     void EndCutscene()
     {
-        characterp.GetComponent<CharacterMovement>().canMove = true;
+        PlayerController controller = characterp.GetComponent<PlayerController>();
+
+        if (controller != null)
+        {
+            controller.canControl = true;
+        }
+
         inCutscene = false;
         Debug.Log("Cutscene finalizada");
     }

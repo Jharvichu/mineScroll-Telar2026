@@ -6,7 +6,9 @@ namespace Player {
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class PlayerController : StateMachineController {
 
-		public Rigidbody2D Rigidbody2D { private set; get; }
+        public bool canControl = true; // code angie
+
+        public Rigidbody2D Rigidbody2D { private set; get; }
 		public Animator Animator { private set; get; }
 
         public SpriteRenderer SpriteRenderer { private set; get; }

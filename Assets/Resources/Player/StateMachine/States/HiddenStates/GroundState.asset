@@ -15,6 +15,6 @@ MonoBehaviour:
   HorizontalVelocity: 3
   HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 264
   DetectionRaycastDistance: 0.1
   DetectionRaycastAmplitude: 0.3
