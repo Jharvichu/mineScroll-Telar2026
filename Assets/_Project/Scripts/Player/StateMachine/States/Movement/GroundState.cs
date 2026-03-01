@@ -30,7 +30,8 @@ namespace Player.Movement.States {
 		public override void EnterState() {
 			base.EnterState();
 			Debug.Log("Enter To Ground State");
-		}
+			TryEnterGroundState();
+        }
 
 		public override void UpdateState() {
             GetInputs();
@@ -46,10 +47,25 @@ namespace Player.Movement.States {
 		}
 
 		public override void ExitState() {
-			base.ExitState();
+			TryExitGroundState();
+            base.ExitState();
 		}
 
-		private void HorizontalMove() {
+        private void TryEnterGroundState()
+		{
+			if (_player.isDropping)
+			{
+                _player.isDropping = false;
+                _player.FlipSprite(-Mathf.Sign(_player.transform.localScale.x));
+            }
+		}
+
+        private void TryExitGroundState()
+		{
+
+		}
+
+        private void HorizontalMove() {
 			if (_player.isClimbing || _player.isDroppingToLedge) return;
 
             float horizontalDirection = 0;
@@ -84,10 +100,11 @@ namespace Player.Movement.States {
 
 		private void Grab()
 		{
-			if ( (_upInput && isLedgeAboveDetected) || _player.isClimbing)
+			if ( (_spaceInput && isLedgeAboveDetected) || _player.isClimbing)
 			{
 				_player.isClimbing = true;
                 _rb.linearVelocityY = _groundData.VerticalVelocity;
+                _rb.linearVelocityX = 0f;
             }
 			else if ( (_downInput && isLedgeBelowDetected) || _player.isDroppingToLedge)
 			{
@@ -97,76 +114,22 @@ namespace Player.Movement.States {
 
 				if (!isLedgeBelowDetected && ledgeBelowLeft) 
 				{
-                    Debug.Log("LLego aqui, deberia cambiar hacia la izquierda");
+                    Debug.Log("Cambiar hacia la izquierda");
                     _player.FlipSprite(-1);
                     _player.isDroppingToLedge = false;
+                    _player.isDropping = true;
                     _player.Rigidbody2D.linearVelocity = new Vector2(0, -1 * _groundData.HorizontalVelocity * 0.5f);
                 }
                 if (!isLedgeBelowDetected && ledgeBelowRight)
 				{
-                    Debug.Log("LLego aqui, deberia cambiar hacia la derecha");
+                    Debug.Log("Cambiar hacia la derecha");
                     _player.FlipSprite(+1);
                     _player.isDroppingToLedge = false;
+                    _player.isDropping = true;
                     _player.Rigidbody2D.linearVelocity = new Vector2(0, -1 * _groundData.HorizontalVelocity * 0.5f);
                 }
             }
         }
-        /*
-		private void Grab()
-		{
-			if (_downInput && isLedgeDetected)
-			{
-				_isGrabbing = true;
-				_movementSM?.ActivateGrabbingCooldown();
-			}
-
-			if (!_isGrabbing) return;
-
-			if (isLedgeDetected)
-			{
-				float direction = !groundHitRight ? 1 : !groundHitLeft ? -1 : 0;
-				_rb.linearVelocityX = direction * _groundData.HorizontalVelocity * 0.5f;
-			}
-			else
-			{
-				if (ledgeSideLeft) _player.FlipSprite(-1);
-				if (ledgeSideRight) _player.FlipSprite(+1);
-				_player.Rigidbody2D.linearVelocity = new Vector2(0, -1 * _groundData.HorizontalVelocity * 0.5f);
-			}
-		}
-		*/
-        /*
-		private void DetectLedgeAndGround()
-		{
-			groundHitLeft = Physics2D.Raycast(
-				(Vector2)_player.transform.position - Vector2.right * _groundData.GroundRaycastAmplitude,
-				Vector2.down,
-				_groundData.GroundRaycastDistance,
-				_groundData.GroundLayer);
-
-			groundHitRight = Physics2D.Raycast(
-				(Vector2)_player.transform.position + Vector2.right * _groundData.GroundRaycastAmplitude,
-				Vector2.down,
-				_groundData.GroundRaycastDistance,
-				_groundData.GroundLayer);
-
-			isLedgeDetected = groundHitLeft ^ groundHitRight;
-
-			if (!_isGrabbing) return;
-
-			ledgeSideLeft = Physics2D.Raycast(
-				(Vector2)_player.transform.position - Vector2.right * _groundData.LedgeRaycastAmplitude,
-				Vector2.down,
-				_groundData.LedgeRaycastDistance,
-				_groundData.LedgeLayer);
-
-			ledgeSideRight = Physics2D.Raycast(
-				(Vector2)_player.transform.position + Vector2.right * _groundData.LedgeRaycastAmplitude,
-				Vector2.down,
-				_groundData.LedgeRaycastDistance,
-				_groundData.LedgeLayer);
-		}
-		*/
 
         private void DetectLedgeAndGround()
 		{
@@ -291,3 +254,60 @@ namespace Player.Movement.States {
 
 	}
 }
+
+/*
+private void Grab()
+{
+    if (_downInput && isLedgeDetected)
+    {
+        _isGrabbing = true;
+        _movementSM?.ActivateGrabbingCooldown();
+    }
+
+    if (!_isGrabbing) return;
+
+    if (isLedgeDetected)
+    {
+        float direction = !groundHitRight ? 1 : !groundHitLeft ? -1 : 0;
+        _rb.linearVelocityX = direction * _groundData.HorizontalVelocity * 0.5f;
+    }
+    else
+    {
+        if (ledgeSideLeft) _player.FlipSprite(-1);
+        if (ledgeSideRight) _player.FlipSprite(+1);
+        _player.Rigidbody2D.linearVelocity = new Vector2(0, -1 * _groundData.HorizontalVelocity * 0.5f);
+    }
+}
+*/
+/*
+private void DetectLedgeAndGround()
+{
+    groundHitLeft = Physics2D.Raycast(
+        (Vector2)_player.transform.position - Vector2.right * _groundData.GroundRaycastAmplitude,
+        Vector2.down,
+        _groundData.GroundRaycastDistance,
+        _groundData.GroundLayer);
+
+    groundHitRight = Physics2D.Raycast(
+        (Vector2)_player.transform.position + Vector2.right * _groundData.GroundRaycastAmplitude,
+        Vector2.down,
+        _groundData.GroundRaycastDistance,
+        _groundData.GroundLayer);
+
+    isLedgeDetected = groundHitLeft ^ groundHitRight;
+
+    if (!_isGrabbing) return;
+
+    ledgeSideLeft = Physics2D.Raycast(
+        (Vector2)_player.transform.position - Vector2.right * _groundData.LedgeRaycastAmplitude,
+        Vector2.down,
+        _groundData.LedgeRaycastDistance,
+        _groundData.LedgeLayer);
+
+    ledgeSideRight = Physics2D.Raycast(
+        (Vector2)_player.transform.position + Vector2.right * _groundData.LedgeRaycastAmplitude,
+        Vector2.down,
+        _groundData.LedgeRaycastDistance,
+        _groundData.LedgeLayer);
+}
+*/
