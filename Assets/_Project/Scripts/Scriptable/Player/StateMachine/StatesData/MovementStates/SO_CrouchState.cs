@@ -1,14 +1,15 @@
 using UnityEngine;
 using StateMachine;
 
-namespace Player.Hidden.States
+namespace Player.Movement.States
 {
     [CreateAssetMenu(
     fileName = "SO_CrouchState",
-    menuName = "Player/Hidden States/Crouch State",
+    menuName = "Player/Movement States/Crouch State",
     order = 2)]
     public class SO_CrouchState : SO_State
     {
+
         public float HorizontalVelocity;
 
         [Header("Ground Raycast")]
@@ -16,15 +17,16 @@ namespace Player.Hidden.States
         public float GroundRaycastDistance;
         public float GroundRaycastAmplitude;
 
-        [Header("Hiding Spot Detection")]
-        public LayerMask HidingSpotLayer;
-        public float DetectionRaycastDistance;
-        public float DetectionRaycastAmplitude;
+        [Header("Ceiling Boxcast")]
+        public LayerMask CeilingLayer;
+        public Vector2 CeilingBoxSize;
+        public float CeilingBoxOffset;
+        public float CeilingCheckDistance;
 
         public SO_CrouchState()
         {
             State = new CrouchState(this);
-            NodeType = HiddenState.Crouch;
+            NodeType = MovementState.Crouch;
         }
 
     }

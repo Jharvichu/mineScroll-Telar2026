@@ -13,13 +13,21 @@ MonoBehaviour:
   m_Name: GroundState
   m_EditorClassIdentifier: 
   HorizontalVelocity: 6
+  VerticalVelocity: 3
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.1
-  GroundRaycastAmplitude: 0.505
-  LedgeLayer:
+  GroundRaycastDistance: 0.2
+  GroundRaycastAmplitude: 0.25
+  LedgeAboveLayer:
     serializedVersion: 2
     m_Bits: 8
-  LedgeRaycastDistance: 0.25
-  LedgeRaycastAmplitude: 0.6
+  LedgeRaycastMiddleDistance: 0.9
+  LedgeMiddleHeight: 0.4
+  LedgeRaycastTopDistance: 2
+  LedgeTopHeight: 0.4
+  LedgeBelowLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  LedgeBelowRaycastAmplitude: 0.35
+  LedgeBelowRaycastDistance: 0.2

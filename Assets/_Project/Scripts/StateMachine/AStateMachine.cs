@@ -11,7 +11,8 @@ namespace StateMachine {
 
 		protected bool _upInput;
 		protected bool _downInput;
-		protected bool _modeInput;
+        protected bool _ctrlInput;
+        protected bool _modeInput;
 
 		public AStateMachine(SO_StateMachine data) {
 			_stateMachineData = data;
@@ -88,9 +89,10 @@ namespace StateMachine {
 
 		private void GetInputs()
 		{
-			_upInput 	= Input.GetKey(KeyCode.W);
-			_downInput 	= Input.GetKey(KeyCode.S);
-			_modeInput 	= Input.GetKeyDown(KeyCode.Space);
-		}
+            _upInput = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+            _downInput = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+            _modeInput 	= Input.GetKeyDown(KeyCode.Space);
+            _ctrlInput = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+        }
 	}
 }

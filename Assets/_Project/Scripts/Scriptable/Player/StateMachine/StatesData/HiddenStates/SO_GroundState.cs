@@ -10,12 +10,17 @@ namespace Player.Hidden.States{
 		
 		public float HorizontalVelocity;
 
-		[Header("Ground Raycast")]
-		public LayerMask GroundLayer;	 
-		public float GroundRaycastDistance;
-		public float GroundRaycastAmplitude;
+        [Header("Ground Raycast")]
+        public LayerMask GroundLayer;
+        public float GroundRaycastDistance;
+        public float GroundRaycastAmplitude;
 
-		public SO_GroundState()
+        [Header("Hiding Spot Detection")]
+        public LayerMask HidingSpotLayer;
+        public float DetectionRaycastDistance;
+        public float DetectionRaycastAmplitude;
+
+        public SO_GroundState()
 		{
 			State = new GroundState(this);
 			NodeType = HiddenState.Ground;

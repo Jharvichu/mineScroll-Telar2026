@@ -24,7 +24,12 @@ namespace Player {
 		public float CliffRaycastTopDistance;
 		public float CliffTopHeight;
 
-		[Header("Debug Options")]
+        [Header("Hidden Raycast")]
+        public LayerMask HiddenSpotLayer;
+        public float DetectionRaycastDistance;
+        public float DetectionRaycastAmplitude;
+
+        [Header("Debug Options")]
 		public bool EnableDebug = false;
 
 		public SO_MovementSubSM(){

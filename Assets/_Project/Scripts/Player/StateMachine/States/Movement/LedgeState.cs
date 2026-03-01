@@ -29,7 +29,9 @@ namespace Player.Movement.States {
 		public override void EnterState() {
 			base.EnterState();
 			Debug.Log("Enter to ledge state");
-			_timer = 0f;
+            _player.isClimbing = false;
+            _player.isHanging = true;
+            _timer = 0f;
 			_rb.gravityScale = 0f;
 			_rb.linearVelocity = Vector2.zero;
 			_downInput = false;
@@ -55,9 +57,8 @@ namespace Player.Movement.States {
 			base.ExitState();
 		}
 
-		private void Checkledge(){
-			
-			Debug.Log("Timer: " + _timer);
+		private void Checkledge()
+		{
 			if(_timer >= _ledgeData.CliffTime && !_isClimbingUp)
 			{
 				Drop();
@@ -100,7 +101,7 @@ namespace Player.Movement.States {
 				_ledgeData.WallLayer
 			);
 
-			if (!_isClimbingUp) return;
+			if (!_isClimbingUp || _wallDetectionHit) return;
 
 			RaycastHit2D groundHitLeft = Physics2D.Raycast(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,
@@ -140,7 +141,9 @@ namespace Player.Movement.States {
 
 		private void DrawGroundRaycastDebug()
 		{
-			Debug.DrawLine(
+            if (!_isClimbingUp || _wallDetectionHit) return;
+
+            Debug.DrawLine(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,
 				(Vector2)_player.transform.position -
 				Vector2.right * _ledgeData.GroundRaycastAmplitude +
