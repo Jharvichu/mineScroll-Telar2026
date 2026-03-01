@@ -141,10 +141,22 @@ namespace Player {
 				_movementData.CliffLayer
 			);
 
-			if (cliffHitMiddle && !cliffHitTop) // && (_player.Rigidbody2D.linearVelocityY < 0 || _upInput)
+            RaycastHit2D groundHitLeft = Physics2D.Raycast(
+                (Vector2)_player.transform.position - Vector2.right * _movementData.GroundRaycastAmplitude,
+                Vector2.down,
+                _movementData.GroundRaycastDistance,
+                _movementData.GroundLayer);
+
+            RaycastHit2D groundHitRight = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.right * _movementData.GroundRaycastAmplitude,
+                Vector2.down,
+                _movementData.GroundRaycastDistance,
+                _movementData.GroundLayer);
+
+            if (cliffHitMiddle && !cliffHitTop)
             {
-				_player.isHanging = true;
-				ChangeState(MovementState.Ledge);
+				if (groundHitLeft && groundHitRight && !_player.isClimbing && !_player.isDropping) _player.isClimbing = true;
+                ChangeState(MovementState.Ledge);
 			}
 		}
 
