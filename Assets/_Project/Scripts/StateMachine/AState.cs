@@ -11,6 +11,7 @@ namespace StateMachine {
 		protected bool _upInput;
 		protected bool _downInput;
         protected bool _ctrlInput;
+		protected bool _spaceInput;
 
         public AState(SO_State data) {
 			_stateData = data;
@@ -29,29 +30,15 @@ namespace StateMachine {
 			_parent = parent;
 		}
 
-		protected void GetInputs() // modifico angie
+		protected void GetInputs()
 		{
-           
-            Player.PlayerController player = (Player.PlayerController)_stateMachineController;
-
-            if (!player.canControl)
-            {
-
-                _rightInput = false;
-                _leftInput = false;
-                _upInput = false;
-                _downInput = false;
-                _ctrlInput = false;
-                return;
-            }
-
             _rightInput = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
             _leftInput = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
             _upInput = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
             _downInput = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+            _spaceInput = Input.GetKeyDown(KeyCode.Space);
             _ctrlInput = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
         }
-    
 
 	}
 }

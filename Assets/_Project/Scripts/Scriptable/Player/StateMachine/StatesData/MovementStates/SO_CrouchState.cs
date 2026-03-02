@@ -17,6 +17,12 @@ namespace Player.Movement.States
         public float GroundRaycastDistance;
         public float GroundRaycastAmplitude;
 
+        [Header("Ceiling Boxcast")]
+        public LayerMask CeilingLayer;
+        public Vector2 CeilingBoxSize;
+        public float CeilingBoxOffset;
+        public float CeilingCheckDistance;
+
         public SO_CrouchState()
         {
             State = new CrouchState(this);

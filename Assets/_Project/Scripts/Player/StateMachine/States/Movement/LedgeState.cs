@@ -13,7 +13,6 @@ namespace Player.Movement.States {
 		private float _timer;
 
 		private RaycastHit2D _wallDetectionHit;
-		private bool _isClimbingUp;
 
 		public LedgeState(SO_State data) : base(data) {
 			_ledgeData = data as SO_LedgeState;
@@ -29,13 +28,9 @@ namespace Player.Movement.States {
 		public override void EnterState() {
 			base.EnterState();
 			Debug.Log("Enter to ledge state");
-            _player.isClimbing = false;
-            _player.isHanging = true;
-            _timer = 0f;
-			_rb.gravityScale = 0f;
-			_rb.linearVelocity = Vector2.zero;
-			_downInput = false;
-		}
+			TryEnterLedgeState();
+
+        }
 
 		public override void UpdateState() {
 			_timer += Time.deltaTime;
@@ -51,34 +46,45 @@ namespace Player.Movement.States {
 		}
 
 		public override void ExitState() {
-			_rb.gravityScale = 1f;
-			_isClimbingUp = false;
-
-			base.ExitState();
+			TryExitLedgeState();
+            base.ExitState();
 		}
 
-		private void Checkledge()
+        private void TryEnterLedgeState()
+        {
+            _player.isDropping = false;
+            _timer = 0f;
+            _rb.gravityScale = 0f;
+            _rb.linearVelocity = Vector2.zero;
+            _downInput = false;
+        }
+
+        private void TryExitLedgeState()
+        {
+            _rb.gravityScale = 1f;
+            _player.isClimbing = false;
+        }
+
+        private void Checkledge()
 		{
-			if(_timer >= _ledgeData.CliffTime && !_isClimbingUp)
+			if(_player.isClimbing || _spaceInput)
+            {
+				_player.isClimbing = true;
+                Raise();
+            }
+			else if(_timer >= _ledgeData.CliffTime && !_player.isClimbing)
 			{
 				Drop();
 				return;
 			}
-
-			if (_downInput) 
+			else if (_downInput) 
 			{
 				Drop();
-			}
-			
-			if (_upInput || _isClimbingUp)
-			{
-				_isClimbingUp = true;
-				Raise();
 			}
 		}
 
 		private void Drop() {
-			Debug.Log("Se solto! ");
+			_player.isDropping = true;
 			_movementSM?.ActivateCliffCooldown();
 			_parent.ChangeState(MovementState.Air);
 		}
@@ -101,7 +107,7 @@ namespace Player.Movement.States {
 				_ledgeData.WallLayer
 			);
 
-			if (!_isClimbingUp || _wallDetectionHit) return;
+			if (!_player.isClimbing || _wallDetectionHit) return;
 
 			RaycastHit2D groundHitLeft = Physics2D.Raycast(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,
@@ -141,7 +147,7 @@ namespace Player.Movement.States {
 
 		private void DrawGroundRaycastDebug()
 		{
-            if (!_isClimbingUp || _wallDetectionHit) return;
+            if (!_player.isClimbing || _wallDetectionHit) return;
 
             Debug.DrawLine(
 				(Vector2)_player.transform.position - Vector2.right * _ledgeData.GroundRaycastAmplitude,

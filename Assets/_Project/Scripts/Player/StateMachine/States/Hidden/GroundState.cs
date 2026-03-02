@@ -25,7 +25,8 @@ namespace Player.Hidden.States {
 		public override void EnterState() {
 			base.EnterState();
 			Debug.Log("Enter To Ground State");
-		}
+            TryEnterGroundState();
+        }
 
 		public override void UpdateState() {
             GetInputs();
@@ -40,10 +41,21 @@ namespace Player.Hidden.States {
 		}
 
 		public override void ExitState() {
-			base.ExitState();
+            TryExitGroundState();
+            base.ExitState();
 		}
 
-		private void HorizontalMove() {
+        private void TryEnterGroundState()
+        {
+
+        }
+
+        private void TryExitGroundState()
+        {
+
+        }
+
+        private void HorizontalMove() {
 			float horizontalDirection = 0;
 
             if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))

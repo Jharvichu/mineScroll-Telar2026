@@ -51,7 +51,7 @@ namespace Player {
 
 		private void TryExitHiddenState()
         {
-			if (_modeInput && _player.isHidden)
+			if (_downInput && _player.isHidden)
 			{
 				_player.isHidden = false;
                 _parent.ChangeState(PlayerState.Movement);

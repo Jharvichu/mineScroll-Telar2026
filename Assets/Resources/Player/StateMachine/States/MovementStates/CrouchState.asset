@@ -18,3 +18,9 @@ MonoBehaviour:
     m_Bits: 512
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.25
+  CeilingLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  CeilingBoxSize: {x: 0.5, y: 0.6}
+  CeilingBoxOffset: 0.25
+  CeilingCheckDistance: 0.6

@@ -16,7 +16,7 @@ namespace Player {
 
         public float FacingDirection => transform.localScale.x > 0 ? 1f : -1f;
 
-        public bool canHide, isHidden, isCrouching, isHanging, isClimbing, isDroppingToLedge;
+        public bool canHide, isHidden, isCrouching, isHanging, isClimbing, isDroppingToLedge, isDropping, isCeilingBlocked;
 
 		protected override void Awake() {
 			Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -58,7 +58,7 @@ namespace Player {
             if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotDynamic"))
             {
                 canHide = false;
-                CurrentHidingSpotCollider = collision;
+                CurrentHidingSpotCollider = null;
             }
 
             if (collision.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
