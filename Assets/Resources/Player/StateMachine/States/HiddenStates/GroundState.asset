@@ -20,6 +20,6 @@ MonoBehaviour:
   GroundRaycastAmplitude: 0.25
   HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 264
+    m_Bits: 320
   DetectionRaycastDistance: 0.1
   DetectionRaycastAmplitude: 0.3

@@ -69,6 +69,7 @@ namespace Player.Movement.States {
 		{
 			if(_player.isClimbing || _spaceInput)
             {
+				Debug.Log("Llego a la esquina");
 				_player.isClimbing = true;
                 Raise();
             }

@@ -15,11 +15,11 @@ MonoBehaviour:
   HorizontalVelocity: 1
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 520
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.25
   HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 321
   DetectionRaycastDistance: 0.1
   DetectionRaycastAmplitude: 0.3

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2726825741663844874}
   - component: {fileID: 3100223980017063646}
   - component: {fileID: 2725658320572323479}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8986803180885771348}
   - component: {fileID: 1775735331821989120}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797312276066716205}
   - component: {fileID: 2069719475964760839}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,9 +323,9 @@ GameObject:
   - component: {fileID: 199193374505381680}
   - component: {fileID: 8443223164103045653}
   - component: {fileID: 5764791791105108488}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: PlayerTest
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,3 +441,5 @@ MonoBehaviour:
   isHanging: 0
   isClimbing: 0
   isDroppingToLedge: 0
+  isDropping: 0
+  isCeilingBlocked: 0

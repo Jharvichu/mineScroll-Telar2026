@@ -162,7 +162,7 @@ public class EnemyController : MonoBehaviour
         if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
         {
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
-            Debug.Log("Cambiando punto");
+          
         }
     }
 

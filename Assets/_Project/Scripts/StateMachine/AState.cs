@@ -30,15 +30,31 @@ namespace StateMachine {
 			_parent = parent;
 		}
 
-		protected void GetInputs()
-		{
+        protected void GetInputs() // modifico angie
+        {
+
+            Player.PlayerController player = (Player.PlayerController)_stateMachineController;
+
+            if (!player.canControl)
+            {
+
+                _rightInput = false;
+                _leftInput = false;
+                _upInput = false;
+                _downInput = false;
+                _ctrlInput = false;
+                _spaceInput = false;
+                return;
+            }
+
             _rightInput = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
             _leftInput = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
             _upInput = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
             _downInput = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
-            _spaceInput = Input.GetKeyDown(KeyCode.Space);
+            _spaceInput = Input.GetKey(KeyCode.Space);
             _ctrlInput = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
         }
 
-	}
+
+    }
 }

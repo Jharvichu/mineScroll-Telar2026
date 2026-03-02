@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3015677908664744242}
   - component: {fileID: 3549272112779523727}
   - component: {fileID: 7091603991069636823}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Riflero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
   nearVisionDistance: 8
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   suspicionTime: 0.5
   aimTime: 0.2
   searchTime: 3

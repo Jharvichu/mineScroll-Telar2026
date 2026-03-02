@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4684335757260090342}
   - component: {fileID: 2951495324225850129}
   - component: {fileID: 5022337636783838451}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: ArbustoTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76787311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arbustos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArbustoTest
       objectReference: {fileID: 0}
+    - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4684335757260090342, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.60186
@@ -724,6 +728,10 @@ PrefabInstance:
     - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_Name
       value: ArbustoTest (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4684335757260090342, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_LocalScale.x
@@ -907,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316907181306807089, guid: 8aa3159df8572fe48b5a48e00f8e7973, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6049774364735485311, guid: 8aa3159df8572fe48b5a48e00f8e7973, type: 3}
       propertyPath: m_Sprite
@@ -943,7 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 954944166}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Choza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,6 +1232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArbustoTest (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4344856564908520224, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4684335757260090342, guid: 4d8a0ef3f4e2c58439b806e39a3f2073, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.841858
@@ -1345,7 +1357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395890740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Casillero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,6 +1585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: agachado
       objectReference: {fileID: 0}
+    - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8171641238618918547, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1034262
@@ -1634,13 +1650,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352500003087179406, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2520264321570844237, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 2520264321570844237, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.37
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 2520264321570844237, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1676,7 +1696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6270727208623320899, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537945391681032397, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8811994471509445602, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_Name
@@ -1684,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811994471509445602, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8811994471509445602, guid: fbc153a2f666b504ba3a5a1d6ecc90b9, type: 3}
       propertyPath: m_TagString
@@ -1808,6 +1832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PaloChoza
       objectReference: {fileID: 0}
+    - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8171641238618918547, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8512845
@@ -1872,6 +1900,10 @@ PrefabInstance:
     - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_Name
       value: TechoChoza
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8171641238618918547, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_LocalScale.x
@@ -1982,9 +2014,17 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 283686045}
+    - target: {fileID: 4327526213477191302, guid: 891aef7fc2c38804a8e8a293ea7a344e, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 7492628556126274892, guid: 891aef7fc2c38804a8e8a293ea7a344e, type: 3}
       propertyPath: m_Name
       value: Guardia
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492628556126274892, guid: 891aef7fc2c38804a8e8a293ea7a344e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8982448742467591158, guid: 891aef7fc2c38804a8e8a293ea7a344e, type: 3}
       propertyPath: m_SortingOrder
@@ -2042,6 +2082,10 @@ PrefabInstance:
     - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_Name
       value: PaloChoza (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710955384180431854, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8171641238618918547, guid: ff3aeaae8d537a241ae629f4d7929327, type: 3}
       propertyPath: m_LocalScale.x
@@ -2115,7 +2159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930378887}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2223,6 +2267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Riflero
       objectReference: {fileID: 0}
+    - target: {fileID: 5088929223248998273, guid: 6fcd7bd8661293d4dbf2f0dcce8bb594, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7091603991069636823, guid: 6fcd7bd8661293d4dbf2f0dcce8bb594, type: 3}
       propertyPath: pointA
       value: 
@@ -2231,6 +2279,10 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 426643784}
+    - target: {fileID: 7091603991069636823, guid: 6fcd7bd8661293d4dbf2f0dcce8bb594, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 7600896554017621484, guid: 6fcd7bd8661293d4dbf2f0dcce8bb594, type: 3}
       propertyPath: m_SortingOrder
       value: 2

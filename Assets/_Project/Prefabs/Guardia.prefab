@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1894941328884110442}
   - component: {fileID: 8556972241772985647}
   - component: {fileID: 4327526213477191302}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Guardia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
   nearVisionDistance: 5
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   catchDistance: 1.2
   reactionTime: 0.3
   searchTime: 3

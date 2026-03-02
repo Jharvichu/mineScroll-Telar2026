@@ -15,7 +15,7 @@ MonoBehaviour:
   HorizontalVelocity: 1
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 520
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.25
   CeilingLayer:

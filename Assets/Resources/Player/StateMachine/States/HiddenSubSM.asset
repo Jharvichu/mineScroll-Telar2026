@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93e599015ce6e7748ba18fa407f1f5c0, type: 2}
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.45
   OrderSpriteofPlayer: 0
