@@ -51,7 +51,7 @@ namespace StateMachine {
             _leftInput = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
             _upInput = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
             _downInput = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
-            _spaceInput = Input.GetKey(KeyCode.Space);
+            _spaceInput = !player.isClimbing && Input.GetKey(KeyCode.Space) ? true : false;
             _ctrlInput = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
         }
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   HorizontalVelocity: 1
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 520
+    m_Bits: 8
   GroundRaycastDistance: 0.2
   GroundRaycastAmplitude: 0.25
   HidingSpotLayer:
@@ -23,3 +23,9 @@ MonoBehaviour:
     m_Bits: 321
   DetectionRaycastDistance: 0.1
   DetectionRaycastAmplitude: 0.3
+  CeilingLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  CeilingBoxSize: {x: 0.5, y: 0.6}
+  CeilingBoxOffset: 0.25
+  CeilingCheckDistance: 0.6

@@ -12,6 +12,7 @@ namespace Player.Hidden.States
 
         private RaycastHit2D groundHitLeft, groundHitRight;
         private RaycastHit2D hidingSpotHitLeft, hidingSpotHitRight;
+        private RaycastHit2D ceilingDetectionHit;
 
         public CrouchState(SO_State data) : base(data)
         {
@@ -92,6 +93,20 @@ namespace Player.Hidden.States
         {
             DetectGround();
             DetectHidingSpots();
+            DetectCeiling();
+        }
+
+        private void DetectCeiling()
+        {
+            ceilingDetectionHit = Physics2D.BoxCast(
+                (Vector2)_player.transform.position + Vector2.up * _crouchData.CeilingBoxOffset,
+                _crouchData.CeilingBoxSize, 0f,
+                Vector2.up,
+                _crouchData.CeilingCheckDistance,
+                _crouchData.CeilingLayer
+            );
+
+            _player.isCeilingBlocked = ceilingDetectionHit.collider != null;
         }
 
         private void DetectGround()
@@ -128,6 +143,19 @@ namespace Player.Hidden.States
         {
             DrawHidingSpotRaycastsDebug();
             DrawGroundRaycastDebug();
+            DrawCeilinglBoxCastDebug();
+        }
+
+        private void DrawCeilinglBoxCastDebug()
+        {
+            Vector2 origin = (Vector2)_player.transform.position + Vector2.up * _crouchData.CeilingBoxOffset;
+            Vector2 end = origin + Vector2.up * _crouchData.CeilingCheckDistance;
+            Vector2 half = _crouchData.CeilingBoxSize * 0.5f;
+
+            Debug.DrawLine(end + new Vector2(-half.x, -half.y), end + new Vector2(half.x, -half.y), Color.green);
+            Debug.DrawLine(end + new Vector2(half.x, -half.y), end + new Vector2(half.x, half.y), Color.green);
+            Debug.DrawLine(end + new Vector2(half.x, half.y), end + new Vector2(-half.x, half.y), Color.green);
+            Debug.DrawLine(end + new Vector2(-half.x, half.y), end + new Vector2(-half.x, -half.y), Color.green);
         }
 
         private void DrawGroundRaycastDebug()
