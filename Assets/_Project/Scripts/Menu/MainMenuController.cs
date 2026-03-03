@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
 
         root.Q<Button>("PlayButton").clicked += () =>
         {
-            StartCoroutine(Transicion("GameScene"));
+            StartCoroutine(Transicion("PrologoScene"));
         };
 
         root.Q<Button>("CreditsButton").clicked += () =>
