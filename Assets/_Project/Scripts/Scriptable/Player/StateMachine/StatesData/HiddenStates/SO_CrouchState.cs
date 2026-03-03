@@ -21,6 +21,12 @@ namespace Player.Hidden.States
         public float DetectionRaycastDistance;
         public float DetectionRaycastAmplitude;
 
+        [Header("Ceiling Boxcast")]
+        public LayerMask CeilingLayer;
+        public Vector2 CeilingBoxSize;
+        public float CeilingBoxOffset;
+        public float CeilingCheckDistance;
+
         public SO_CrouchState()
         {
             State = new CrouchState(this);
