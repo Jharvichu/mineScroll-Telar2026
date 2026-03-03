@@ -18,16 +18,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   GroundRaycastDistance: 0.2
-  GroundRaycastAmplitude: 0.25
+  GroundRaycastAmplitude: 0.2
   LedgeAboveLayer:
     serializedVersion: 2
     m_Bits: 8
-  LedgeRaycastMiddleDistance: 0.9
-  LedgeMiddleHeight: 0.4
-  LedgeRaycastTopDistance: 2
-  LedgeTopHeight: 0.4
+  LedgeRaycastMiddleDistance: 1.2
+  LedgeMiddleHeight: 0.3
+  LedgeRaycastTopDistance: 2.5
+  LedgeTopHeight: 0.3
   LedgeBelowLayer:
     serializedVersion: 2
     m_Bits: 8
-  LedgeBelowRaycastAmplitude: 0.35
-  LedgeBelowRaycastDistance: 0.2
+  LedgeBelowRaycastAmplitude: 0.3
+  LedgeBelowRaycastDistance: 0.25
