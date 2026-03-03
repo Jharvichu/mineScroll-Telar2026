@@ -26,18 +26,18 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.3
-  GroundRaycastAmplitude: 0.225
+  GroundRaycastDistance: 0.2
+  GroundRaycastAmplitude: 0.2
   CliffLayer:
     serializedVersion: 2
     m_Bits: 8
-  CliffRaycastMiddleDistance: 0.55
-  CliffMiddleHeight: 0.4
-  CliffRaycastTopDistance: 0.95
-  CliffTopHeight: 0.4
+  CliffRaycastMiddleDistance: 1
+  CliffMiddleHeight: 0.3
+  CliffRaycastTopDistance: 1.6
+  CliffTopHeight: 0.3
   HiddenSpotLayer:
     serializedVersion: 2
     m_Bits: 320
-  DetectionRaycastDistance: 0.2
-  DetectionRaycastAmplitude: 0.25
+  DetectionRaycastDistance: 1
+  DetectionRaycastAmplitude: 0.18
   EnableDebug: 1
