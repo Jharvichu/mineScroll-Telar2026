@@ -1,6 +1,6 @@
 using UnityEngine;
 using StateMachine;
-
+ 
 namespace Player {
 
 	[RequireComponent(typeof(Rigidbody2D))]
