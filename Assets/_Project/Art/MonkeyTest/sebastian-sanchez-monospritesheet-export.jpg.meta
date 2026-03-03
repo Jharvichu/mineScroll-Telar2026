@@ -1,0 +1,1099 @@
+fileFormatVersion: 2
+guid: f1f4035f733c02a4e8b14660ae91f4ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2945546467685100878
+    second: sebastian-sanchez-monospritesheet-export_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4de6cbf7eea0e820800000000000000
+      internalID: 2945546467685100878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 749
+        width: 150
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a479acdc55f1c484084c5450adebbec7
+      internalID: -51578891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3290183f0f6eb043a55bb89000775e3
+      internalID: -1144680270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97899a87a4ef01141bae27f379942128
+      internalID: 970363261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f732cd703694f439f3041468db4ff7
+      internalID: 1139259668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_5
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734bc2f5976950a42960ac426b973e42
+      internalID: 153934478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_6
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 750
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fb36e7465b1134d85781585f90626b
+      internalID: -1875814706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 617
+        width: 165
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 4, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e75effb5fda99e4794b978788b07ac1
+      internalID: 1251523902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_8
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 621
+        width: 154
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c379fc5196ced841864fc217b105e35
+      internalID: 1991246359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_9
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 612
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565b30488d926e342af9d3fbff377e5e
+      internalID: -1538823900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_10
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 612
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd1cfb2a0cb50342b4252a41865e656
+      internalID: 1664910162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_11
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 612
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1497ffc644e3ce84dbd725725f17ed4d
+      internalID: 2095202781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_12
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 612
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f349c8d37fd715d4b85fb1be21714089
+      internalID: 75585633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_13
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 612
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14172b80e9b870e4db3ae7c3ff052d9a
+      internalID: -1600861059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 127
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738eb20ae16f35d40bcf282effe1cfa6
+      internalID: -68398446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_15
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 434
+        width: 111
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db131b716fb68a4fbc99b5501808a44
+      internalID: 1842624649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_16
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 474
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3061f4ebc027c89468790f1c9df02032
+      internalID: 5583820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_17
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 474
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07ea2cbe08a77b4ba4d0fac80853252
+      internalID: 907698150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_18
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 474
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc86f54e32141348b3a16c6a613e57c
+      internalID: 1873575684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_19
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 474
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24aa8e3eb8e4edb488b753baee03621f
+      internalID: 16960767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_20
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 474
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 512d83486045dff4ebef660cdeae3dbb
+      internalID: -838961156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80c03316367df647aa87dd1b95926e2
+      internalID: 37745114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_22
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586fe83ccf6b0fe46a3087d99389d558
+      internalID: -2120977398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_23
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82fba1457e31b3498e5a369c9714751
+      internalID: 640168829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_24
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a303810c9a96554d9eab844569d0039
+      internalID: 1409625632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_25
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4572fe28c7bc04da2794ef2d2e1fa3
+      internalID: -1731472346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_26
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4aff436e6041e4bbcd17e3e2809073
+      internalID: 718158235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_27
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 336
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a963cc9416178a84a9f4cca56657d85a
+      internalID: 539120719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fbbc13ab5a9d4941aa7ca9e0eeedfbb
+      internalID: -1505236214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_29
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48daa0ad8da9734c95a46f8f02cfebc
+      internalID: 1089100417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_30
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ec25689697cfb4788d1d8bd3899deb
+      internalID: -1205599333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_31
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802255927338c944b9b427912dcae186
+      internalID: -1993628166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_32
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba474d8c2fca064b9c7c757a71b7955
+      internalID: 885200049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_33
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523fb9097fb9e7e46b22e0ecd22413bc
+      internalID: 874335525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_34
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 198
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ab0467023700b4e8d4ee9baa18a766
+      internalID: -216185523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2794091ac75de4e9d40c67457a11b8
+      internalID: 93119644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_36
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a2f577e7693f744b5adf0e6fbadcf3
+      internalID: 524257375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_37
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc1da271f9b39946b18f1fb6f5ddb2e
+      internalID: 778323056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_38
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5df3e7de20f22247b7d7874ee7b2f63
+      internalID: 91765905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_39
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38996d86165ee954082789f59498a735
+      internalID: 1762947583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_40
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdecbd8d9111bf4bb37f2d3508e6401
+      internalID: 1143698847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sebastian-sanchez-monospritesheet-export_41
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 60
+        width: 186
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75744ecbadc9b7842846207372737337
+      internalID: -2006748204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cb1cc7772f0ac0747bddd37818eedb65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sebastian-sanchez-monospritesheet-export_0: 2945546467685100878
+      sebastian-sanchez-monospritesheet-export_1: -51578891
+      sebastian-sanchez-monospritesheet-export_10: 1664910162
+      sebastian-sanchez-monospritesheet-export_11: 2095202781
+      sebastian-sanchez-monospritesheet-export_12: 75585633
+      sebastian-sanchez-monospritesheet-export_13: -1600861059
+      sebastian-sanchez-monospritesheet-export_14: -68398446
+      sebastian-sanchez-monospritesheet-export_15: 1842624649
+      sebastian-sanchez-monospritesheet-export_16: 5583820
+      sebastian-sanchez-monospritesheet-export_17: 907698150
+      sebastian-sanchez-monospritesheet-export_18: 1873575684
+      sebastian-sanchez-monospritesheet-export_19: 16960767
+      sebastian-sanchez-monospritesheet-export_2: -1144680270
+      sebastian-sanchez-monospritesheet-export_20: -838961156
+      sebastian-sanchez-monospritesheet-export_21: 37745114
+      sebastian-sanchez-monospritesheet-export_22: -2120977398
+      sebastian-sanchez-monospritesheet-export_23: 640168829
+      sebastian-sanchez-monospritesheet-export_24: 1409625632
+      sebastian-sanchez-monospritesheet-export_25: -1731472346
+      sebastian-sanchez-monospritesheet-export_26: 718158235
+      sebastian-sanchez-monospritesheet-export_27: 539120719
+      sebastian-sanchez-monospritesheet-export_28: -1505236214
+      sebastian-sanchez-monospritesheet-export_29: 1089100417
+      sebastian-sanchez-monospritesheet-export_3: 970363261
+      sebastian-sanchez-monospritesheet-export_30: -1205599333
+      sebastian-sanchez-monospritesheet-export_31: -1993628166
+      sebastian-sanchez-monospritesheet-export_32: 885200049
+      sebastian-sanchez-monospritesheet-export_33: 874335525
+      sebastian-sanchez-monospritesheet-export_34: -216185523
+      sebastian-sanchez-monospritesheet-export_35: 93119644
+      sebastian-sanchez-monospritesheet-export_36: 524257375
+      sebastian-sanchez-monospritesheet-export_37: 778323056
+      sebastian-sanchez-monospritesheet-export_38: 91765905
+      sebastian-sanchez-monospritesheet-export_39: 1762947583
+      sebastian-sanchez-monospritesheet-export_4: 1139259668
+      sebastian-sanchez-monospritesheet-export_40: 1143698847
+      sebastian-sanchez-monospritesheet-export_41: -2006748204
+      sebastian-sanchez-monospritesheet-export_5: 153934478
+      sebastian-sanchez-monospritesheet-export_6: -1875814706
+      sebastian-sanchez-monospritesheet-export_7: 1251523902
+      sebastian-sanchez-monospritesheet-export_8: 1991246359
+      sebastian-sanchez-monospritesheet-export_9: -1538823900
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
