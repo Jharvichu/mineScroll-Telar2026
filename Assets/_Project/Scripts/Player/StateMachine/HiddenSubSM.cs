@@ -89,7 +89,7 @@ namespace Player {
 				_hiddenData.GroundRaycastDistance,
 				_hiddenData.GroundLayer);
 
-            if (groundHitLeft && groundHitRight && _ctrlInput)
+            if ( groundHitLeft && groundHitRight && (_ctrlInput || _player.isCeilingBlocked) )
             {
                 ChangeState(HiddenState.Crouch);
             }
