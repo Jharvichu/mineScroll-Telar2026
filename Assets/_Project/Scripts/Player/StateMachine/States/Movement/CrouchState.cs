@@ -8,9 +8,11 @@ namespace Player.Movement.States
         private readonly SO_CrouchState _crouchData;
         private PlayerController _player;
         private Rigidbody2D _rb;
+        private Vector2 _originalColliderSize, _originalColliderOffset;
 
         private RaycastHit2D groundHitLeft, groundHitRight;
         private RaycastHit2D ceilingDetectionHit;
+        private CapsuleCollider2D _capsuleCollider;
 
         public CrouchState(SO_State data) : base(data)
         {
@@ -53,17 +55,19 @@ namespace Player.Movement.States
         private void TryEnterCrouchState()
         {
             _player.isCrouching = true;
-            Vector3 scale = _player.Rigidbody2D.transform.localScale;
-            scale.y = 0.5f;
-            _player.Rigidbody2D.transform.localScale = scale;
+            _capsuleCollider = (CapsuleCollider2D)_player.Collider2D;
+            _originalColliderSize = _capsuleCollider.size;
+            _originalColliderOffset = _capsuleCollider.offset;
+            _capsuleCollider.size = _crouchData.ColliderBoxSize;
+            _capsuleCollider.offset = _crouchData.ColliderBoxOffset;
         }
 
         private void TryExitCrouchState()
         {
             _player.isCrouching = false;
-            Vector3 scale = _player.Rigidbody2D.transform.localScale;
-            scale.y = 1f;
-            _player.Rigidbody2D.transform.localScale = scale;
+            _capsuleCollider = (CapsuleCollider2D)_player.Collider2D;
+            _capsuleCollider.size   = _originalColliderSize;
+            _capsuleCollider.offset = _originalColliderOffset;
         }
 
         private void HorizontalMove()
@@ -116,6 +120,8 @@ namespace Player.Movement.States
                 _crouchData.CeilingLayer
             );
 
+
+
             _player.isCeilingBlocked = ceilingDetectionHit.collider != null;
         }
 
@@ -127,14 +133,36 @@ namespace Player.Movement.States
 
         private void DrawCeilinglBoxCastDebug()
         {
+            // 1. Definir el origen exactamente igual que en DetectCeiling
             Vector2 origin = (Vector2)_player.transform.position + Vector2.up * _crouchData.CeilingBoxOffset;
-            Vector2 end = origin + Vector2.up * _crouchData.CeilingCheckDistance;
-            Vector2 half = _crouchData.CeilingBoxSize * 0.5f;
 
-            Debug.DrawLine(end + new Vector2(-half.x, -half.y), end + new Vector2(half.x, -half.y), Color.green);
-            Debug.DrawLine(end + new Vector2(half.x, -half.y), end + new Vector2(half.x, half.y), Color.green);
-            Debug.DrawLine(end + new Vector2(half.x, half.y), end + new Vector2(-half.x, half.y), Color.green);
-            Debug.DrawLine(end + new Vector2(-half.x, half.y), end + new Vector2(-half.x, -half.y), Color.green);
+            // 2. Definir la dirección y distancia
+            Vector2 direction = Vector2.up;
+            float distance = _crouchData.CeilingCheckDistance;
+            Vector2 size = _crouchData.CeilingBoxSize;
+            Vector2 half = size * 0.5f;
+
+            // 3. Posición final
+            Vector2 end = origin + direction * distance;
+
+            // Dibujar el cuadro en el ORIGEN (Rojo para saber de donde sale)
+            DrawRectangle(origin, half, Color.red);
+
+            // Dibujar el cuadro en el DESTINO (Verde para ver el alcance máximo)
+            DrawRectangle(end, half, Color.green);
+
+            // Opcional: Dibujar líneas conectoras para ver el volumen del "Cast"
+            Debug.DrawLine(origin + new Vector2(-half.x, half.y), end + new Vector2(-half.x, half.y), Color.yellow);
+            Debug.DrawLine(origin + new Vector2(half.x, half.y), end + new Vector2(half.x, half.y), Color.yellow);
+        }
+
+        // Método auxiliar para no repetir código de dibujo
+        private void DrawRectangle(Vector2 position, Vector2 half, Color color)
+        {
+            Debug.DrawLine(position + new Vector2(-half.x, -half.y), position + new Vector2(half.x, -half.y), color);
+            Debug.DrawLine(position + new Vector2(half.x, -half.y), position + new Vector2(half.x, half.y), color);
+            Debug.DrawLine(position + new Vector2(half.x, half.y), position + new Vector2(-half.x, half.y), color);
+            Debug.DrawLine(position + new Vector2(-half.x, half.y), position + new Vector2(-half.x, -half.y), color);
         }
 
         private void DrawGroundRaycastDebug()

@@ -23,6 +23,10 @@ namespace Player.Movement.States
         public float CeilingBoxOffset;
         public float CeilingCheckDistance;
 
+        [Header("Collider Crouch")]
+        public Vector2 ColliderBoxSize;
+        public Vector2 ColliderBoxOffset;
+
         public SO_CrouchState()
         {
             State = new CrouchState(this);
