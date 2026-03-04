@@ -17,11 +17,11 @@ MonoBehaviour:
   WallLayer:
     serializedVersion: 2
     m_Bits: 8
-  WallBoxSize: {x: 0.5, y: 1.2}
-  WallBoxOffset: 0.5
+  WallBoxSize: {x: 0.4, y: 2}
+  WallBoxOffset: 1
   WallBoxDistance: 0.25
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  GroundRaycastDistance: 0.5
-  GroundRaycastAmplitude: 0.9
+  GroundRaycastDistance: 0.3
+  GroundRaycastAmplitude: 0.3
