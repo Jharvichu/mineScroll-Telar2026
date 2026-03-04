@@ -172,6 +172,7 @@ namespace Player {
 
 		private void DrawGroundLines()
 		{
+			Debug.Log("Se ejecutaGroundLines");
 			//Left Line
 			Debug.DrawLine(
 				(Vector2)_player.transform.position - Vector2.right * _movementData.GroundRaycastAmplitude,

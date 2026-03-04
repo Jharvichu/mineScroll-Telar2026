@@ -22,9 +22,9 @@ MonoBehaviour:
   LedgeAboveLayer:
     serializedVersion: 2
     m_Bits: 8
-  LedgeRaycastMiddleDistance: 1.2
+  LedgeRaycastMiddleDistance: 2.25
   LedgeMiddleHeight: 0.3
-  LedgeRaycastTopDistance: 2.5
+  LedgeRaycastTopDistance: 3.5
   LedgeTopHeight: 0.3
   LedgeBelowLayer:
     serializedVersion: 2
