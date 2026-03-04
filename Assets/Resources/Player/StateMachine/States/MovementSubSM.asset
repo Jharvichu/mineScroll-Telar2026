@@ -31,9 +31,9 @@ MonoBehaviour:
   CliffLayer:
     serializedVersion: 2
     m_Bits: 8
-  CliffRaycastMiddleDistance: 1
+  CliffRaycastMiddleDistance: 1.2
   CliffMiddleHeight: 0.3
-  CliffRaycastTopDistance: 1.6
+  CliffRaycastTopDistance: 1.8
   CliffTopHeight: 0.3
   HiddenSpotLayer:
     serializedVersion: 2
