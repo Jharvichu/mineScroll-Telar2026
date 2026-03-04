@@ -1,24 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ParallaxManager : MonoBehaviour
 {
-    public float parallaxSpeed = 0.5f;
-
-    private Transform cam;
-    private Vector3 lastCamPos;
-
+    private float starPosition, length;
+    [SerializeField] private GameObject cam;
+    [SerializeField] private float parallaxEffect;
     void Start()
     {
-        cam = Camera.main.transform;
-        lastCamPos = cam.position;
+        starPosition = transform.position.x;
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
-        float deltaX = cam.position.x - lastCamPos.x;
+        float distance = cam.transform.position.x * parallaxEffect;
+        float movement = cam.transform.position.x * (1 - parallaxEffect);
+        transform.position = new Vector3(starPosition + distance, transform.position.y, transform.position.z);
 
-        transform.position += new Vector3(deltaX * parallaxSpeed, 0f, 0f);
+        if (movement > starPosition + length)
+        {
+            starPosition += length;
+        }
+        else if (movement < starPosition - length)
+        {
+            starPosition -= length;
+        }
 
-        lastCamPos = cam.position;
     }
 }
