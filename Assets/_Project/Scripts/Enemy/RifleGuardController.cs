@@ -54,7 +54,8 @@ public class RifleGuardController : MonoBehaviour
 
             case State.Investigate:
                 MoveTowards(lastKnownPosition, suspiciousSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     ChangeState(State.Search);
                 }
@@ -62,11 +63,9 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.Aiming:
-                
                 timer += Time.deltaTime;
                 if (timer >= aimTime)
                 {
-                    
                     if (targetPlayer != null && !targetPlayer.isHidden)
                     {
                         Debug.Log("¡BANG! Un solo tiro. GAME OVER.");
@@ -74,8 +73,7 @@ public class RifleGuardController : MonoBehaviour
                     }
                     else
                     {
-                        
-                        Debug.Log("¡Lo perdí de vista en la maleza! Voy a investigar...");
+                        Debug.Log("¡Lo perdí de vista! Investigando...");
                         ChangeState(State.Search);
                     }
                 }
@@ -83,7 +81,8 @@ public class RifleGuardController : MonoBehaviour
 
             case State.Search:
                 MoveTowards(lastKnownPosition, patrolSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     timer += Time.deltaTime;
                     if (timer >= searchTime) ChangeState(State.Return); 
@@ -93,7 +92,8 @@ public class RifleGuardController : MonoBehaviour
 
             case State.Return:
                 MoveTowards(currentPatrolTarget.position, patrolSpeed);
-                if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
                 {
                     ChangeState(State.Patrol); 
                 }
@@ -147,7 +147,8 @@ public class RifleGuardController : MonoBehaviour
 
     void CheckPatrolPoints()
     {
-        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+        
+        if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
         {
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
         }
