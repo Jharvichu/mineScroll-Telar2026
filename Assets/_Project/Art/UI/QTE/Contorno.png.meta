@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a63cd07f837c38846b1b3af8e773c08b
+guid: 0e7aa18fc32aaff47bde35f375408de7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7781736531859086505
-    second: sacos_0
-  - first:
-      213: 3212224199999207532
-    second: sacos_1
+      213: 1576896064777518698
+    second: Contorno_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sacos_0
+      name: Contorno_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 12
-        width: 773
-        height: 555
+        x: 0
+        y: 0
+        width: 720
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ac142575284efb60800000000000000
-      internalID: 7781736531859086505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sacos_1
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 110
-        width: 16
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c68bddb04ec149c20800000000000000
-      internalID: 3212224199999207532
+      spriteID: a6e76ccbd9242e510800000000000000
+      internalID: 1576896064777518698
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sacos_0: 7781736531859086505
-      sacos_1: 3212224199999207532
+      Contorno_0: 1576896064777518698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -48,16 +48,15 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.SuspicionWait:
-                
                 timer += Time.deltaTime;
                 if (timer >= reactionTime) ChangeState(State.Investigate);
                 DetectPlayer(); 
                 break;
 
             case State.Investigate:
-                
                 MoveTowards(lastKnownPosition, suspiciousSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     ChangeState(State.Search); 
                 }
@@ -65,7 +64,6 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.AlertWait:
-                
                 timer += Time.deltaTime;
                 if (timer >= reactionTime) ChangeState(State.Chase);
                 break;
@@ -76,14 +74,14 @@ public class EnemyController : MonoBehaviour
                     MoveTowards(targetPlayer.transform.position, chaseSpeed);
                     lastKnownPosition = targetPlayer.transform.position;
 
-                    // Te atrapó
+                    
                     if (Vector2.Distance(transform.position, targetPlayer.transform.position) <= catchDistance)
                     {
                         Debug.Log("¡GAME OVER! El guardia te atrapó.");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
 
-                    // Te escondiste a tiempo
+                    
                     if (targetPlayer.isHidden)
                     {
                         Debug.Log("¡Se escondió! Buscando...");
@@ -94,7 +92,8 @@ public class EnemyController : MonoBehaviour
 
             case State.Search:
                 MoveTowards(lastKnownPosition, patrolSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     timer += Time.deltaTime;
                     if (timer >= searchTime) ChangeState(State.Return); 
@@ -104,7 +103,8 @@ public class EnemyController : MonoBehaviour
 
             case State.Return:
                 MoveTowards(currentPatrolTarget.position, patrolSpeed);
-                if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
                 {
                     ChangeState(State.Patrol); 
                 }
@@ -159,10 +159,10 @@ public class EnemyController : MonoBehaviour
 
     void CheckPatrolPoints()
     {
-        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+        
+        if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
         {
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
-          
         }
     }
 
