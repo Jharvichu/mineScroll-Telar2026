@@ -12,21 +12,33 @@ public class CinematicPrologue : MonoBehaviour
     public Animator animCamioneta;
     public Camera mainCamera;
     
-    [Header("Interfaz QTE")]
+    [Header("Interfaz y POV")]
     public CircularQTE qteUI;
+    public GameObject hudCamaraPOV; 
 
-    [Header("Marcadores de Movimiento (Waypoints)")]
+    [Header("Marcadores de Movimiento (Carrillo)")]
     public Transform punto1;
     public Transform punto2;
     public Transform punto3;
     public Transform puntoFinal;
 
+    [Header("Encuadres y Camioneta")]
+    public Transform encuadre1; 
+    public Transform encuadre2; 
+    public Transform encuadreCamioneta; 
+    public Transform destinoCamioneta; 
+
     [Header("Configuraciones")]
     public float velocidadCaminar = 3f;
+    public float velocidadCamioneta = 15f; 
+    
+    [Tooltip("Segundos reales antes de fallar el QTE de la camioneta")]
+    public float tiempoLimiteCamioneta = 1.5f; 
+
     private float tamañoCamaraOriginal;
     private Vector3 posicionCamaraOriginal;
+    private Vector3 escalaOriginalCarrillo; 
 
-    
     private bool intentoTerminado = false;
     private bool exitoQTE = false;
 
@@ -34,7 +46,9 @@ public class CinematicPrologue : MonoBehaviour
     {
         tamañoCamaraOriginal = mainCamera.orthographicSize;
         posicionCamaraOriginal = mainCamera.transform.position;
+        escalaOriginalCarrillo = actorCarrillo.localScale; 
         
+        if (hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
         
         StartCoroutine(SecuenciaCinematica());
     }
@@ -45,22 +59,31 @@ public class CinematicPrologue : MonoBehaviour
         yield return MoverActor(actorCarrillo, animCarrillo, punto1.position);
 
         
-        yield return EjecutarQTE(150f, 90f, 45f, new Vector2(0, 0), true);
+        if(encuadre1 != null) yield return MoverCamara(encuadre1.position, 0.5f);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
+        yield return EjecutarQTE(150f, 90f, 45f, new Vector2(0, 0), true, 0f);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
+        yield return MoverCamara(posicionCamaraOriginal, 0.5f);
 
         
         yield return MoverActor(actorCarrillo, animCarrillo, punto2.position);
 
         
-        yield return EjecutarQTE(180f, 200f, 30f, new Vector2(150, 100), true);
+        if(encuadre2 != null) yield return MoverCamara(encuadre2.position, 0.5f);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
+        yield return EjecutarQTE(180f, 200f, 30f, new Vector2(150, 100), true, 0f);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
+        yield return MoverCamara(posicionCamaraOriginal, 0.5f);
 
-       
+        
         yield return MoverActor(actorCarrillo, animCarrillo, punto3.position);
-        actorCarrillo.localScale = new Vector3(-1, 1, 1); 
+        actorCarrillo.localScale = new Vector3(-Mathf.Abs(escalaOriginalCarrillo.x), escalaOriginalCarrillo.y, escalaOriginalCarrillo.z); 
         animCarrillo.Play("Idle");
 
         
         yield return MoverCamara(actorCamioneta.position, 0.5f); 
         animCamioneta.Play("Camioneta_Acercandose"); 
+        StartCoroutine(MoverVehiculo(actorCamioneta, destinoCamioneta.position, velocidadCamioneta));
         
         
         yield return new WaitForSeconds(1.5f);
@@ -70,30 +93,31 @@ public class CinematicPrologue : MonoBehaviour
         
         yield return new WaitForSeconds(1f); 
         
+        if(encuadreCamioneta != null) yield return MoverCamara(encuadreCamioneta.position, 0.2f);
         mainCamera.orthographicSize = tamañoCamaraOriginal - 2f; 
         Time.timeScale = 0.3f; 
         
         
-        yield return EjecutarQTE(400f, 45f, 50f, new Vector2(0, -100), false);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
+        
+        yield return EjecutarQTE(400f, 135f, 60f, new Vector2(0, -100), false, tiempoLimiteCamioneta);
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
         
         
         Time.timeScale = 1f;
         mainCamera.orthographicSize = tamañoCamaraOriginal;
+        yield return MoverCamara(posicionCamaraOriginal, 0.5f);
         
         
         yield return new WaitForSeconds(1.5f); 
 
         
         actorCarrillo.gameObject.SetActive(true);
-        actorCarrillo.localScale = new Vector3(1, 1, 1);
+        actorCarrillo.localScale = new Vector3(Mathf.Abs(escalaOriginalCarrillo.x), escalaOriginalCarrillo.y, escalaOriginalCarrillo.z);
         yield return MoverActor(actorCarrillo, animCarrillo, puntoFinal.position);
 
-        
-        Debug.Log("Cinemática Terminada. Cargando Siguiente Nivel...");
-        // SceneManager.LoadScene("");
+        Debug.Log("Cinemática Terminada.");
     }
-
-    
 
     IEnumerator MoverActor(Transform actor, Animator anim, Vector3 destino)
     {
@@ -101,9 +125,18 @@ public class CinematicPrologue : MonoBehaviour
         while (Vector2.Distance(actor.position, destino) > 0.1f)
         {
             actor.position = Vector2.MoveTowards(actor.position, destino, velocidadCaminar * Time.deltaTime);
-            yield return null;
+            yield return null; 
         }
         anim.Play("Idle");
+    }
+
+    IEnumerator MoverVehiculo(Transform vehiculo, Vector3 destino, float velocidad)
+    {
+        while (Vector2.Distance(vehiculo.position, destino) > 0.1f)
+        {
+            vehiculo.position = Vector2.MoveTowards(vehiculo.position, destino, velocidad * Time.deltaTime);
+            yield return null;
+        }
     }
 
     IEnumerator MoverCamara(Vector3 destino, float duracionViaje)
@@ -121,7 +154,8 @@ public class CinematicPrologue : MonoBehaviour
         mainCamera.transform.position = posicionFinal;
     }
 
-    IEnumerator EjecutarQTE(float vel, float angulo, float tamaño, Vector2 pos, bool esInfinito)
+    
+    IEnumerator EjecutarQTE(float vel, float angulo, float tamaño, Vector2 pos, bool esInfinito, float tiempoLimite)
     {
         bool qteResuelto = false;
         animCarrillo.Play("Foto");
@@ -130,14 +164,29 @@ public class CinematicPrologue : MonoBehaviour
         {
             intentoTerminado = false;
             exitoQTE = false;
+            float tiempoActual = 0f; 
 
-            
             qteUI.StartQTE(vel, angulo, tamaño, pos, 
                 () => { exitoQTE = true; intentoTerminado = true; }, 
                 () => { exitoQTE = false; intentoTerminado = true; });
 
             
-            yield return new WaitUntil(() => intentoTerminado);
+            while (!intentoTerminado)
+            {
+                if (tiempoLimite > 0f)
+                {
+                    
+                    tiempoActual += Time.unscaledDeltaTime; 
+                    if (tiempoActual >= tiempoLimite)
+                    {
+                        Debug.Log("¡Se te escapó la camioneta!");
+                        qteUI.gameObject.SetActive(false); 
+                        exitoQTE = false;
+                        intentoTerminado = true;
+                    }
+                }
+                yield return null; 
+            }
 
             if (exitoQTE)
             {
@@ -148,6 +197,7 @@ public class CinematicPrologue : MonoBehaviour
                 if (esInfinito)
                 {
                     animCarrillo.Play("Idle"); 
+                    qteUI.gameObject.SetActive(false);
                     yield return new WaitForSeconds(1f); 
                     animCarrillo.Play("Foto"); 
                 }
