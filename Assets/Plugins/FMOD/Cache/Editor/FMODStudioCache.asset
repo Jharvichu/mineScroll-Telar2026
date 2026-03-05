@@ -248,7 +248,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083109395787173
+  lastModified: 639083134914065312
   FileSizes:
   - Name: 
     Value: 1778
@@ -397,7 +397,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639083109395921084
+  cacheTime: 639083134914315534
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639083109395692914
+  lastModified: 639083134913838064
   FileSizes: []
   Exists: 1
 --- !u!114 &5779934979176659596
@@ -752,7 +752,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639083109395577881
+  lastModified: 639083134913569591
   FileSizes: []
   Exists: 1
 --- !u!114 &6422425231777052102
@@ -794,7 +794,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639083109395921084
+  lastModified: 639083134914315534
   FileSizes: []
   Exists: 1
 --- !u!114 &8600949703349748133
