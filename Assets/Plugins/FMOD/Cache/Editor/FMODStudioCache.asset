@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -1367705940
     Data4: -475227002
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
     Data3: -1555399260
     Data4: -457276930
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     Data3: 1678150050
     Data4: 2048824643
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -82,26 +82,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7871753664205017458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../COMMISSIONS/TELAR/BGM/FMOD/Minescroller/Minescroller/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639082794119634234
-  FileSizes:
-  - Name: 
-    Value: 1778
-  Exists: 1
 --- !u!114 &-7324851613758367857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +101,7 @@ MonoBehaviour:
     Data3: -51979844
     Data4: -1029254638
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -244,7 +224,7 @@ MonoBehaviour:
     Data3: -459592801
     Data4: -252231103
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -253,6 +233,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 48000
+--- !u!114 &-2579895866476248121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639083101992232776
+  FileSizes:
+  - Name: 
+    Value: 1778
+  Exists: 1
 --- !u!114 &-2264309288359858131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
     Data3: -1593429865
     Data4: 1997000302
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -280,24 +280,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 400
---- !u!114 &-1637709474112956661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../COMMISSIONS/TELAR/BGM/FMOD/Minescroller/Minescroller/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639082794119634234
-  FileSizes: []
-  Exists: 1
 --- !u!114 &-1586912743549556476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +299,7 @@ MonoBehaviour:
     Data3: -2027249782
     Data4: -1964612105
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -344,7 +326,7 @@ MonoBehaviour:
     Data3: 312641947
     Data4: -645416814
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -389,10 +371,10 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7871753664205017458}
-  - {fileID: 3145729617128260508}
-  - {fileID: -1637709474112956661}
-  - {fileID: 1503112955968956143}
+  - {fileID: -2579895866476248121}
+  - {fileID: 6331880356006365250}
+  - {fileID: 5422211246897799908}
+  - {fileID: 6972750501659571960}
   EditorEvents:
   - {fileID: 2122573705285682286}
   - {fileID: 6118572029877477653}
@@ -411,11 +393,11 @@ MonoBehaviour:
   - {fileID: -2264309288359858131}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1637709474112956661}
+  - {fileID: 5422211246897799908}
   StringsBanks:
-  - {fileID: -7871753664205017458}
+  - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639082819821068482
+  cacheTime: 639083101992807789
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -466,7 +448,7 @@ MonoBehaviour:
     Data3: -236171381
     Data4: -118319785
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -496,7 +478,7 @@ MonoBehaviour:
     Data3: -1635652218
     Data4: 976348004
   Banks:
-  - {fileID: 1503112955968956143}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -504,24 +486,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1503112955968956143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../../COMMISSIONS/TELAR/BGM/FMOD/Minescroller/Minescroller/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 639082819821068482
-  FileSizes: []
-  Exists: 1
 --- !u!114 &1671857887835522442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +505,7 @@ MonoBehaviour:
     Data3: -1624620886
     Data4: -248747865
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -569,7 +533,7 @@ MonoBehaviour:
     Data3: -1393489489
     Data4: 580798848
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -628,24 +592,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &3145729617128260508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: ../../COMMISSIONS/TELAR/BGM/FMOD/Minescroller/Minescroller/Build/Desktop/BGM.bank
-  Name: BGM
-  StudioPath: bank:/BGM
-  lastModified: 639082722707531627
-  FileSizes: []
-  Exists: 1
 --- !u!114 &4529805196552747894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,6 +640,24 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5422211246897799908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639083101992227434
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5779934979176659596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +701,7 @@ MonoBehaviour:
     Data3: 1904591240
     Data4: -1979282322
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -765,7 +729,7 @@ MonoBehaviour:
     Data3: 1254932619
     Data4: -1027168801
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -773,6 +737,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 85714
+--- !u!114 &6331880356006365250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 639083101992190732
+  FileSizes: []
+  Exists: 1
 --- !u!114 &6422425231777052102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +779,24 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6972750501659571960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 639083101992807789
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8600949703349748133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,7 +816,7 @@ MonoBehaviour:
     Data3: 911079085
     Data4: -2132649412
   Banks:
-  - {fileID: 3145729617128260508}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
