@@ -3776,7 +3776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionPanel: {fileID: 815994984}
   transitionTime: 1
-  siguienteEscena: Intermedio1
+  siguienteEscena: Intermedio2
 --- !u!61 &1204151071
 BoxCollider2D:
   m_ObjectHideFlags: 0
