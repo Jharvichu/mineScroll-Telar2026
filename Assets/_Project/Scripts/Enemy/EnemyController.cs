@@ -213,7 +213,8 @@ public class EnemyController : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
 
-       
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOverL1");
     }
 }

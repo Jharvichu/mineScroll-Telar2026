@@ -1,0 +1,4 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/TryAgainButton/TryAgainButton.uss?fileID=7433441132597879392&amp;guid=3f035cdf86377d1488c834561c3eda67&amp;type=3#TryAgainButton" />
+    <ui:Button text="Intentar de nuevo" name="tryagain-button" style="width: 676px; height: 118px; transform-origin: center; translate: -2px 833px; align-items: center; justify-content: flex-end; align-self: center; align-content: center; font-size: 60px; -unity-font-style: bold;" />
+</ui:UXML>
