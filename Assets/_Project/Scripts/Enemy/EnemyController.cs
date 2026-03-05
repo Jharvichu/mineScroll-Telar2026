@@ -75,6 +75,7 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.AlertWait:
+                AudioManager.Instance.SetBGMParameter("player_chase", 1f);
                 timer += Time.deltaTime;
                 if (timer >= reactionTime) ChangeState(State.Chase);
                 break;
@@ -111,6 +112,7 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.Return:
+                AudioManager.Instance.SetBGMParameter("player_chase", 0f);
                 MoveTowards(currentPatrolTarget.position, patrolSpeed);
                 if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
                 {

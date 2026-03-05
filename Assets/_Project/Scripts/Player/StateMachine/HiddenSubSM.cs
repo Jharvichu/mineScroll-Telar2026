@@ -27,6 +27,7 @@ namespace Player {
 		{
             Debug.Log("Enter to Hidden State");
 			HidePlayerBehindObstacle(_player.CurrentHidingSpotCollider);
+            AudioManager.Instance.SetBGMParameter("escondido", 1f);
             ChangeState(HiddenState.Ground);
 			base.EnterState();
 		}
@@ -46,6 +47,7 @@ namespace Player {
         public override void ExitState()
         {
 			ShowPlayerInFront();
+            AudioManager.Instance.SetBGMParameter("escondido", 0f);
             base.ExitState();
         }
 

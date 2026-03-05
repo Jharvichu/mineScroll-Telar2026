@@ -2173,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1230518986984831556, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.66
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 2468238149358495018, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_LayerOverridePriority
@@ -2183,6 +2183,10 @@ PrefabInstance:
       propertyPath: Sombra
       value: 
       objectReference: {fileID: 775604635}
+    - target: {fileID: 6916198957023407052, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: orthographic size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8016099838247155664, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_Name
       value: Player

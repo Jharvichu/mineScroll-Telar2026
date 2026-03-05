@@ -205,6 +205,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2912312805026239162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_Trepar
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_Trepar
+  Guid:
+    Data1: -165413570
+    Data2: 1194281298
+    Data3: 1301202367
+    Data4: 942692078
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 558
 --- !u!114 &-2657523535847103590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,10 +275,10 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083109395787173
+  lastModified: 639083176421724186
   FileSizes:
   - Name: 
-    Value: 1778
+    Value: 1866
   Exists: 1
 --- !u!114 &-2264309288359858131
 MonoBehaviour:
@@ -375,6 +402,7 @@ MonoBehaviour:
   - {fileID: 6331880356006365250}
   - {fileID: 5422211246897799908}
   - {fileID: 6972750501659571960}
+  - {fileID: 8125322815936940093}
   EditorEvents:
   - {fileID: 2122573705285682286}
   - {fileID: 6118572029877477653}
@@ -391,13 +419,14 @@ MonoBehaviour:
   - {fileID: -7324851613758367857}
   - {fileID: 1195901074411106801}
   - {fileID: -2264309288359858131}
+  - {fileID: -2912312805026239162}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5422211246897799908}
   StringsBanks:
   - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639083109395921084
+  cacheTime: 639083176422958570
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -429,6 +458,8 @@ MonoBehaviour:
     index: 13
   - key: event:/SFX_PLAYER_Pasos
     index: 14
+  - key: event:/SFX_PLAYER_Trepar
+    index: 15
 --- !u!114 &1037833420838008915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +686,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639083109395692914
+  lastModified: 639083176421719162
   FileSizes: []
   Exists: 1
 --- !u!114 &5779934979176659596
@@ -752,7 +783,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639083109395577881
+  lastModified: 639083133759954477
   FileSizes: []
   Exists: 1
 --- !u!114 &6422425231777052102
@@ -794,7 +825,25 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639083109395921084
+  lastModified: 639083176422936919
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8125322815936940093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AMBIANCE.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/AMBIANCE.bank
+  Name: AMBIANCE
+  StudioPath: bank:/AMBIANCE
+  lastModified: 639083176422958570
   FileSizes: []
   Exists: 1
 --- !u!114 &8600949703349748133
