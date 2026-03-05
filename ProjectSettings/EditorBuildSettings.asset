@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Prologo/PrologoScene.unity
     guid: 29916cc3a0809d04d8f8b0e14dbdca4c
   - enabled: 1
+    path: Assets/_Project/Scenes/Orilla.unity
+    guid: 89e2d9c2d9b8eab4285061d3881a4a7e
+  - enabled: 1
     path: Assets/_Project/Scenes/MenuTest/ControlsScene.unity
     guid: 2a376a20df926e94a89e51660b5ec66c
   - enabled: 1
