@@ -11,6 +11,7 @@ namespace Player {
 		private PlayerController _player;
 
 		private int _originalSortingOrder;
+        private string _originalSortingLayerName; 
 
 		public HiddenSubSM(SO_StateMachine data) : base(data)
 		{
@@ -71,13 +72,29 @@ namespace Player {
 
         private void HidePlayerBehindObstacle(Collider2D obstacleCollision)
         {
-            _originalSortingOrder = _player.SpriteRenderer.sortingOrder;
-            _player.SpriteRenderer.sortingOrder = obstacleCollision.GetComponent<SpriteRenderer>().sortingOrder - 1;
+            if (obstacleCollision == null) return;
+
+            SpriteRenderer obstacleSprite = obstacleCollision.GetComponent<SpriteRenderer>();
+            if (obstacleSprite == null) obstacleSprite = obstacleCollision.GetComponentInChildren<SpriteRenderer>();
+            if (obstacleSprite == null) obstacleSprite = obstacleCollision.GetComponentInParent<SpriteRenderer>();
+
+            if (obstacleSprite != null)
+            {
+                _originalSortingOrder = _player.SpriteRenderer.sortingOrder;
+                _originalSortingLayerName = _player.SpriteRenderer.sortingLayerName; 
+
+                _player.SpriteRenderer.sortingLayerName = obstacleSprite.sortingLayerName;
+                
+                
+                _player.SpriteRenderer.sortingOrder = obstacleSprite.sortingOrder + 1; 
+            }
         }
 
         private void ShowPlayerInFront()
         {
+            
             _player.SpriteRenderer.sortingOrder = _originalSortingOrder;
+            _player.SpriteRenderer.sortingLayerName = _originalSortingLayerName; 
         }
 
         private void DrawDebug()

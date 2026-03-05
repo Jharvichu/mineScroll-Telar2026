@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class DialogoOrilla : MonoBehaviour
 {
     [System.Serializable]
@@ -10,6 +11,7 @@ public class DialogoOrilla : MonoBehaviour
         [TextArea(3, 5)]
         public string text;
     }
+    public OrillaaTuto cambioEscena;
 
     [Header("UI References")]
     public GameObject panelA;
@@ -48,6 +50,7 @@ public class DialogoOrilla : MonoBehaviour
         }
 
         Debug.Log("Diálogo terminado");
+        cambioEscena.IrATutorial();
     }
 
     IEnumerator ShowLine(GameObject panel, TextMeshProUGUI textUI, string message)

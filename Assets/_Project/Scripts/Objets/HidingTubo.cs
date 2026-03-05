@@ -24,7 +24,7 @@ public class HidingTube : MonoBehaviour
         if (collision.TryGetComponent(out PlayerController player))
         {
             tubeManager.playerEnteredSection(player);
-            SetCeilingActive(true);
+            
         }
     }
 
@@ -33,7 +33,7 @@ public class HidingTube : MonoBehaviour
         if (collision.TryGetComponent(out PlayerController player))
         {
             tubeManager.playerLeftSection(player);
-            SetCeilingActive(false);
+            SetCeilingActive(false); 
         }
     }
 
@@ -43,14 +43,11 @@ public class HidingTube : MonoBehaviour
 
         if (collision.TryGetComponent(out PlayerController player))
         {
-            if (player.isCrouching && player.isHidden)
-            {
-                player.isHidden = true;
-                SetCeilingActive(true);
-            }
+            
+            
+            SetCeilingActive(player.isHidden);
         }
     }
-
 
     private void SetCeilingActive(bool state)
     {
