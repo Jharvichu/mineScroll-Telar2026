@@ -157,6 +157,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-5910144129018910994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MONO
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MONO
+  Guid:
+    Data1: 414863422
+    Data2: 1202694857
+    Data3: 1441757595
+    Data4: -391032264
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1750
 --- !u!114 &-5705318852817274318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +232,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3254831445740594455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_CARRO
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_CARRO
+  Guid:
+    Data1: -1206784216
+    Data2: 1207545114
+    Data3: 1644895115
+    Data4: -536246181
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 12000
 --- !u!114 &-2912312805026239162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +286,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 878
+--- !u!114 &-2761586498366750418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_PrepareCamera
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_PrepareCamera
+  Guid:
+    Data1: 1592829649
+    Data2: 1079535492
+    Data3: -231373679
+    Data4: -1331452283
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1104
 --- !u!114 &-2657523535847103590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,11 +356,38 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083201704714764
+  lastModified: 639083304624129871
   FileSizes:
   - Name: 
-    Value: 1866
+    Value: 2216
   Exists: 1
+--- !u!114 &-2302966564442552023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MOTOS
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MOTOS
+  Guid:
+    Data1: 1363202696
+    Data2: 1154577591
+    Data3: 511175096
+    Data4: -2089419463
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3010
 --- !u!114 &-2264309288359858131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +442,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1430689320399321280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_CameraShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_CameraShot
+  Guid:
+    Data1: 1567837163
+    Data2: 1094886116
+    Data3: -1436961109
+    Data4: 240540850
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 268
 --- !u!114 &-386226855613666047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,13 +555,21 @@ MonoBehaviour:
   - {fileID: 1195901074411106801}
   - {fileID: -2264309288359858131}
   - {fileID: -2912312805026239162}
+  - {fileID: 9073718076101725066}
+  - {fileID: -5910144129018910994}
+  - {fileID: -2302966564442552023}
+  - {fileID: 2938446399258204711}
+  - {fileID: -2761586498366750418}
+  - {fileID: -1430689320399321280}
+  - {fileID: -3254831445740594455}
+  - {fileID: 1148712911291563830}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5422211246897799908}
   StringsBanks:
   - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639083201704749840
+  cacheTime: 639083304628366549
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -460,6 +603,22 @@ MonoBehaviour:
     index: 14
   - key: event:/SFX_PLAYER_Trepar
     index: 15
+  - key: event:/SFX_PLAYER_CameraShotFail
+    index: 16
+  - key: event:/SFX_MONO
+    index: 17
+  - key: event:/SFX_MOTOS
+    index: 18
+  - key: event:/SFX_PLAYER_HeartBeat
+    index: 19
+  - key: event:/SFX_PLAYER_PrepareCamera
+    index: 20
+  - key: event:/SFX_PLAYER_CameraShot
+    index: 21
+  - key: event:/SFX_CARRO
+    index: 22
+  - key: event:/AMB_Viento
+    index: 23
 --- !u!114 &1037833420838008915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +649,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 91428
+--- !u!114 &1148712911291563830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMB_Viento
+  m_EditorClassIdentifier: 
+  Path: event:/AMB_Viento
+  Guid:
+    Data1: -1682653659
+    Data2: 1288218551
+    Data3: -169022843
+    Data4: 1970738728
+  Banks:
+  - {fileID: 8125322815936940093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60000
 --- !u!114 &1195901074411106801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +809,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2938446399258204711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_HeartBeat
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_HeartBeat
+  Guid:
+    Data1: -447397233
+    Data2: 1249780538
+    Data3: 1806857632
+    Data4: -482132383
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &4529805196552747894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +899,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639083198700840559
+  lastModified: 639083304624124429
   FileSizes: []
   Exists: 1
 --- !u!114 &5779934979176659596
@@ -783,7 +996,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639083198700805154
+  lastModified: 639083256673227014
   FileSizes: []
   Exists: 1
 --- !u!114 &6422425231777052102
@@ -825,7 +1038,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639083201704749840
+  lastModified: 639083291296068325
   FileSizes: []
   Exists: 1
 --- !u!114 &8125322815936940093
@@ -843,7 +1056,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/AMBIANCE.bank
   Name: AMBIANCE
   StudioPath: bank:/AMBIANCE
-  lastModified: 639083201704714764
+  lastModified: 639083304628366549
   FileSizes: []
   Exists: 1
 --- !u!114 &8600949703349748133
@@ -899,3 +1112,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &9073718076101725066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_CameraShotFail
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_CameraShotFail
+  Guid:
+    Data1: 1410105367
+    Data2: 1300703481
+    Data3: 921126529
+    Data4: -329482021
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 258

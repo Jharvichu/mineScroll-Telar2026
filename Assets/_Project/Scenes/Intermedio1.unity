@@ -885,6 +885,34 @@ MonoBehaviour:
   actorCamioneta: {fileID: 211210440}
   animCamioneta: {fileID: 211210441}
   mainCamera: {fileID: 2103666425}
+  sfxPrepareCamera:
+    Guid:
+      Data1: 1592829649
+      Data2: 1079535492
+      Data3: -231373679
+      Data4: -1331452283
+    Path: event:/SFX_PLAYER_PrepareCamera
+  sfxCameraShot:
+    Guid:
+      Data1: 1567837163
+      Data2: 1094886116
+      Data3: -1436961109
+      Data4: 240540850
+    Path: event:/SFX_PLAYER_CameraShot
+  sfxCameraShotFail:
+    Guid:
+      Data1: 1410105367
+      Data2: 1300703481
+      Data3: 921126529
+      Data4: -329482021
+    Path: event:/SFX_PLAYER_CameraShotFail
+  sfxCamioneta:
+    Guid:
+      Data1: -1206784216
+      Data2: 1207545114
+      Data3: 1644895115
+      Data4: -536246181
+    Path: event:/SFX_CARRO
   qteUI: {fileID: 1705436396}
   hudCamaraPOV: {fileID: 1200687899}
   punto1: {fileID: 1682347060}
@@ -3216,6 +3244,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1515354189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515354191}
+  - component: {fileID: 1515354190}
+  m_Layer: 0
+  m_Name: SceneAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1515354190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515354189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f5ea5c0e5fdf4393b7289e5b4d665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmEvent:
+    Guid:
+      Data1: -1530460662
+      Data2: 1124834202
+      Data3: -1393489489
+      Data4: 580798848
+    Path: event:/CampAband_o_CampPrinc
+  bgmFadeTime: 2
+  ambienceEvent:
+    Guid:
+      Data1: -1682653659
+      Data2: 1288218551
+      Data3: -169022843
+      Data4: 1970738728
+    Path: event:/AMB_Viento
+  ambienceFadeTime: 2
+--- !u!4 &1515354191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515354189}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11976081, y: 4.1010623, z: -0.10223692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546979179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,6 +4353,7 @@ GameObject:
   - component: {fileID: 2088409874}
   - component: {fileID: 2088409876}
   - component: {fileID: 2088409875}
+  - component: {fileID: 2088409877}
   m_Layer: 0
   m_Name: Actor_Carrillo
   m_TagString: Untagged
@@ -4364,6 +4453,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2088409877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088409873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae7667e46fb3ec47b43b0efe99e9047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 710275715
+      Data2: 1160692655
+      Data3: -1593429865
+      Data4: 1997000302
+    Path: event:/SFX_PLAYER_Pasos
+  climbEvent:
+    Guid:
+      Data1: -165413570
+      Data2: 1194281298
+      Data3: 1301202367
+      Data4: 942692078
+    Path: event:/SFX_PLAYER_Trepar
+  heartbeatEvent:
+    Guid:
+      Data1: -447397233
+      Data2: 1249780538
+      Data3: 1806857632
+      Data4: -482132383
+    Path: event:/SFX_PLAYER_HeartBeat
 --- !u!1 &2092593090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,8 +4583,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2103666426}
   - component: {fileID: 2103666425}
-  - component: {fileID: 2103666424}
   - component: {fileID: 2103666427}
+  - component: {fileID: 2103666428}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4470,14 +4592,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2103666424
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103666423}
-  m_Enabled: 1
 --- !u!20 &2103666425
 Camera:
   m_ObjectHideFlags: 0
@@ -4588,6 +4702,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &2103666428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103666423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4612,3 +4740,4 @@ SceneRoots:
   - {fileID: 1808234843}
   - {fileID: 450825576}
   - {fileID: 1074025192}
+  - {fileID: 1515354191}
