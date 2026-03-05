@@ -25,6 +25,7 @@ public class CinematicPrologue : MonoBehaviour
     [Header("Encuadres y Camioneta")]
     public Transform encuadre1; 
     public Transform encuadre2; 
+    public Transform encuadreViendoCamioneta; 
     public Transform encuadreCamioneta; 
     public Transform destinoCamioneta; 
 
@@ -35,7 +36,7 @@ public class CinematicPrologue : MonoBehaviour
     [Tooltip("Segundos reales antes de fallar el QTE de la camioneta")]
     public float tiempoLimiteCamioneta = 1.5f; 
 
-    [Header("Transición Final (NUEVO)")]
+    [Header("Transición Final")]
     public GameObject transitionPanel; 
     public float transitionTime = 1f;
     public string siguienteEscena = "Nivel2"; 
@@ -63,8 +64,6 @@ public class CinematicPrologue : MonoBehaviour
     {
         
         yield return MoverActor(actorCarrillo, animCarrillo, punto1.position);
-
-        
         if(encuadre1 != null) yield return MoverCamara(encuadre1.position, 0.5f);
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
         yield return EjecutarQTE(150f, 90f, 45f, new Vector2(0, 0), true, 0f);
@@ -73,8 +72,6 @@ public class CinematicPrologue : MonoBehaviour
 
         
         yield return MoverActor(actorCarrillo, animCarrillo, punto2.position);
-
-        
         if(encuadre2 != null) yield return MoverCamara(encuadre2.position, 0.5f);
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
         yield return EjecutarQTE(180f, 200f, 30f, new Vector2(150, 100), true, 0f);
@@ -87,37 +84,40 @@ public class CinematicPrologue : MonoBehaviour
         animCarrillo.Play("Idle");
 
         
-        yield return MoverCamara(actorCamioneta.position, 0.5f); 
+        if(encuadreViendoCamioneta != null) 
+        {
+            yield return MoverCamara(encuadreViendoCamioneta.position, 0.5f); 
+        }
+        else 
+        {
+            yield return MoverCamara(actorCamioneta.position, 0.5f); 
+        }
+        
         animCamioneta.Play("Camioneta_Acercandose"); 
         StartCoroutine(MoverVehiculo(actorCamioneta, destinoCamioneta.position, velocidadCamioneta));
         
-        
+        // 5.
         yield return new WaitForSeconds(1.5f);
         actorCarrillo.gameObject.SetActive(false); 
         yield return MoverCamara(posicionCamaraOriginal, 0.5f);
 
-        
+        // 6.
         yield return new WaitForSeconds(1f); 
-        
         if(encuadreCamioneta != null) yield return MoverCamara(encuadreCamioneta.position, 0.2f);
         mainCamera.orthographicSize = tamañoCamaraOriginal - 2f; 
         Time.timeScale = 0.3f; 
         
-        
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
-        
         yield return EjecutarQTE(400f, 135f, 60f, new Vector2(0, -100), false, tiempoLimiteCamioneta);
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
         
-        
+        // 7.
         Time.timeScale = 1f;
         mainCamera.orthographicSize = tamañoCamaraOriginal;
         yield return MoverCamara(posicionCamaraOriginal, 0.5f);
         
-        
+        // 8.
         yield return new WaitForSeconds(1.5f); 
-
-        
         actorCarrillo.gameObject.SetActive(true);
         actorCarrillo.localScale = new Vector3(Mathf.Abs(escalaOriginalCarrillo.x), escalaOriginalCarrillo.y, escalaOriginalCarrillo.z);
         yield return MoverActor(actorCarrillo, animCarrillo, puntoFinal.position);
@@ -144,7 +144,7 @@ public class CinematicPrologue : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        Debug.Log("Viajando al Nivel 2...");
+        Debug.Log("Viajando al " + siguienteEscena + "...");
         SceneManager.LoadScene(siguienteEscena);
     }
 
@@ -183,7 +183,6 @@ public class CinematicPrologue : MonoBehaviour
         mainCamera.transform.position = posicionFinal;
     }
 
-    
     IEnumerator EjecutarQTE(float vel, float angulo, float tamaño, Vector2 pos, bool esInfinito, float tiempoLimite)
     {
         bool qteResuelto = false;
@@ -199,12 +198,10 @@ public class CinematicPrologue : MonoBehaviour
                 () => { exitoQTE = true; intentoTerminado = true; }, 
                 () => { exitoQTE = false; intentoTerminado = true; });
 
-            
             while (!intentoTerminado)
             {
                 if (tiempoLimite > 0f)
                 {
-                    
                     tiempoActual += Time.unscaledDeltaTime; 
                     if (tiempoActual >= tiempoLimite)
                     {

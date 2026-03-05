@@ -293,6 +293,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &71134425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71134426}
+  m_Layer: 0
+  m_Name: EncuadreViendoCamioneta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71134426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71134425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -93.6, y: -2.65, z: 0.6563657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101233982
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +893,7 @@ MonoBehaviour:
   puntoFinal: {fileID: 2073195120}
   encuadre1: {fileID: 840975262}
   encuadre2: {fileID: 1652392773}
+  encuadreViendoCamioneta: {fileID: 71134426}
   encuadreCamioneta: {fileID: 1588953489}
   destinoCamioneta: {fileID: 450825576}
   velocidadCaminar: 6
@@ -1738,7 +1770,7 @@ Transform:
   m_GameObject: {fileID: 840975261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: -6.73, z: 0.6563657}
+  m_LocalPosition: {x: -3.3, y: -3.56, z: 0.6563657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3296,7 +3328,7 @@ Transform:
   m_GameObject: {fileID: 1588953488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.98, y: -10.78, z: 0.6563657}
+  m_LocalPosition: {x: 6.89, y: -6.68, z: 0.6563657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3501,7 +3533,7 @@ Transform:
   m_GameObject: {fileID: 1652392772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.71, y: -6.8, z: 0.6563657}
+  m_LocalPosition: {x: 7.2, y: -4.45, z: 0.6563657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4576,6 +4608,7 @@ SceneRoots:
   - {fileID: 840975262}
   - {fileID: 1652392773}
   - {fileID: 1588953489}
+  - {fileID: 71134426}
   - {fileID: 1808234843}
   - {fileID: 450825576}
   - {fileID: 1074025192}
