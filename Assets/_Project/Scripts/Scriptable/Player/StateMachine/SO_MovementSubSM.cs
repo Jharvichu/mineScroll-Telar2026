@@ -29,6 +29,11 @@ namespace Player {
         public float DetectionRaycastDistance;
         public float DetectionRaycastAmplitude;
 
+        [Header("Hiding Spot Crouch Detection")]
+        public LayerMask HiddenSpotCrouchLayer;
+        public float DetectionRaycastOffSetY;
+        public float DetectionRaycastSizeY;
+
         [Header("Debug Options")]
 		public bool EnableDebug = false;
 

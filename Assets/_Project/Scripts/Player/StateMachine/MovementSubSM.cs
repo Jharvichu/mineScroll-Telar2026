@@ -60,12 +60,14 @@ namespace Player {
 			DrawGroundLines();
 			DrawCliffLines();
 			DrawDetectionLines();
+			DrawDetectionLine();
 
         }
 
         private void TryEnterHiddenState()
         {
-            if (GetCurrentState() as MovementState? != MovementState.Ground) return;
+            MovementState? currentState = GetCurrentState() as MovementState?;
+            if (currentState != MovementState.Ground && currentState != MovementState.Crouch) return;
             if (_player.CurrentHidingSpotCollider == null) return;
 
             RaycastHit2D hiddenSpotHitLeft = Physics2D.Raycast(
@@ -80,7 +82,21 @@ namespace Player {
                 _movementData.DetectionRaycastDistance,
                 _movementData.HiddenSpotLayer);
 
-            if (( _upInput && _player.canHide && (hiddenSpotHitLeft || hiddenSpotHitRight) ) || isHidding)
+            RaycastHit2D hiddenEntryHit = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.up * _movementData.DetectionRaycastOffSetY,
+                Vector2.up,
+                _movementData.DetectionRaycastSizeY,
+                _movementData.HiddenSpotCrouchLayer);
+
+			_player.isEntryHidding = hiddenEntryHit.collider != null;
+
+            if (_player.isCrouching && hiddenEntryHit.collider != null)
+			{
+				Debug.Log("Llego");
+                _player.isHidden = true;
+                _parent.ChangeState(PlayerState.Hidden);
+            }
+            else if (( _upInput && _player.canHide && (hiddenSpotHitLeft || hiddenSpotHitRight) ) || isHidding)
             {
 				isHidding = true;
 
@@ -172,7 +188,6 @@ namespace Player {
 
 		private void DrawGroundLines()
 		{
-			Debug.Log("Se ejecutaGroundLines");
 			//Left Line
 			Debug.DrawLine(
 				(Vector2)_player.transform.position - Vector2.right * _movementData.GroundRaycastAmplitude,
@@ -229,6 +244,16 @@ namespace Player {
                 Vector2.up * _movementData.DetectionRaycastDistance,
                 Color.cyan
             );
+        }
+
+        private void DrawDetectionLine()
+        {
+            Vector2 rayOrigin = (Vector2)_player.transform.position + (Vector2.up * _movementData.DetectionRaycastOffSetY);
+
+            Vector2 rayDirection = Vector2.up * _movementData.DetectionRaycastSizeY;
+            Vector2 rayDestination = rayOrigin + rayDirection;
+
+            Debug.DrawLine(rayOrigin, rayDestination, Color.yellow);
         }
     }
 }

@@ -51,11 +51,22 @@ namespace Player {
 
 		private void TryExitHiddenState()
         {
-			if (_downInput && _player.isHidden)
-			{
+            RaycastHit2D hiddenEntryHit = Physics2D.Raycast(
+                (Vector2)_player.transform.position + Vector2.up * _hiddenData.DetectionRaycastOffSetY,
+                Vector2.up,
+                _hiddenData.DetectionRaycastSizeY,
+                _hiddenData.HidingSpotCrouchLayer);
+
+            if (_downInput && _player.isHidden && !hiddenEntryHit)
+            {
 				_player.isHidden = false;
                 _parent.ChangeState(PlayerState.Movement);
 			}
+			else if (!_player.isHidden  && !_player.isCrouching)
+			{
+                _player.isHidden = false;
+                _parent.ChangeState(PlayerState.Movement);
+            }
 		}
 
         private void HidePlayerBehindObstacle(Collider2D obstacleCollision)
@@ -73,7 +84,9 @@ namespace Player {
 		{
 			if (!_hiddenData.EnableDebug) return;
 			DrawGroundLines();
-		}
+			DrawDetectionLine();
+
+        }
 
 		private void CheckGround()
 		{
@@ -119,5 +132,15 @@ namespace Player {
 				Color.cyan
 			);
 		}
+
+		private void DrawDetectionLine()
+		{
+            Debug.DrawLine(
+                (Vector2)_player.transform.position + Vector2.up * _hiddenData.DetectionRaycastOffSetY,
+                (Vector2)_player.transform.position +
+                Vector2.up * _hiddenData.DetectionRaycastOffSetY * _hiddenData.DetectionRaycastSizeY,
+                Color.yellow
+            );
+        }
 	}
 }

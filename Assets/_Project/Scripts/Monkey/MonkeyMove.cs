@@ -13,6 +13,7 @@ public class MonkeyMove : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+
     void Update()
     {
         if (mover && destino != null)
@@ -30,10 +31,7 @@ public class MonkeyMove : MonoBehaviour
                 mover = false;
                 animator.SetBool("isRunning", false);
 
-                if (destruirAlLlegar)
-                {
-                    Destroy(gameObject);
-                }
+                if (destruirAlLlegar) Destroy(gameObject);
             }
         }
     }

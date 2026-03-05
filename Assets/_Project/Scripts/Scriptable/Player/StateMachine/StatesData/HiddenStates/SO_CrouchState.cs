@@ -21,11 +21,19 @@ namespace Player.Hidden.States
         public float DetectionRaycastDistance;
         public float DetectionRaycastAmplitude;
 
+        public LayerMask HidingSpotCrouchLayer;
+        public float DetectionRaycastOffSetY;
+        public float DetectionRaycastSizeY;
+
         [Header("Ceiling Boxcast")]
         public LayerMask CeilingLayer;
         public Vector2 CeilingBoxSize;
         public float CeilingBoxOffset;
         public float CeilingCheckDistance;
+
+        [Header("Collider Crouch")]
+        public Vector2 ColliderBoxSize;
+        public Vector2 ColliderBoxOffset;
 
         public SO_CrouchState()
         {

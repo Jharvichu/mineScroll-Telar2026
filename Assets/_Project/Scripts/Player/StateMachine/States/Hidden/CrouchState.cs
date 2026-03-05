@@ -9,10 +9,12 @@ namespace Player.Hidden.States
         private readonly SO_CrouchState _crouchData;
         private PlayerController _player;
         private Rigidbody2D _rb;
+        private Vector2 _originalColliderSize, _originalColliderOffset;
 
         private RaycastHit2D groundHitLeft, groundHitRight;
         private RaycastHit2D hidingSpotHitLeft, hidingSpotHitRight;
         private RaycastHit2D ceilingDetectionHit;
+        private CapsuleCollider2D _capsuleCollider;
 
         public CrouchState(SO_State data) : base(data)
         {
@@ -54,23 +56,33 @@ namespace Player.Hidden.States
 
         private void TryEnterCrouchState()
         {
-            Vector3 scale = _player.Rigidbody2D.transform.localScale;
-            scale.y = 0.5f;
-            _player.Rigidbody2D.transform.localScale = scale;
+            _player.isCrouching = true;
+            _capsuleCollider = (CapsuleCollider2D)_player.Collider2D;
+            _originalColliderSize = _capsuleCollider.size;
+            _originalColliderOffset = _capsuleCollider.offset;
+            _capsuleCollider.size = _crouchData.ColliderBoxSize;
+            _capsuleCollider.offset = _crouchData.ColliderBoxOffset;
         }
 
         private void TryExitCrouchState()
         {
-            Vector3 scale = _player.Rigidbody2D.transform.localScale;
-            scale.y = 1f;
-            _player.Rigidbody2D.transform.localScale = scale;
+            _player.isCrouching = false;
+            _capsuleCollider = (CapsuleCollider2D)_player.Collider2D;
+            _capsuleCollider.size = _originalColliderSize;
+            _capsuleCollider.offset = _originalColliderOffset;
         }
 
         private void HorizontalMove()
         {
             float horizontalDirection = 0;
 
-            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
+            bool isStaticSpot = false;
+            if (_player.CurrentHidingSpotCollider != null)
+            {
+                isStaticSpot = _player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic");
+            }
+
+            if (isStaticSpot)
             {
                 horizontalDirection = 0;
             }
