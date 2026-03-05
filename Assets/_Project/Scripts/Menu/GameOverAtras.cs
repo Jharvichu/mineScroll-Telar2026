@@ -3,42 +3,26 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using System.Collections;
 
-public class MainMenuController : MonoBehaviour
+public class GameOverAtras : MonoBehaviour
+
 {
     public GameObject transition;
     public float transitionTime = 1f;
-
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
-        root.Q<Button>("PlayButton").clicked += () =>
+        // Botón Try Again
+        root.Q<Button>("tryagain-button").clicked += () =>
         {
-            StartCoroutine(Transicion("PrologoScene"));
-        };
-
-        root.Q<Button>("CreditsButton").clicked += () =>
-        {
-            StartCoroutine(Transicion("CreditsScene"));
-        };
-
-        root.Q<Button>("ControlsButton").clicked += () =>
-        {
-            StartCoroutine(Transicion("ControlsScene"));
-        };
-
-        root.Q<Button>("ExitButton").clicked += () =>
-        {
-            Application.Quit();
-            Debug.Log("Salí del juego");
+            string lastLevel = PlayerPrefs.GetString("LastLevel");
+            StartCoroutine(Transicion(lastLevel));
         };
     }
-
     IEnumerator Transicion(string escena)
     {
         transition.SetActive(true);
 
-        // Obtenemos el CanvasGroup del panel de transición
         CanvasGroup canvasGroup = transition.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
             canvasGroup = transition.AddComponent<CanvasGroup>();
@@ -56,7 +40,6 @@ public class MainMenuController : MonoBehaviour
 
         canvasGroup.alpha = 1f;
 
-        // Cargamos la escena
         SceneManager.LoadScene(escena);
     }
 }
