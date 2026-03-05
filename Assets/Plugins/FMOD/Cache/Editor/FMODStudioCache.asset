@@ -1,414 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8997157364830237560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Tutorial/activar_ambiente
-  m_EditorClassIdentifier: 
-  Name: activar_ambiente
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1098659479
-    data2: 1084253590
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-8525145430105643604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CampAband_o_CampPrinc/escondido
-  m_EditorClassIdentifier: 
-  Name: escondido
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2060316229
-    data2: 3656847902
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-8391302856711931082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Uchu/QuickTimeEvent
-  m_EditorClassIdentifier: 
-  Name: QuickTimeEvent
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 775828578
-    data2: 1932157553
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7842110111908066471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Ninas/QuickTimeEvent
-  m_EditorClassIdentifier: 
-  Name: QuickTimeEvent
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 775828578
-    data2: 1932157553
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7811304823226649614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Jungla_o_Campamento/jungla_o_campamento
-  m_EditorClassIdentifier: 
-  Name: jungla_o_campamento
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4221592807
-    data2: 759871879
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7545741509938780625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Jungla_o_Campamento/escondido
-  m_EditorClassIdentifier: 
-  Name: escondido
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2060316229
-    data2: 3656847902
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7183372891205170440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Prologo
-  m_EditorClassIdentifier: 
-  Path: event:/Prologo
-  Guid:
-    Data1: -495468659
-    Data2: 1197254612
-    Data3: -1555399260
-    Data4: -457276930
-  Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4972415670955917783}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 76235
---- !u!114 &-7051414977507195101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639083198700855805
-  FileSizes:
-  - Name: 
-    Value: 1778
-  Exists: 1
---- !u!114 &-6817461455483892568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX_MENU_Hover2
-  m_EditorClassIdentifier: 
-  Path: event:/SFX_MENU_Hover2
-  Guid:
-    Data1: -661869200
-    Data2: 1243642901
-    Data3: 1678150050
-    Data4: 2048824643
-  Banks:
-  - {fileID: -4009031378704139228}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4009031378704139228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/_Project/FMOD/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 639083198700942557
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2467010286665983820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/_Project/FMOD/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639083198700840559
-  FileSizes: []
-  Exists: 1
---- !u!114 &-631879961242485509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Motos
-  m_EditorClassIdentifier: 
-  Path: event:/Motos
-  Guid:
-    Data1: 461959932
-    Data2: 1143555373
-    Data3: -459592801
-    Data4: -252231103
-  Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2068721410712906745}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 48000
---- !u!114 &-190276234804789740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX_MENU_Back
-  m_EditorClassIdentifier: 
-  Path: event:/SFX_MENU_Back
-  Guid:
-    Data1: -431682052
-    Data2: 1187095676
-    Data3: 312641947
-    Data4: -645416814
-  Banks:
-  - {fileID: -4009031378704139228}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -7051414977507195101}
-  - {fileID: 1632116217660735354}
-  - {fileID: -2467010286665983820}
-  - {fileID: -4009031378704139228}
-  EditorEvents:
-  - {fileID: 4674877134280189392}
-  - {fileID: 7935866548187866550}
-  - {fileID: -7183372891205170440}
-  - {fileID: 6435456443518098297}
-  - {fileID: 609931245428334860}
-  - {fileID: 4327460648814745197}
-  - {fileID: 3324598608021635212}
-  - {fileID: -631879961242485509}
-  - {fileID: 1432930103667273788}
-  - {fileID: 2745550787376063355}
-  - {fileID: -6817461455483892568}
-  - {fileID: 6679842081050978749}
-  - {fileID: 2703290061438789366}
-  - {fileID: 7258091571434556989}
-  - {fileID: -190276234804789740}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -2467010286665983820}
-  StringsBanks:
-  - {fileID: -7051414977507195101}
-  cacheVersion: 131858
-  cacheTime: 639083198700942557
-  SerializableEventsDict:
-  - key: event:/CampAband_o_CampPrinc
-    index: 0
-  - key: event:/Uchu
-    index: 1
-  - key: event:/Prologo
-    index: 2
-  - key: event:/Jungla_o_Campamento
-    index: 3
-  - key: event:/Menu
-    index: 4
-  - key: event:/Ninas
-    index: 5
-  - key: event:/Tutorial
-    index: 6
-  - key: event:/Motos
-    index: 7
-  - key: event:/SFX_MENU_Select
-    index: 8
-  - key: event:/SFX_MENU_Hover4
-    index: 9
-  - key: event:/SFX_MENU_Hover2
-    index: 10
-  - key: event:/SFX_PLAYER_Pasos
-    index: 11
-  - key: event:/SFX_MENU_Hover3
-    index: 12
-  - key: event:/SFX_MENU_Hover1
-    index: 13
-  - key: event:/SFX_MENU_Back
-    index: 14
---- !u!114 &609931245428334860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu
-  m_EditorClassIdentifier: 
-  Path: event:/Menu
-  Guid:
-    Data1: -1068583209
-    Data2: 1092833097
-    Data3: 1254932619
-    Data4: -1027168801
-  Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 85714
---- !u!114 &1432930103667273788
+--- !u!114 &-8952920357718093803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,7 +19,7 @@ MonoBehaviour:
     Data3: -1367705940
     Data4: -475227002
   Banks:
-  - {fileID: -4009031378704139228}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -435,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1632116217660735354
+--- !u!114 &-8408688377423690942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,16 +36,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Prologo
   m_EditorClassIdentifier: 
-  Path: Assets/_Project/FMOD/Desktop/BGM.bank
-  Name: BGM
-  StudioPath: bank:/BGM
-  lastModified: 639083198700805154
-  FileSizes: []
-  Exists: 1
---- !u!114 &2068721410712906745
+  Path: event:/Prologo
+  Guid:
+    Data1: -495468659
+    Data2: 1197254612
+    Data3: -1555399260
+    Data4: -457276930
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4529805196552747894}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 76235
+--- !u!114 &-8033891023780949461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,22 +64,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Motos/escondido
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MENU_Hover2
   m_EditorClassIdentifier: 
-  Name: escondido
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2060316229
-    data2: 3656847902
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2166262893905906566
+  Path: event:/SFX_MENU_Hover2
+  Guid:
+    Data1: -661869200
+    Data2: 1243642901
+    Data3: 1678150050
+    Data4: 2048824643
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7324851613758367857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_MENU_Hover3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_MENU_Hover3
+  Guid:
+    Data1: -2010961761
+    Data2: 1135569844
+    Data3: -51979844
+    Data4: -1029254638
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6884018716403663555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,7 +133,79 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2703290061438789366
+--- !u!114 &-6047101142584405594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jungla_o_Campamento/escondido
+  m_EditorClassIdentifier: 
+  Name: escondido
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2060316229
+    data2: 3656847902
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5705318852817274318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Uchu/QuickTimeEvent
+  m_EditorClassIdentifier: 
+  Name: QuickTimeEvent
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 775828578
+    data2: 1932157553
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3615838999318867321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CampAband_o_CampPrinc/escondido
+  m_EditorClassIdentifier: 
+  Name: escondido
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2060316229
+    data2: 3656847902
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2912312805026239162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,24 +215,99 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX_MENU_Hover3
+  m_Name: event:/SFX_PLAYER_Trepar
   m_EditorClassIdentifier: 
-  Path: event:/SFX_MENU_Hover3
+  Path: event:/SFX_PLAYER_Trepar
   Guid:
-    Data1: -2010961761
-    Data2: 1135569844
-    Data3: -51979844
-    Data4: -1029254638
+    Data1: -165413570
+    Data2: 1194281298
+    Data3: 1301202367
+    Data4: 942692078
   Banks:
-  - {fileID: -4009031378704139228}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &2745550787376063355
+  Length: 878
+--- !u!114 &-2657523535847103590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Motos
+  m_EditorClassIdentifier: 
+  Path: event:/Motos
+  Guid:
+    Data1: 461959932
+    Data2: 1143555373
+    Data3: -459592801
+    Data4: -252231103
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6422425231777052102}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48000
+--- !u!114 &-2579895866476248121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639083176421724186
+  FileSizes:
+  - Name: 
+    Value: 1866
+  Exists: 1
+--- !u!114 &-2264309288359858131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_PLAYER_Pasos
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_PLAYER_Pasos
+  Guid:
+    Data1: 710275715
+    Data2: 1160692655
+    Data3: -1593429865
+    Data4: 1997000302
+  Banks:
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 400
+--- !u!114 &-1586912743549556476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -547,7 +326,7 @@ MonoBehaviour:
     Data3: -2027249782
     Data4: -1964612105
   Banks:
-  - {fileID: -4009031378704139228}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -555,31 +334,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2974043359174212263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Tutorial/QuickTimeEvent
-  m_EditorClassIdentifier: 
-  Name: QuickTimeEvent
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 775828578
-    data2: 1932157553
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3324598608021635212
+--- !u!114 &-386226855613666047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -589,132 +344,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tutorial
+  m_Name: event:/SFX_MENU_Back
   m_EditorClassIdentifier: 
-  Path: event:/Tutorial
+  Path: event:/SFX_MENU_Back
   Guid:
-    Data1: 1552364518
-    Data2: 1156414035
-    Data3: 911079085
-    Data4: -2132649412
+    Data1: -431682052
+    Data2: 1187095676
+    Data3: 312641947
+    Data4: -645416814
   Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8997157364830237560}
-  - {fileID: 2974043359174212263}
+  - {fileID: 6972750501659571960}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 53114
---- !u!114 &4327460648814745197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ninas
-  m_EditorClassIdentifier: 
-  Path: event:/Ninas
-  Guid:
-    Data1: 1811923421
-    Data2: 1320946456
-    Data3: -1624620886
-    Data4: -248747865
-  Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -7842110111908066471}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 88000
---- !u!114 &4674877134280189392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/CampAband_o_CampPrinc
-  m_EditorClassIdentifier: 
-  Path: event:/CampAband_o_CampPrinc
-  Guid:
-    Data1: -1530460662
-    Data2: 1124834202
-    Data3: -1393489489
-    Data4: 580798848
-  Banks:
-  - {fileID: 1632116217660735354}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2166262893905906566}
-  - {fileID: -8525145430105643604}
-  - {fileID: 6136079435458465347}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 138947
---- !u!114 &4972415670955917783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Prologo/activar_ambiente
-  m_EditorClassIdentifier: 
-  Name: activar_ambiente
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1098659479
-    data2: 1084253590
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &5319770570895454419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Jungla_o_Campamento/player_chase
-  m_EditorClassIdentifier: 
-  Name: player_chase
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 495171922
-    data2: 4019678570
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &6136079435458465347
+  Length: 0
+--- !u!114 &-241867091870389241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,7 +385,82 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6435456443518098297
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -2579895866476248121}
+  - {fileID: 6331880356006365250}
+  - {fileID: 5422211246897799908}
+  - {fileID: 6972750501659571960}
+  - {fileID: 8125322815936940093}
+  EditorEvents:
+  - {fileID: 2122573705285682286}
+  - {fileID: 6118572029877477653}
+  - {fileID: -8408688377423690942}
+  - {fileID: 1037833420838008915}
+  - {fileID: 1671857887835522442}
+  - {fileID: 8600949703349748133}
+  - {fileID: -2657523535847103590}
+  - {fileID: 6278296727426365841}
+  - {fileID: -8952920357718093803}
+  - {fileID: -386226855613666047}
+  - {fileID: -1586912743549556476}
+  - {fileID: -8033891023780949461}
+  - {fileID: -7324851613758367857}
+  - {fileID: 1195901074411106801}
+  - {fileID: -2264309288359858131}
+  - {fileID: -2912312805026239162}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 5422211246897799908}
+  StringsBanks:
+  - {fileID: -2579895866476248121}
+  cacheVersion: 131858
+  cacheTime: 639083183336284300
+  SerializableEventsDict:
+  - key: event:/CampAband_o_CampPrinc
+    index: 0
+  - key: event:/Uchu
+    index: 1
+  - key: event:/Prologo
+    index: 2
+  - key: event:/Jungla_o_Campamento
+    index: 3
+  - key: event:/Ninas
+    index: 4
+  - key: event:/Tutorial
+    index: 5
+  - key: event:/Motos
+    index: 6
+  - key: event:/Menu
+    index: 7
+  - key: event:/SFX_MENU_Select
+    index: 8
+  - key: event:/SFX_MENU_Back
+    index: 9
+  - key: event:/SFX_MENU_Hover4
+    index: 10
+  - key: event:/SFX_MENU_Hover2
+    index: 11
+  - key: event:/SFX_MENU_Hover3
+    index: 12
+  - key: event:/SFX_MENU_Hover1
+    index: 13
+  - key: event:/SFX_PLAYER_Pasos
+    index: 14
+  - key: event:/SFX_PLAYER_Trepar
+    index: 15
+--- !u!114 &1037833420838008915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,45 +479,18 @@ MonoBehaviour:
     Data3: -236171381
     Data4: -118319785
   Banks:
-  - {fileID: 1632116217660735354}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7811304823226649614}
-  - {fileID: 5319770570895454419}
-  - {fileID: -7545741509938780625}
+  - {fileID: 5779934979176659596}
+  - {fileID: 2766930743279188964}
+  - {fileID: -6047101142584405594}
   MinDistance: 0
   MaxDistance: 0
   Length: 91428
---- !u!114 &6679842081050978749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX_PLAYER_Pasos
-  m_EditorClassIdentifier: 
-  Path: event:/SFX_PLAYER_Pasos
-  Guid:
-    Data1: 710275715
-    Data2: 1160692655
-    Data3: -1593429865
-    Data4: 1997000302
-  Banks:
-  - {fileID: -4009031378704139228}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 400
---- !u!114 &7258091571434556989
+--- !u!114 &1195901074411106801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -814,7 +509,7 @@ MonoBehaviour:
     Data3: -1635652218
     Data4: 976348004
   Banks:
-  - {fileID: -4009031378704139228}
+  - {fileID: 6972750501659571960}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -822,7 +517,203 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7935866548187866550
+--- !u!114 &1671857887835522442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ninas
+  m_EditorClassIdentifier: 
+  Path: event:/Ninas
+  Guid:
+    Data1: 1811923421
+    Data2: 1320946456
+    Data3: -1624620886
+    Data4: -248747865
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8881078328278575151}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 88000
+--- !u!114 &2122573705285682286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CampAband_o_CampPrinc
+  m_EditorClassIdentifier: 
+  Path: event:/CampAband_o_CampPrinc
+  Guid:
+    Data1: -1530460662
+    Data2: 1124834202
+    Data3: -1393489489
+    Data4: 580798848
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6884018716403663555}
+  - {fileID: -3615838999318867321}
+  - {fileID: -241867091870389241}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 138947
+--- !u!114 &2186530186608658012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial/activar_ambiente
+  m_EditorClassIdentifier: 
+  Name: activar_ambiente
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1098659479
+    data2: 1084253590
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2766930743279188964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jungla_o_Campamento/player_chase
+  m_EditorClassIdentifier: 
+  Name: player_chase
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 495171922
+    data2: 4019678570
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4529805196552747894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Prologo/activar_ambiente
+  m_EditorClassIdentifier: 
+  Name: activar_ambiente
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1098659479
+    data2: 1084253590
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4552391066164547346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Tutorial/QuickTimeEvent
+  m_EditorClassIdentifier: 
+  Name: QuickTimeEvent
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 775828578
+    data2: 1932157553
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5422211246897799908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639083176421719162
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5779934979176659596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jungla_o_Campamento/jungla_o_campamento
+  m_EditorClassIdentifier: 
+  Name: jungla_o_campamento
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4221592807
+    data2: 759871879
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6118572029877477653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -841,12 +732,170 @@ MonoBehaviour:
     Data3: 1904591240
     Data4: -1979282322
   Banks:
-  - {fileID: 1632116217660735354}
+  - {fileID: 6331880356006365250}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8391302856711931082}
+  - {fileID: -5705318852817274318}
   MinDistance: 1
   MaxDistance: 20
   Length: 171000
+--- !u!114 &6278296727426365841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Menu
+  Guid:
+    Data1: -1068583209
+    Data2: 1092833097
+    Data3: 1254932619
+    Data4: -1027168801
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 85714
+--- !u!114 &6331880356006365250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 639083133759954477
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6422425231777052102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Motos/escondido
+  m_EditorClassIdentifier: 
+  Name: escondido
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2060316229
+    data2: 3656847902
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6972750501659571960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 639083183336284300
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8125322815936940093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AMBIANCE.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/AMBIANCE.bank
+  Name: AMBIANCE
+  StudioPath: bank:/AMBIANCE
+  lastModified: 639083176422958570
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8600949703349748133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tutorial
+  m_EditorClassIdentifier: 
+  Path: event:/Tutorial
+  Guid:
+    Data1: 1552364518
+    Data2: 1156414035
+    Data3: 911079085
+    Data4: -2132649412
+  Banks:
+  - {fileID: 6331880356006365250}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2186530186608658012}
+  - {fileID: 4552391066164547346}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 53114
+--- !u!114 &8881078328278575151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ninas/QuickTimeEvent
+  m_EditorClassIdentifier: 
+  Name: QuickTimeEvent
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 775828578
+    data2: 1932157553
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
