@@ -3172,7 +3172,7 @@ GameObject:
   - component: {fileID: 1751145961}
   - component: {fileID: 1751145960}
   m_Layer: 0
-  m_Name: CinemachineCamera (1)
+  m_Name: CamaraPeque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3247,7 +3247,7 @@ GameObject:
   - component: {fileID: 1763884694}
   - component: {fileID: 1763884693}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: CamaraGrande
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3305,7 +3305,7 @@ Transform:
   m_GameObject: {fileID: 1763884692}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0.6, z: -22.895592}
+  m_LocalPosition: {x: 1.9, y: -0.5, z: -22.895592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3451,11 +3451,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    Hold: 2
+    Hold: 1
   - Camera: {fileID: 1751145960}
     Blend:
       Style: 1
-      Time: 2
+      Time: 1
       CustomCurve:
         serializedVersion: 2
         m_Curve: []
@@ -4567,7 +4567,7 @@ Transform:
   m_GameObject: {fileID: 2112235591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3837875, y: 4.6513104, z: -22.789162}
+  m_LocalPosition: {x: -0.3837875, y: 3.5513105, z: -22.789162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
