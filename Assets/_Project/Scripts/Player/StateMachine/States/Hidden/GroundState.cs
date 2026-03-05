@@ -58,7 +58,13 @@ namespace Player.Hidden.States {
         private void HorizontalMove() {
 			float horizontalDirection = 0;
 
-            if (_player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic"))
+            bool isStaticSpot = false;
+            if (_player.CurrentHidingSpotCollider != null)
+            {
+                isStaticSpot = _player.CurrentHidingSpotCollider.gameObject.layer == LayerMask.NameToLayer("HiddenSpotStatic");
+            }
+
+            if (isStaticSpot)
             {
                 horizontalDirection = 0;
             }

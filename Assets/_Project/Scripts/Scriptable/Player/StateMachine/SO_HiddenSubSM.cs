@@ -13,6 +13,11 @@ namespace Player {
 		public float GroundRaycastDistance;
 		public float GroundRaycastAmplitude;
 
+        [Header("Hiding Spot Crouch Detection")]
+        public LayerMask HidingSpotCrouchLayer;
+        public float DetectionRaycastOffSetY;
+        public float DetectionRaycastSizeY;
+
         [Header("Hidden Config")]
         public int OrderSpriteofPlayer;
 

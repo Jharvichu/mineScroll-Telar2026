@@ -21,8 +21,8 @@ MonoBehaviour:
   CeilingLayer:
     serializedVersion: 2
     m_Bits: 8
-  CeilingBoxSize: {x: 0.4, y: 1}
-  CeilingBoxOffset: 0.55
-  CeilingCheckDistance: 1
+  CeilingBoxSize: {x: 0.4, y: 0.5}
+  CeilingBoxOffset: 0.6
+  CeilingCheckDistance: 1.1
   ColliderBoxSize: {x: 0.38, y: 1.5}
   ColliderBoxOffset: {x: 0, y: 0.7}

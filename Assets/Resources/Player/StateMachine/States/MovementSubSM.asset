@@ -40,4 +40,9 @@ MonoBehaviour:
     m_Bits: 320
   DetectionRaycastDistance: 1
   DetectionRaycastAmplitude: 0.18
+  HiddenSpotCrouchLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  DetectionRaycastOffSetY: 0.1
+  DetectionRaycastSizeY: 0.5
   EnableDebug: 1

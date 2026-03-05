@@ -20,12 +20,19 @@ MonoBehaviour:
   GroundRaycastAmplitude: 0.25
   HidingSpotLayer:
     serializedVersion: 2
-    m_Bits: 321
+    m_Bits: 320
   DetectionRaycastDistance: 0.1
   DetectionRaycastAmplitude: 0.3
+  HidingSpotCrouchLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  DetectionRaycastOffSetY: 0
+  DetectionRaycastSizeY: 0
   CeilingLayer:
     serializedVersion: 2
     m_Bits: 8
-  CeilingBoxSize: {x: 0.5, y: 0.6}
-  CeilingBoxOffset: 0.25
-  CeilingCheckDistance: 0.6
+  CeilingBoxSize: {x: 0.4, y: 0.5}
+  CeilingBoxOffset: 0.6
+  CeilingCheckDistance: 1.1
+  ColliderBoxSize: {x: 0.38, y: 1.5}
+  ColliderBoxOffset: {x: 0, y: 0.7}
