@@ -25,6 +25,7 @@ public class PanelBlackText : MonoBehaviour
 
     IEnumerator PlayCinematic()
     {
+
         foreach (Image paragraph in paragraphs)
         {
             

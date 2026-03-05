@@ -569,6 +569,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113fb57d1da150146bac5673a61b927e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  select:
+    Guid:
+      Data1: 1978039883
+      Data2: 1138737802
+      Data3: -1367705940
+      Data4: -475227002
+    Path: event:/SFX_MENU_Select
+  back:
+    Guid:
+      Data1: -431682052
+      Data2: 1187095676
+      Data3: 312641947
+      Data4: -645416814
+    Path: event:/SFX_MENU_Back
 --- !u!114 &696471830
 MonoBehaviour:
   m_ObjectHideFlags: 0
