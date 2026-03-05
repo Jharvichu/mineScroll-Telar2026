@@ -35,6 +35,11 @@ public class CinematicPrologue : MonoBehaviour
     [Tooltip("Segundos reales antes de fallar el QTE de la camioneta")]
     public float tiempoLimiteCamioneta = 1.5f; 
 
+    [Header("Transición Final (NUEVO)")]
+    public GameObject transitionPanel; 
+    public float transitionTime = 1f;
+    public string siguienteEscena = "Nivel2"; 
+
     private float tamañoCamaraOriginal;
     private Vector3 posicionCamaraOriginal;
     private Vector3 escalaOriginalCarrillo; 
@@ -49,6 +54,7 @@ public class CinematicPrologue : MonoBehaviour
         escalaOriginalCarrillo = actorCarrillo.localScale; 
         
         if (hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
+        if (transitionPanel != null) transitionPanel.SetActive(false); 
         
         StartCoroutine(SecuenciaCinematica());
     }
@@ -116,7 +122,30 @@ public class CinematicPrologue : MonoBehaviour
         actorCarrillo.localScale = new Vector3(Mathf.Abs(escalaOriginalCarrillo.x), escalaOriginalCarrillo.y, escalaOriginalCarrillo.z);
         yield return MoverActor(actorCarrillo, animCarrillo, puntoFinal.position);
 
-        Debug.Log("Cinemática Terminada.");
+        Debug.Log("Cinemática Terminada. Iniciando Transición Final...");
+
+        
+        if (transitionPanel != null)
+        {
+            transitionPanel.SetActive(true);
+            CanvasGroup canvasGroup = transitionPanel.GetComponent<CanvasGroup>();
+            if (canvasGroup == null) canvasGroup = transitionPanel.AddComponent<CanvasGroup>();
+
+            float elapsed = 0f;
+            canvasGroup.alpha = 0f;
+
+            while (elapsed < transitionTime)
+            {
+                elapsed += Time.deltaTime;
+                canvasGroup.alpha = Mathf.Clamp01(elapsed / transitionTime);
+                yield return null;
+            }
+            canvasGroup.alpha = 1f;
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        Debug.Log("Viajando al Nivel 2...");
+        SceneManager.LoadScene(siguienteEscena);
     }
 
     IEnumerator MoverActor(Transform actor, Animator anim, Vector3 destino)
