@@ -18,9 +18,11 @@ public class RifleGuardController : MonoBehaviour
     public float suspiciousSpeed = 3f;
 
     [Header("Configuración de Visión (Francotirador)")]
-    public float farVisionDistance = 12f;  // Rango largo para sospechar (?)
-    public float nearVisionDistance = 8f;  // Rango para disparar (!)
+    public float farVisionDistance = 12f;  
+    public float nearVisionDistance = 8f; 
     public LayerMask playerLayer;
+    [Tooltip("Ajusta la altura del láser. Valores negativos lo bajan a la cintura/piernas.")]
+    public float visionHeightOffset = -0.5f;
 
     [Header("Temporizadores")]
     public float suspicionTime = 0.5f; 
@@ -108,12 +110,19 @@ public class RifleGuardController : MonoBehaviour
 
     void DetectPlayer()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * facingDirection, farVisionDistance, playerLayer);
-        Debug.DrawRay(transform.position, Vector2.right * facingDirection * farVisionDistance, Color.red);
+        
+        Vector2 originPoint = new Vector2(transform.position.x, transform.position.y + visionHeightOffset);
+
+        
+        RaycastHit2D hit = Physics2D.Raycast(originPoint, Vector2.right * facingDirection, farVisionDistance, playerLayer);
+        
+        
+        Debug.DrawRay(originPoint, Vector2.right * facingDirection * farVisionDistance, Color.red);
 
         if (hit.collider != null)
         {
-            Player.PlayerController player =    hit.collider.GetComponent<Player.PlayerController>(); // angie 
+            Player.PlayerController player = hit.collider.GetComponent<Player.PlayerController>(); 
+            
 
             if (player != null && !player.isHidden)
             {
