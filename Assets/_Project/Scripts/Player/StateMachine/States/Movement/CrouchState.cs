@@ -120,8 +120,6 @@ namespace Player.Movement.States
                 _crouchData.CeilingLayer
             );
 
-
-
             _player.isCeilingBlocked = ceilingDetectionHit.collider != null;
         }
 
@@ -133,30 +131,20 @@ namespace Player.Movement.States
 
         private void DrawCeilinglBoxCastDebug()
         {
-            // 1. Definir el origen exactamente igual que en DetectCeiling
             Vector2 origin = (Vector2)_player.transform.position + Vector2.up * _crouchData.CeilingBoxOffset;
 
-            // 2. Definir la dirección y distancia
             Vector2 direction = Vector2.up;
             float distance = _crouchData.CeilingCheckDistance;
             Vector2 size = _crouchData.CeilingBoxSize;
             Vector2 half = size * 0.5f;
 
-            // 3. Posición final
             Vector2 end = origin + direction * distance;
 
-            // Dibujar el cuadro en el ORIGEN (Rojo para saber de donde sale)
             DrawRectangle(origin, half, Color.red);
 
-            // Dibujar el cuadro en el DESTINO (Verde para ver el alcance máximo)
             DrawRectangle(end, half, Color.green);
-
-            // Opcional: Dibujar líneas conectoras para ver el volumen del "Cast"
-            Debug.DrawLine(origin + new Vector2(-half.x, half.y), end + new Vector2(-half.x, half.y), Color.yellow);
-            Debug.DrawLine(origin + new Vector2(half.x, half.y), end + new Vector2(half.x, half.y), Color.yellow);
         }
 
-        // Método auxiliar para no repetir código de dibujo
         private void DrawRectangle(Vector2 position, Vector2 half, Color color)
         {
             Debug.DrawLine(position + new Vector2(-half.x, -half.y), position + new Vector2(half.x, -half.y), color);

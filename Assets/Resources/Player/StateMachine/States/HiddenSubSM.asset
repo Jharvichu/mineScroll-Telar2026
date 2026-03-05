@@ -21,6 +21,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   GroundRaycastDistance: 0.2
-  GroundRaycastAmplitude: 0.45
+  GroundRaycastAmplitude: 0.3
+  HidingSpotCrouchLayer:
+    serializedVersion: 2
+    m_Bits: 3072
+  DetectionRaycastOffSetY: 0
+  DetectionRaycastSizeY: 1
   OrderSpriteofPlayer: 0
   EnableDebug: 1
