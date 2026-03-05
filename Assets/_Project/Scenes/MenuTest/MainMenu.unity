@@ -208,8 +208,8 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -217,14 +217,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +327,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +527,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1404898573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404898575}
+  - component: {fileID: 1404898574}
+  m_Layer: 0
+  m_Name: SceneAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1404898574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404898573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f5ea5c0e5fdf4393b7289e5b4d665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmEvent:
+    Guid:
+      Data1: -1068583209
+      Data2: 1092833097
+      Data3: 1254932619
+      Data4: -1027168801
+    Path: event:/Menu
+  bgmFadeTime: 2
+  ambienceEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ambienceFadeTime: 2
+--- !u!4 &1404898575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404898573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11976081, y: 4.1010623, z: -0.10223692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024644427
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +741,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 2024644427}
   transitionTime: 3
+  select:
+    Guid:
+      Data1: 1978039883
+      Data2: 1138737802
+      Data3: -1367705940
+      Data4: -475227002
+    Path: event:/SFX_MENU_Select
+  back:
+    Guid:
+      Data1: -431682052
+      Data2: 1187095676
+      Data3: 312641947
+      Data4: -645416814
+    Path: event:/SFX_MENU_Back
+  hover1:
+    Guid:
+      Data1: 1879258810
+      Data2: 1103920301
+      Data3: -1635652218
+      Data4: 976348004
+    Path: event:/SFX_MENU_Hover1
+  hover2:
+    Guid:
+      Data1: -661869200
+      Data2: 1243642901
+      Data3: 1678150050
+      Data4: 2048824643
+    Path: event:/SFX_MENU_Hover2
+  hover3:
+    Guid:
+      Data1: -2010961761
+      Data2: 1135569844
+      Data3: -51979844
+      Data4: -1029254638
+    Path: event:/SFX_MENU_Hover3
+  hover4:
+    Guid:
+      Data1: -792858793
+      Data2: 1126408196
+      Data3: -2027249782
+      Data4: -1964612105
+    Path: event:/SFX_MENU_Hover4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -684,3 +792,4 @@ SceneRoots:
   - {fileID: 2042419356}
   - {fileID: 1273548027}
   - {fileID: 489791445}
+  - {fileID: 1404898575}

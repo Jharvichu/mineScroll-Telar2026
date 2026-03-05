@@ -33,6 +33,8 @@ public class DialogoOrilla : MonoBehaviour
 
     IEnumerator PlayDialogue()
     {
+        AudioManager.Instance.SetBGMParameter("activar_ambiente", 1f);
+
         foreach (DialogueLine line in dialogueLines)
         {
             if (line.isCharacterA)
