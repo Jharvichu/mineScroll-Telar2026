@@ -65,7 +65,11 @@ namespace FMODUnity
             {
                 SerializableEventsDict.ForEach((item) =>
                 {
-                    EditorEventsDict.Add(item.key, item.index);
+                    
+                    if (!EditorEventsDict.ContainsKey(item.key))
+                    {
+                        EditorEventsDict.Add(item.key, item.index);
+                    }
                 });
                 SerializableEventsDict.Clear();
             }
