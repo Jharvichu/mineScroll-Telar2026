@@ -31,10 +31,12 @@ public class EnemyController : MonoBehaviour
     private int facingDirection = 1;
     private Player.PlayerController targetPlayer; // angie 
     private Vector2 lastKnownPosition;
+    private Animator animator;
 
     void Start()
     {
         currentPatrolTarget = pointB;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -48,6 +50,7 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case State.SuspicionWait:
+                animator.SetBool("isWalking", false);
                 timer += Time.deltaTime;
                 if (timer >= reactionTime) ChangeState(State.Investigate);
                 DetectPlayer(); 
@@ -77,6 +80,8 @@ public class EnemyController : MonoBehaviour
                     
                     if (Vector2.Distance(transform.position, targetPlayer.transform.position) <= catchDistance)
                     {
+                        animator.SetBool("isWalking", false); 
+                        animator.SetBool("Ataca", true);
                         Debug.Log("¡GAME OVER! El guardia te atrapó.");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
@@ -152,7 +157,10 @@ public class EnemyController : MonoBehaviour
     void MoveTowards(Vector2 target, float speed)
     {
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed * Time.deltaTime);
-        
+
+        // Animación de caminar
+        animator.SetBool("isWalking", true);
+
         if (target.x > transform.position.x + 0.1f) Flip(1);
         else if (target.x < transform.position.x - 0.1f) Flip(-1);
     }
@@ -162,6 +170,7 @@ public class EnemyController : MonoBehaviour
         
         if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
         {
+            animator.SetBool("isWalking", false);
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
         }
     }

@@ -6,6 +6,7 @@ public class RifleGuardController : MonoBehaviour
     
     public enum State { Patrol, SuspicionWait, Investigate, Aiming, Search, Return }
     public State currentState = State.Patrol;
+    private Animator animator;
 
     [Header("Referencias")]
     public Transform pointA;
@@ -30,10 +31,12 @@ public class RifleGuardController : MonoBehaviour
     private int facingDirection = 1;
     private Player.PlayerController targetPlayer; // angie 
     private Vector2 lastKnownPosition;
+    
 
     void Start()
     {
         currentPatrolTarget = pointB;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.SuspicionWait:
+                animator.SetBool("isWalking", false);
                 timer += Time.deltaTime;
                 if (timer >= suspicionTime) ChangeState(State.Investigate);
                 DetectPlayer(); 
@@ -140,7 +144,14 @@ public class RifleGuardController : MonoBehaviour
 
     void MoveTowards(Vector2 target, float speed)
     {
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(
+        transform.position,
+        new Vector2(target.x, transform.position.y),
+        speed * Time.deltaTime
+    );
+
+        animator.SetBool("isWalking", true);
+
         if (target.x > transform.position.x + 0.1f) Flip(1);
         else if (target.x < transform.position.x - 0.1f) Flip(-1);
     }
@@ -158,6 +169,20 @@ public class RifleGuardController : MonoBehaviour
     {
         currentState = newState;
         timer = 0f;
+
+        if (newState == State.Aiming)
+        {
+            animator.SetBool("isWalking", false); // deja de caminar
+            animator.SetTrigger("Dispara");       // activa animación disparo
+        }
+
+        if (newState == State.Patrol ||
+            newState == State.Investigate ||
+            newState == State.Search ||
+            newState == State.Return)
+        {
+            animator.SetBool("isWalking", true); // vuelve a caminar
+        }
     }
 
     void Flip(int direction)
