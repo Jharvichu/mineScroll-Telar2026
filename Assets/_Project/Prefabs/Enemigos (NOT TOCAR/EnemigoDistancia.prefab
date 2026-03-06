@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4784658524351582513}
   - component: {fileID: 1295310987606379412}
   - component: {fileID: 1138288260146644789}
+  - component: {fileID: 7350610471128552460}
   m_Layer: 9
   m_Name: EnemigoEscopeta
   m_TagString: Untagged
@@ -166,6 +167,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  visionHeightOffset: -0.5
   suspicionTime: 0.5
   aimTime: 0.2
   searchTime: 3
@@ -242,6 +244,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7350610471128552460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989825363852452312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce1eb63efa78d64f9790195034f6c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 816097809
+      Data2: 1080655127
+      Data3: 1535775625
+      Data4: -43157396
+    Path: event:/SFX_ENEMY_Pasos_Arma
+  reloadEvent:
+    Guid:
+      Data1: 1669571946
+      Data2: 1191848414
+      Data3: 904540307
+      Data4: -1516388315
+    Path: event:/SFX_ENEMY_Pistola_Recarga
+  shootEvent:
+    Guid:
+      Data1: -1285108066
+      Data2: 1233611290
+      Data3: -1925864301
+      Data4: -240641715
+    Path: event:/SFX_ENEMY_Pistola_Disparo
 --- !u!1 &3969713880072134378
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 5641504033893921068}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000018119812, y: 9.301381, z: -10}
+  m_LocalPosition: {x: -0.00002670288, y: 8.737969, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,6 +393,41 @@ MonoBehaviour:
       Data3: -1593429865
       Data4: 1997000302
     Path: event:/SFX_PLAYER_Pasos
+  climbEvent:
+    Guid:
+      Data1: -165413570
+      Data2: 1194281298
+      Data3: 1301202367
+      Data4: 942692078
+    Path: event:/SFX_PLAYER_Trepar
+  heartbeatEvent:
+    Guid:
+      Data1: -447397233
+      Data2: 1249780538
+      Data3: 1806857632
+      Data4: -482132383
+    Path: event:/SFX_PLAYER_HeartBeat
+  ledgegrabEvent:
+    Guid:
+      Data1: 1415469029
+      Data2: 1168142287
+      Data3: 2038804374
+      Data4: 2126637763
+    Path: event:/SFX_PLAYER_Ledge
+  godownEvent:
+    Guid:
+      Data1: 252915224
+      Data2: 1317933971
+      Data3: 282474407
+      Data4: 593879306
+    Path: event:/SFX_PLAYER_Bajar
+  deathEvent:
+    Guid:
+      Data1: 327451246
+      Data2: 1179430278
+      Data3: -965258083
+      Data4: -2070268623
+    Path: event:/SFX_PLAYER_DEATH
 --- !u!1 &8016099838247155664
 GameObject:
   m_ObjectHideFlags: 0
