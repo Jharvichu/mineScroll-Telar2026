@@ -1,19 +1,32 @@
-#back-button {
-    width: 20%;
-    height: 80px;
-    margin: 20px;
-    font-size: 60px;
-    background-color: white;
-    color: black;
+Button#back-button {
+    background-image: url('botones');
+    -unity-background-image-tint-color: white;
+    border-width: 0;
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
 }
 
-#back-button:hover {
-    background-color: rgb(255, 217, 102);
+Button#backbutton:hover {
     scale: 1.1;
-    color: rgb(0, 0, 0);
+    -unity-background-image-tint-color: rgb(118, 18, 18);
+    background-color: rgb(152, 16, 16);
+    color: rgb(178, 39, 39);
+    -unity-text-outline-color: rgb(164, 12, 12);
+    border-left-color: rgb(130, 24, 24);
+    border-right-color: rgb(130, 24, 24);
+    border-top-color: rgb(130, 24, 24);
+    border-bottom-color: rgb(130, 24, 24);
 }
 
-#back-button:active {
-    background-color: orange;
+Button#back-button:active {
     scale: 0.95;
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgb(94, 6, 6);
+    border-right-color: rgb(94, 6, 6);
+    border-top-color: rgb(94, 6, 6);
+    border-bottom-color: rgb(94, 6, 6);
+    -unity-background-image-tint-color: rgb(131, 124, 99);
 }

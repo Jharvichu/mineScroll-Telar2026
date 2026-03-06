@@ -30,11 +30,16 @@ Button {
 }
 
 Button:hover {
-    background-color: #ffd966;
+    background-color: rgb(255, 127, 102);
     scale: 1.05;
+    -unity-background-image-tint-color: rgb(131, 124, 99);
 }
 
 Button:active {
     background-color: orange;
     scale: 0.95;
+    -unity-background-image-tint-color: rgb(131, 124, 99);
+}
+
+.unity-text-element {
 }
