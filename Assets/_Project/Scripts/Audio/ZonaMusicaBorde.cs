@@ -7,7 +7,7 @@ public class ZonaMusicaBorde : MonoBehaviour {
     [SerializeField] float valorDerecha = 1f;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (!other.CompareTag("Player")) return;
+        if (!other.CompareTag("Character")) return;
 
         bool estaALaIzquierda = other.transform.position.x > transform.position.x;
         float valor = estaALaIzquierda ? valorIzquierda : valorDerecha;
