@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 98e1084861c35184789647b052bbf0ca
+guid: 4e3f361b84f576246bd62f49ba69d828
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5668795105989534970
-    second: Teclas_0
-  - first:
-      213: -9156802782555630004
-    second: Teclas_1
-  - first:
-      213: 4975070973683788868
-    second: Teclas_2
-  - first:
-      213: -5921809524246091223
-    second: Teclas_3
+      213: 1283667507198311472
+    second: botones_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Teclas_0
+      name: botones_0
       rect:
         serializedVersion: 2
-        x: 307
-        y: 294
-        width: 262
-        height: 256
+        x: 44
+        y: 10
+        width: 747
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60b550bb2e46451b0800000000000000
-      internalID: -5668795105989534970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teclas_1
-      rect:
-        serializedVersion: 2
-        x: 577
-        y: 36
-        width: 257
-        height: 260
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c46967352608ce080800000000000000
-      internalID: -9156802782555630004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teclas_2
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 36
-        width: 248
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44c67c601b00b0540800000000000000
-      internalID: 4975070973683788868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Teclas_3
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 39
-        width: 259
-        height: 251
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92a69cfdc9181dda0800000000000000
-      internalID: -5921809524246091223
+      spriteID: 03c3440fbc080d110800000000000000
+      internalID: 1283667507198311472
       vertices: []
       indices: 
       edges: []
@@ -213,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Teclas_0: -5668795105989534970
-      Teclas_1: -9156802782555630004
-      Teclas_2: 4975070973683788868
-      Teclas_3: -5921809524246091223
+      botones_0: 1283667507198311472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
