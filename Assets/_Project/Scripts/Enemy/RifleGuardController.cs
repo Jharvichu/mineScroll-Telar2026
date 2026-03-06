@@ -77,7 +77,7 @@ public class RifleGuardController : MonoBehaviour
                     {
                         Debug.Log("¡BANG! Un solo tiro. GAME OVER.");
                         PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
-                        SceneManager.LoadScene("GameOverL1");
+                        SceneManager.LoadScene("GameOver1");
                     }
                     else
                     {

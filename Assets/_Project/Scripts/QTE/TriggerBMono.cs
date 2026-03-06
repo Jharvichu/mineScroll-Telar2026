@@ -28,6 +28,7 @@ public class TriggerBMono : MonoBehaviour
             }
 
             popupF.SetActive(true);
+            AudioManager.Instance.SetBGMParameter("QuickTimeEvent", 1f);
             esperandoF = true;
         }
     }
@@ -37,6 +38,7 @@ public class TriggerBMono : MonoBehaviour
         if (esperandoF && Input.GetKeyDown(KeyCode.F))
         {
             popupF.SetActive(false);
+            AudioManager.Instance.SetBGMParameter("QuickTimeEvent", 0f);
 
             mono.IrA(puntoC, true); // va a C y se destruye
 

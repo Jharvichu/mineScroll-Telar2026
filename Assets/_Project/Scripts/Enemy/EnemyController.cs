@@ -217,6 +217,6 @@ public class EnemyController : MonoBehaviour
 
 
         PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("GameOverL1");
+        SceneManager.LoadScene("GameOver2");
     }
 }

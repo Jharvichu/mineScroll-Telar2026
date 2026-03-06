@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using Player;
 using UnityEngine;
 
@@ -13,6 +15,7 @@ public class MotoMove : MonoBehaviour
     private SpriteRenderer sprite;
     private Collider2D col;
     private PlayerController playerController;
+    private EventInstance motoInstance;
 
     void Start()
     {
@@ -42,6 +45,8 @@ public class MotoMove : MonoBehaviour
                 playerController.canControl = true;
             playerController.Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
 
+            motoInstance.stop(STOP_MODE.ALLOWFADEOUT);
+            motoInstance.release();
             Destroy(gameObject);
         }
     }
@@ -53,5 +58,10 @@ public class MotoMove : MonoBehaviour
         sprite.enabled = true;
         col.enabled = true;   // 🔥 recién ahora colisiona
         isMoving = true;
+
+        //AUDIO
+        motoInstance = RuntimeManager.CreateInstance("event:/SFX_MOTOS");
+        RuntimeManager.AttachInstanceToGameObject(motoInstance, gameObject);
+        motoInstance.start();
     }
 }

@@ -549,18 +549,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   select:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1978039883
+      Data2: 1138737802
+      Data3: -1367705940
+      Data4: -475227002
+    Path: event:/SFX_MENU_Select
   back:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -431682052
+      Data2: 1187095676
+      Data3: 312641947
+      Data4: -645416814
+    Path: event:/SFX_MENU_Back
   transition: {fileID: 1642941735}
   transitionTime: 3
 --- !u!114 &696471830
