@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 821835226e6abe5468247699413e6b1a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6622727259429417677
+    second: PANTALLA-DE-INICIO-logo-rojo_0
+  - first:
+      213: 4936111402788240445
+    second: PANTALLA-DE-INICIO-logo-rojo_1
+  - first:
+      213: 5796910821024406108
+    second: PANTALLA-DE-INICIO-logo-rojo_2
+  - first:
+      213: 3585462405725496365
+    second: PANTALLA-DE-INICIO-logo-rojo_3
+  - first:
+      213: 3214294692460730747
+    second: PANTALLA-DE-INICIO-logo-rojo_4
+  - first:
+      213: -7206324498085237950
+    second: PANTALLA-DE-INICIO-logo-rojo_5
+  - first:
+      213: -5932800645245722225
+    second: PANTALLA-DE-INICIO-logo-rojo_6
+  - first:
+      213: 7846638085840225139
+    second: PANTALLA-DE-INICIO-logo-rojo_7
+  - first:
+      213: -6663717671213871397
+    second: PANTALLA-DE-INICIO-logo-rojo_8
+  - first:
+      213: -809703503642300465
+    second: PANTALLA-DE-INICIO-logo-rojo_9
+  - first:
+      213: -2936597834572719786
+    second: PANTALLA-DE-INICIO-logo-rojo_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_0
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 337
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dc96175a85714a0800000000000000
+      internalID: -6622727259429417677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 341
+        width: 173
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cb2fe0b27908440800000000000000
+      internalID: 4936111402788240445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 337
+        width: 196
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a17c9ada3c27050800000000000000
+      internalID: 5796910821024406108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 82
+        width: 248
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2429c8bf0f12c130800000000000000
+      internalID: 3585462405725496365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_4
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 81
+        width: 137
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b799b832ef77b9c20800000000000000
+      internalID: 3214294692460730747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_5
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 82
+        width: 164
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b2f6bbc0efdfb90800000000000000
+      internalID: -7206324498085237950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_6
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 81
+        width: 128
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81abe81f357aada0800000000000000
+      internalID: -5932800645245722225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_7
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 82
+        width: 164
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373ce8b04cbd4ec60800000000000000
+      internalID: 7846638085840225139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_8
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 81
+        width: 137
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdecdcb7518b583a0800000000000000
+      internalID: -6663717671213871397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_9
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 81
+        width: 157
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfe20414fa53c4f0800000000000000
+      internalID: -809703503642300465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANTALLA-DE-INICIO-logo-rojo_10
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 81
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6599c1604db1f37d0800000000000000
+      internalID: -2936597834572719786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PANTALLA-DE-INICIO-logo-rojo_0: -6622727259429417677
+      PANTALLA-DE-INICIO-logo-rojo_1: 4936111402788240445
+      PANTALLA-DE-INICIO-logo-rojo_10: -2936597834572719786
+      PANTALLA-DE-INICIO-logo-rojo_2: 5796910821024406108
+      PANTALLA-DE-INICIO-logo-rojo_3: 3585462405725496365
+      PANTALLA-DE-INICIO-logo-rojo_4: 3214294692460730747
+      PANTALLA-DE-INICIO-logo-rojo_5: -7206324498085237950
+      PANTALLA-DE-INICIO-logo-rojo_6: -5932800645245722225
+      PANTALLA-DE-INICIO-logo-rojo_7: 7846638085840225139
+      PANTALLA-DE-INICIO-logo-rojo_8: -6663717671213871397
+      PANTALLA-DE-INICIO-logo-rojo_9: -809703503642300465
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

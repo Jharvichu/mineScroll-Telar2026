@@ -1,28 +1,29 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class DialogoOrilla : MonoBehaviour
 {
+
     [System.Serializable]
-    public class DialogueLine
+    public class DialogueImage
     {
-        public bool isCharacterA; 
-        [TextArea(3, 5)]
-        public string text;
+        public Sprite image;       // La imagen que se mostrará
+        public float duration = 2f; // Tiempo que se verá la imagen
+        public bool isCharacterA;
     }
+
+    public OrillaaTuto cambioEscena; // Tu referencia para cambiar escena
 
     [Header("UI References")]
     public GameObject panelA;
     public GameObject panelB;
-    public TextMeshProUGUI textA;
-    public TextMeshProUGUI textB;
+    public Image imageA;
+    public Image imageB;
 
-    [Header("Configuración")]
-    public float typingSpeed = 0.05f;
-    public float visibleDuration = 2f; 
-
-    [Header("Diálogos")]
-    public DialogueLine[] dialogueLines;
+    [Header("Diálogos en imágenes")]
+    public DialogueImage[] dialogueLines;
 
     private void Start()
     {
@@ -33,36 +34,30 @@ public class DialogoOrilla : MonoBehaviour
 
     IEnumerator PlayDialogue()
     {
-        foreach (DialogueLine line in dialogueLines)
+        AudioManager.Instance.SetBGMParameter("activar_ambiente", 1f);
+
+        
+        foreach (DialogueImage line in dialogueLines)
         {
             if (line.isCharacterA)
-            {
-                yield return StartCoroutine(ShowLine(panelA, textA, line.text));
-            }
+                yield return StartCoroutine(ShowImage(panelA, imageA, line.image, line.duration));
             else
-            {
-                yield return StartCoroutine(ShowLine(panelB, textB, line.text));
-            }
+                yield return StartCoroutine(ShowImage(panelB, imageB, line.image, line.duration));
         }
 
         Debug.Log("Diálogo terminado");
+        cambioEscena.IrATutorial();
     }
 
-    IEnumerator ShowLine(GameObject panel, TextMeshProUGUI textUI, string message)
+    IEnumerator ShowImage(GameObject panel, Image imageUI, Sprite sprite, float duration)
     {
         panelA.SetActive(false);
         panelB.SetActive(false);
 
         panel.SetActive(true);
-        textUI.text = "";
+        imageUI.sprite = sprite;
 
-        foreach (char letter in message)
-        {
-            textUI.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-
-        yield return new WaitForSeconds(visibleDuration);
+        yield return new WaitForSeconds(duration);
 
         panel.SetActive(false);
     }

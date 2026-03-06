@@ -103,6 +103,7 @@ namespace Player.Movement.States {
 			if ( (_spaceInput && isLedgeAboveDetected) || _player.isClimbing)
 			{
 				_player.isClimbing = true;
+
                 _rb.linearVelocityY = _groundData.VerticalVelocity;
                 _rb.linearVelocityX = 0f;
             }

@@ -1,5 +1,7 @@
-using UnityEngine;
 using StateMachine;
+using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
+using FMODUnity;
 
 namespace Player.Movement.States {
 
@@ -14,7 +16,7 @@ namespace Player.Movement.States {
 
 		private RaycastHit2D _wallDetectionHit;
 
-		public LedgeState(SO_State data) : base(data) {
+        public LedgeState(SO_State data) : base(data) {
 			_ledgeData = data as SO_LedgeState;
 		}
 
@@ -52,6 +54,7 @@ namespace Player.Movement.States {
 
         private void TryEnterLedgeState()
         {
+            RuntimeManager.PlayOneShot("event:/SFX_PLAYER_Ledge");
             _player.isDropping = false;
             _timer = 0f;
             _rb.gravityScale = 0f;
@@ -84,8 +87,9 @@ namespace Player.Movement.States {
 		}
 
 		private void Drop() {
-			_player.isDropping = true;
-			_movementSM?.ActivateCliffCooldown();
+            RuntimeManager.PlayOneShot("event:/SFX_PLAYER_Bajar");
+            _player.isDropping = true;
+            _movementSM?.ActivateCliffCooldown();
 			_parent.ChangeState(MovementState.Air);
 		}
 

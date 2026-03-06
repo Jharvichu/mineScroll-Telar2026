@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class MonkeyMove : MonoBehaviour
@@ -12,6 +14,8 @@ public class MonkeyMove : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        EventInstance bgm = AudioManager.Instance.GetBGMInstance();
+        RuntimeManager.AttachInstanceToGameObject(bgm, gameObject);
     }
 
     void Update()
@@ -31,7 +35,9 @@ public class MonkeyMove : MonoBehaviour
                 mover = false;
                 animator.SetBool("isRunning", false);
 
-                if (destruirAlLlegar) Destroy(gameObject);
+                if (destruirAlLlegar) {
+                    Destroy(gameObject); 
+                }
             }
         }
     }
@@ -41,5 +47,6 @@ public class MonkeyMove : MonoBehaviour
         destino = punto;
         mover = true;
         destruirAlLlegar = destruir;
+        RuntimeManager.PlayOneShotAttached("event:/SFX_MONO", gameObject);
     }
 }

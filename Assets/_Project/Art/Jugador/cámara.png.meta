@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 79f848ec68b12cf43995b523a4e075a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5583969784789113418
+    second: "c\xE1mara_0"
+  - first:
+      213: -2998167871414717454
+    second: "c\xE1mara_1"
+  - first:
+      213: 4399587603184548364
+    second: "c\xE1mara_2"
+  - first:
+      213: -846812224036782837
+    second: "c\xE1mara_3"
+  - first:
+      213: -1251911825279878426
+    second: "c\xE1mara_4"
+  - first:
+      213: -3762649579618067230
+    second: "c\xE1mara_5"
+  - first:
+      213: -288149208448463416
+    second: "c\xE1mara_6"
+  - first:
+      213: -1624965665032586869
+    second: "c\xE1mara_7"
+  - first:
+      213: -1095708065066035218
+    second: "c\xE1mara_8"
+  - first:
+      213: 6534247444087990049
+    second: "c\xE1mara_9"
+  - first:
+      213: 7585668197668042980
+    second: "c\xE1mara_10"
+  - first:
+      213: 4183139210427237354
+    second: "c\xE1mara_11"
+  - first:
+      213: -6411626270148024404
+    second: "c\xE1mara_12"
+  - first:
+      213: -352550566628913492
+    second: "c\xE1mara_13"
+  - first:
+      213: -6776829349960863091
+    second: "c\xE1mara_14"
+  - first:
+      213: -1965245004798150623
+    second: "c\xE1mara_15"
+  - first:
+      213: -2031721667542584194
+    second: "c\xE1mara_16"
+  - first:
+      213: -3454731380080085957
+    second: "c\xE1mara_17"
+  - first:
+      213: -8659992848255221074
+    second: "c\xE1mara_18"
+  - first:
+      213: 2683630166341507307
+    second: "c\xE1mara_19"
+  - first:
+      213: 388132117694160473
+    second: "c\xE1mara_20"
+  - first:
+      213: -1181932299286676868
+    second: "c\xE1mara_21"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "c\xE1mara_0"
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 282
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5612dd011c182b0800000000000000
+      internalID: -5583969784789113418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_1"
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 300
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f33657b43e5466d0800000000000000
+      internalID: -2998167871414717454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_2"
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 300
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0af6067d997e0d30800000000000000
+      internalID: 4399587603184548364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_3"
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 302
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d34d2d4c48f34f0800000000000000
+      internalID: -846812224036782837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_4"
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 288
+        width: 77
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eaf41ce3d050aee0800000000000000
+      internalID: -1251911825279878426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_5"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 284
+        width: 82
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec9798842268cbc0800000000000000
+      internalID: -3762649579618067230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_6"
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd8e1452d9400cf0800000000000000
+      internalID: -288149208448463416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_7"
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 18
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89b68b4656f279e0800000000000000
+      internalID: -1624965665032586869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_8"
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 19
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee75534f1534bc0f0800000000000000
+      internalID: -1095708065066035218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_9"
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 18
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1276e533e6f4eaa50800000000000000
+      internalID: 6534247444087990049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_10"
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e83bf10905b54960800000000000000
+      internalID: 7585668197668042980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_11"
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 18
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3068bd2fe7d0a30800000000000000
+      internalID: 4183139210427237354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_12"
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7a347a0e35507a0800000000000000
+      internalID: -6411626270148024404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_13"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 18
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae88b6a02d7b1bf0800000000000000
+      internalID: -352550566628913492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_14"
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 8
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8234248c9dd3f1a0800000000000000
+      internalID: -6776829349960863091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_15"
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 18
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1283568941c0ab4e0800000000000000
+      internalID: -1965245004798150623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_16"
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74f8ab68efddc3e0800000000000000
+      internalID: -2031721667542584194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_17"
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 18
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b347eef1d145e00d0800000000000000
+      internalID: -3454731380080085957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_18"
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2035a136681d780800000000000000
+      internalID: -8659992848255221074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_19"
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8de45fa6b2e3520800000000000000
+      internalID: 2683630166341507307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_20"
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 18
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e9419ca1ce26500800000000000000
+      internalID: 388132117694160473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\xE1mara_21"
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 15
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7af47006dee89fe0800000000000000
+      internalID: -1181932299286676868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "c\xE1mara_0": -5583969784789113418
+      "c\xE1mara_1": -2998167871414717454
+      "c\xE1mara_10": 7585668197668042980
+      "c\xE1mara_11": 4183139210427237354
+      "c\xE1mara_12": -6411626270148024404
+      "c\xE1mara_13": -352550566628913492
+      "c\xE1mara_14": -6776829349960863091
+      "c\xE1mara_15": -1965245004798150623
+      "c\xE1mara_16": -2031721667542584194
+      "c\xE1mara_17": -3454731380080085957
+      "c\xE1mara_18": -8659992848255221074
+      "c\xE1mara_19": 2683630166341507307
+      "c\xE1mara_2": 4399587603184548364
+      "c\xE1mara_20": 388132117694160473
+      "c\xE1mara_21": -1181932299286676868
+      "c\xE1mara_3": -846812224036782837
+      "c\xE1mara_4": -1251911825279878426
+      "c\xE1mara_5": -3762649579618067230
+      "c\xE1mara_6": -288149208448463416
+      "c\xE1mara_7": -1624965665032586869
+      "c\xE1mara_8": -1095708065066035218
+      "c\xE1mara_9": 6534247444087990049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

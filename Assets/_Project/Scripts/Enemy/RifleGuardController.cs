@@ -6,6 +6,7 @@ public class RifleGuardController : MonoBehaviour
     
     public enum State { Patrol, SuspicionWait, Investigate, Aiming, Search, Return }
     public State currentState = State.Patrol;
+    private Animator animator;
 
     [Header("Referencias")]
     public Transform pointA;
@@ -17,9 +18,11 @@ public class RifleGuardController : MonoBehaviour
     public float suspiciousSpeed = 3f;
 
     [Header("Configuración de Visión (Francotirador)")]
-    public float farVisionDistance = 12f;  // Rango largo para sospechar (?)
-    public float nearVisionDistance = 8f;  // Rango para disparar (!)
+    public float farVisionDistance = 12f;  
+    public float nearVisionDistance = 8f; 
     public LayerMask playerLayer;
+    [Tooltip("Ajusta la altura del láser. Valores negativos lo bajan a la cintura/piernas.")]
+    public float visionHeightOffset = -0.5f;
 
     [Header("Temporizadores")]
     public float suspicionTime = 0.5f; 
@@ -30,10 +33,12 @@ public class RifleGuardController : MonoBehaviour
     private int facingDirection = 1;
     private Player.PlayerController targetPlayer; // angie 
     private Vector2 lastKnownPosition;
+    
 
     void Start()
     {
         currentPatrolTarget = pointB;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -47,6 +52,7 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.SuspicionWait:
+                animator.SetBool("isWalking", false);
                 timer += Time.deltaTime;
                 if (timer >= suspicionTime) ChangeState(State.Investigate);
                 DetectPlayer(); 
@@ -54,7 +60,8 @@ public class RifleGuardController : MonoBehaviour
 
             case State.Investigate:
                 MoveTowards(lastKnownPosition, suspiciousSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     ChangeState(State.Search);
                 }
@@ -62,20 +69,30 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.Aiming:
-                
+                AudioManager.Instance.SetBGMParameter("player_chase", 1f);
                 timer += Time.deltaTime;
                 if (timer >= aimTime)
                 {
-                    
                     if (targetPlayer != null && !targetPlayer.isHidden)
                     {
                         Debug.Log("¡BANG! Un solo tiro. GAME OVER.");
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                        PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
+                        string escenaActual = SceneManager.GetActiveScene().name;
+
+                        string gameOver = escenaActual switch {
+                            "Nivel1" => "GameOver1",
+                            "Nivel2" => "GameOver2",
+                            "Nivel3" => "GameOver3",
+                            "Nivel4" => "GameOver3",
+                            _ => "GameOver1" // fallback
+                        };
+
+                        PlayerPrefs.SetString("LastLevel", escenaActual);
+                        SceneManager.LoadScene(gameOver);
                     }
                     else
                     {
-                        
-                        Debug.Log("¡Lo perdí de vista en la maleza! Voy a investigar...");
+                        Debug.Log("¡Lo perdí de vista! Investigando...");
                         ChangeState(State.Search);
                     }
                 }
@@ -83,7 +100,8 @@ public class RifleGuardController : MonoBehaviour
 
             case State.Search:
                 MoveTowards(lastKnownPosition, patrolSpeed);
-                if (Vector2.Distance(transform.position, lastKnownPosition) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - lastKnownPosition.x) < 0.5f)
                 {
                     timer += Time.deltaTime;
                     if (timer >= searchTime) ChangeState(State.Return); 
@@ -92,8 +110,10 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.Return:
+                AudioManager.Instance.SetBGMParameter("player_chase", 0f);
                 MoveTowards(currentPatrolTarget.position, patrolSpeed);
-                if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+                
+                if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
                 {
                     ChangeState(State.Patrol); 
                 }
@@ -104,12 +124,19 @@ public class RifleGuardController : MonoBehaviour
 
     void DetectPlayer()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * facingDirection, farVisionDistance, playerLayer);
-        Debug.DrawRay(transform.position, Vector2.right * facingDirection * farVisionDistance, Color.red);
+        
+        Vector2 originPoint = new Vector2(transform.position.x, transform.position.y + visionHeightOffset);
+
+        
+        RaycastHit2D hit = Physics2D.Raycast(originPoint, Vector2.right * facingDirection, farVisionDistance, playerLayer);
+        
+        
+        Debug.DrawRay(originPoint, Vector2.right * facingDirection * farVisionDistance, Color.red);
 
         if (hit.collider != null)
         {
-            Player.PlayerController player =    hit.collider.GetComponent<Player.PlayerController>(); // angie 
+            Player.PlayerController player = hit.collider.GetComponent<Player.PlayerController>(); 
+            
 
             if (player != null && !player.isHidden)
             {
@@ -140,14 +167,22 @@ public class RifleGuardController : MonoBehaviour
 
     void MoveTowards(Vector2 target, float speed)
     {
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.x, transform.position.y), speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(
+        transform.position,
+        new Vector2(target.x, transform.position.y),
+        speed * Time.deltaTime
+    );
+
+        animator.SetBool("isWalking", true);
+
         if (target.x > transform.position.x + 0.1f) Flip(1);
         else if (target.x < transform.position.x - 0.1f) Flip(-1);
     }
 
     void CheckPatrolPoints()
     {
-        if (Vector2.Distance(transform.position, currentPatrolTarget.position) < 0.5f)
+        
+        if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)
         {
             currentPatrolTarget = (currentPatrolTarget == pointA) ? pointB : pointA;
         }
@@ -157,6 +192,20 @@ public class RifleGuardController : MonoBehaviour
     {
         currentState = newState;
         timer = 0f;
+
+        if (newState == State.Aiming)
+        {
+            animator.SetBool("isWalking", false); // deja de caminar
+            animator.SetTrigger("Dispara");       // activa animación disparo
+        }
+
+        if (newState == State.Patrol ||
+            newState == State.Investigate ||
+            newState == State.Search ||
+            newState == State.Return)
+        {
+            animator.SetBool("isWalking", true); // vuelve a caminar
+        }
     }
 
     void Flip(int direction)
