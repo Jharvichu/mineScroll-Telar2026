@@ -3730,6 +3730,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 2024644427}
   transitionTime: 3
+  select:
+    Guid:
+      Data1: 1978039883
+      Data2: 1138737802
+      Data3: -1367705940
+      Data4: -475227002
+    Path: event:/SFX_MENU_Select
+  back:
+    Guid:
+      Data1: -431682052
+      Data2: 1187095676
+      Data3: 312641947
+      Data4: -645416814
+    Path: event:/SFX_MENU_Back
+  hover1:
+    Guid:
+      Data1: 1879258810
+      Data2: 1103920301
+      Data3: -1635652218
+      Data4: 976348004
+    Path: event:/SFX_MENU_Hover1
+  hover2:
+    Guid:
+      Data1: -661869200
+      Data2: 1243642901
+      Data3: 1678150050
+      Data4: 2048824643
+    Path: event:/SFX_MENU_Hover2
+  hover3:
+    Guid:
+      Data1: -792858793
+      Data2: 1126408196
+      Data3: -2027249782
+      Data4: -1964612105
+    Path: event:/SFX_MENU_Hover4
 --- !u!1 &2067532604
 GameObject:
   m_ObjectHideFlags: 0

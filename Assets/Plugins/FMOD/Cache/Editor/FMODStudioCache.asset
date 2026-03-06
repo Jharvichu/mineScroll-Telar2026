@@ -248,7 +248,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083533964289754
+  lastModified: 639083628211608892
   FileSizes:
   - Name: 
     Value: 1778
@@ -307,6 +307,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1371758992765911294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AMBIANCE.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Project/FMOD/Desktop/AMBIANCE.bank
+  Name: AMBIANCE
+  StudioPath: 
+  lastModified: 639083628196493243
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-386226855613666047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +393,7 @@ MonoBehaviour:
   - {fileID: 6331880356006365250}
   - {fileID: 5422211246897799908}
   - {fileID: 6972750501659571960}
+  - {fileID: -1371758992765911294}
   EditorEvents:
   - {fileID: 2122573705285682286}
   - {fileID: 6118572029877477653}
@@ -397,7 +416,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639083533964344618
+  cacheTime: 639083628211753148
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -657,7 +676,7 @@ MonoBehaviour:
   StudioPath: bank:/Master
   lastModified: 639083533964289754
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5779934979176659596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +773,7 @@ MonoBehaviour:
   StudioPath: bank:/BGM
   lastModified: 639083533964243945
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6422425231777052102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +815,7 @@ MonoBehaviour:
   StudioPath: bank:/SFX
   lastModified: 639083533964344618
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8600949703349748133
 MonoBehaviour:
   m_ObjectHideFlags: 0
