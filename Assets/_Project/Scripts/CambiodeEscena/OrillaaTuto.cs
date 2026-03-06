@@ -9,7 +9,7 @@ public class OrillaaTuto : MonoBehaviour
 
     public void IrATutorial()
     {
-        StartCoroutine(Transicion("Tutorial"));
+        StartCoroutine(Transicion("Tutorial 1"));
     }
 
     IEnumerator Transicion(string escena)
