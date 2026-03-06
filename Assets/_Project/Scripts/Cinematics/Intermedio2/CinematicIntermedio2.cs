@@ -42,7 +42,7 @@ public class CinematicIntermedio2 : MonoBehaviour
     {
         posicionCamaraOriginal = mainCamera.transform.position;
         
-        // Apagamos todo lo que no debe verse al inicio
+        
         if (fondoUchu != null) fondoUchu.SetActive(false);
         if (imagenMoto != null) imagenMoto.gameObject.SetActive(false);
         foreach (var dialogo in dialogosUchu) { dialogo.SetActive(false); }
@@ -52,31 +52,31 @@ public class CinematicIntermedio2 : MonoBehaviour
 
     IEnumerator SecuenciaIntermedio2()
     {
-        // 1. Carrillo entra caminando
+        
         // [AUDIO: Iniciar pasos de Carrillo]
         actorCarrillo.position = puntoEntrada.position;
         yield return MoverActor(actorCarrillo, animCarrillo, puntoBaseMuro.position, "Correr", velocidadCaminar);
         // [AUDIO: Detener pasos]
 
-        // 2. Carrillo trepa el muro
+        
         animCarrillo.Play("Trepar");
         // [AUDIO: Sonido de esfuerzo / trepar]
         yield return SubirMuro(actorCarrillo, puntoArribaMuro.position, velocidadTrepar);
         
-        // 3. Se agacha y observa
+        
         animCarrillo.Play("Agacharse"); // O el nombre que tenga tu animación
         // [AUDIO: Sonido de tela o movimiento sutil al agacharse]
         yield return new WaitForSeconds(1.5f);
 
-        // 4. FUNDIDO A NEGRO
+        // FUNDIDO A NEGRO
         yield return HacerFade(1f);
 
-        // --- ESCENA DE UCHU (Flashback / Visión) ---
+        
         // [AUDIO: Cambio de música, ambiente tenso de Uchu]
         fondoUchu.SetActive(true);
-        yield return HacerFade(0f); // Aclaramos la pantalla para ver a Uchu
+        yield return HacerFade(0f); 
 
-        // Pasamos los diálogos uno por uno
+        
         foreach (GameObject dialogo in dialogosUchu)
         {
             dialogo.SetActive(true);
@@ -90,22 +90,22 @@ public class CinematicIntermedio2 : MonoBehaviour
         fondoUchu.SetActive(false);
         // [AUDIO: Regresa el ambiente de la calle/noche]
 
-        // --- VOLVEMOS A LA REALIDAD ---
-        yield return HacerFade(0f); // Aclaramos, Carrillo sigue ahí agachado
+        
+        yield return HacerFade(0f); 
         yield return new WaitForSeconds(1f);
 
-        // 5. Cámara vuela rápido al sicario
-        yield return MoverCamara(encuadreMoto.position, 0.3f); // Movimiento rápido
+        
+        yield return MoverCamara(encuadreMoto.position, 0.3f); 
         
         // [AUDIO: Arranca el motor de la moto a todo volumen]
         imagenMoto.gameObject.SetActive(true);
         yield return MoverVehiculo(imagenMoto, destinoMoto.position, velocidadMoto);
-        imagenMoto.gameObject.SetActive(false); // La moto sale de escena
+        imagenMoto.gameObject.SetActive(false); 
 
-        // 6. Cámara vuelve a Carrillo
+        
         yield return MoverCamara(posicionCamaraOriginal, 0.3f);
         
-        // 7. Carrillo se levanta y sale corriendo en persecución
+        
         // [AUDIO: Pasos corriendo rápido]
         yield return MoverActor(actorCarrillo, animCarrillo, puntoSalida.position, "Correr", velocidadCaminar * 1.5f); // Corre un poco más rápido
         // [AUDIO: Detener pasos]
