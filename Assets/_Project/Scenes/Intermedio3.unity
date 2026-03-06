@@ -2108,6 +2108,34 @@ MonoBehaviour:
   transitionPanel: {fileID: 1734195503}
   transitionTime: 1
   siguienteEscena: Nivel3
+  sfxPrepareCamera:
+    Guid:
+      Data1: 1592829649
+      Data2: 1079535492
+      Data3: -231373679
+      Data4: -1331452283
+    Path: event:/SFX_PLAYER_PrepareCamera
+  sfxCameraShot:
+    Guid:
+      Data1: 1567837163
+      Data2: 1094886116
+      Data3: -1436961109
+      Data4: 240540850
+    Path: event:/SFX_PLAYER_CameraShot
+  sfxCameraShotFail:
+    Guid:
+      Data1: 1410105367
+      Data2: 1300703481
+      Data3: 921126529
+      Data4: -329482021
+    Path: event:/SFX_PLAYER_CameraShotFail
+  sfxCamioneta:
+    Guid:
+      Data1: -1206784216
+      Data2: 1207545114
+      Data3: 1644895115
+      Data4: -536246181
+    Path: event:/SFX_CARRO
 --- !u!1 &444981627
 GameObject:
   m_ObjectHideFlags: 0
@@ -5816,11 +5844,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmEvent:
     Guid:
-      Data1: -1530460662
-      Data2: 1124834202
-      Data3: -1393489489
-      Data4: 580798848
-    Path: event:/CampAband_o_CampPrinc
+      Data1: 1811923421
+      Data2: 1320946456
+      Data3: -1624620886
+      Data4: -248747865
+    Path: event:/Ninas
   bgmFadeTime: 2
   ambienceEvent:
     Guid:

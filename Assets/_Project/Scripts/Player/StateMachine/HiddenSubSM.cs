@@ -1,7 +1,10 @@
 using StateMachine;
 using System;
 using UnityEngine;
+#if UNITY_EDITOR
 using static UnityEditor.Experimental.GraphView.GraphView;
+#endif
+
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Player {

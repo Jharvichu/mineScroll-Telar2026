@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class CinematicIntermedio3 : MonoBehaviour
 {
@@ -53,6 +54,17 @@ public class CinematicIntermedio3 : MonoBehaviour
 
     private Vector3 posicionCamaraOriginal;
 
+    [Header("SFX Cámara")]
+    [SerializeField] EventReference sfxPrepareCamera;
+    [SerializeField] EventReference sfxCameraShot;
+    [SerializeField] EventReference sfxCameraShotFail;
+
+    [Header("SFX Camioneta")]
+    [SerializeField] EventReference sfxCamioneta;
+
+    private FMOD.Studio.EventInstance instanciaCamioneta;
+
+
     void Start()
     {
         posicionCamaraOriginal = mainCamera.transform.position;
@@ -79,7 +91,13 @@ public class CinematicIntermedio3 : MonoBehaviour
 
         // 3. Llega la camioneta
         yield return MoverCamara(encuadreCamioneta.position, 0.5f);
-        animCamioneta.Play("Camioneta_Acercandose"); 
+        animCamioneta.Play("Camioneta_Acercandose");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(
+            instanciaCamioneta,
+            actorCamioneta.gameObject
+        );
+        instanciaCamioneta.start();
+
         yield return MoverVehiculo(actorCamioneta, marcaFrenoCamioneta.position, velocidadCamioneta);
         yield return new WaitForSeconds(0.5f);
 
@@ -103,7 +121,8 @@ public class CinematicIntermedio3 : MonoBehaviour
             ninas[i].gameObject.SetActive(true);
             StartCoroutine(MoverActor(ninas[i], animNinas[i], marcaFugaMalos.position, "CorrerNina", velocidadCorrer, ""));
         }
-        
+        AudioManager.Instance.PlaySFX(sfxPrepareCamera); AudioManager.Instance.PlaySFX(sfxPrepareCamera);
+
         yield return new WaitForSeconds(0.5f);
 
         // 6. QTE
@@ -242,10 +261,12 @@ public class CinematicIntermedio3 : MonoBehaviour
 
             if (exitoQTE)
             {
+                AudioManager.Instance.PlaySFX(sfxCameraShot); // ← éxito
                 qteResuelto = true; 
             }
             else
             {
+                AudioManager.Instance.PlaySFX(sfxCameraShotFail); // ← fallo
                 if (esInfinito)
                 {
                     qteUI.gameObject.SetActive(false);
