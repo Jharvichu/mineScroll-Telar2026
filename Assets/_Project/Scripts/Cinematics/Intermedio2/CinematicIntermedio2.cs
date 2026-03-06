@@ -10,10 +10,16 @@ public class CinematicIntermedio2 : MonoBehaviour
     public Animator animCarrillo;
     public Camera mainCamera;
 
-    [Header("Escena Uchu (Imágenes)")]
+    [Header("Escena Uchu (Conversación)")]
     public GameObject fondoUchu; 
-    public GameObject[] dialogosUchu; 
+    [Tooltip("Pon los PNGs en el orden que hablan (Uchu, Sicario, Uchu...)")]
+    public GameObject[] dialogosConversacion; 
     public float tiempoPorDialogo = 3f; 
+
+    [Header("Interfaz y POV (Para la foto de la visión)")]
+    public CircularQTE qteUI;
+    public GameObject hudCamaraPOV; 
+    public float tiempoLimiteQTE = 1.5f;
 
     [Header("Escena Moto (Sicario)")]
     public Transform imagenMoto; 
@@ -24,6 +30,7 @@ public class CinematicIntermedio2 : MonoBehaviour
     public Transform puntoEntrada;
     public Transform puntoBaseMuro; 
     public Transform puntoArribaMuro; 
+    public Transform puntoAterrizaje; 
     public Transform puntoSalida; 
 
     [Header("Configuraciones")]
@@ -42,10 +49,12 @@ public class CinematicIntermedio2 : MonoBehaviour
     {
         posicionCamaraOriginal = mainCamera.transform.position;
         
-        
         if (fondoUchu != null) fondoUchu.SetActive(false);
         if (imagenMoto != null) imagenMoto.gameObject.SetActive(false);
-        foreach (var dialogo in dialogosUchu) { dialogo.SetActive(false); }
+        if (hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
+        if (transitionPanel != null) transitionPanel.SetActive(false);
+
+        foreach (var dialogo in dialogosConversacion) { dialogo.SetActive(false); }
         
         StartCoroutine(SecuenciaIntermedio2());
     }
@@ -53,76 +62,88 @@ public class CinematicIntermedio2 : MonoBehaviour
     IEnumerator SecuenciaIntermedio2()
     {
         
-        // [AUDIO: Iniciar pasos de Carrillo]
+        // [AUDIO: Pasos Carrillo INICIO]
         actorCarrillo.position = puntoEntrada.position;
         yield return MoverActor(actorCarrillo, animCarrillo, puntoBaseMuro.position, "Correr", velocidadCaminar);
-        // [AUDIO: Detener pasos]
+        // [AUDIO: Pasos Carrillo FIN]
 
         
         animCarrillo.Play("Trepar");
-        // [AUDIO: Sonido de esfuerzo / trepar]
+        // [AUDIO: Esfuerzo / Trepar]
         yield return SubirMuro(actorCarrillo, puntoArribaMuro.position, velocidadTrepar);
         
         
-        animCarrillo.Play("Agacharse"); // O el nombre que tenga tu animación
-        // [AUDIO: Sonido de tela o movimiento sutil al agacharse]
+        animCarrillo.Play("Agacharse"); 
+        // [AUDIO: Ropa moviéndose al agacharse]
         yield return new WaitForSeconds(1.5f);
 
-        // FUNDIDO A NEGRO
+        
         yield return HacerFade(1f);
 
         
-        // [AUDIO: Cambio de música, ambiente tenso de Uchu]
+        // [AUDIO: Ambiente tenso / Música de los malos]
         fondoUchu.SetActive(true);
         yield return HacerFade(0f); 
 
         
-        foreach (GameObject dialogo in dialogosUchu)
+        foreach (GameObject dialogo in dialogosConversacion)
         {
             dialogo.SetActive(true);
-            // [AUDIO: Sonido de "blip" o impacto al aparecer el texto]
+            // [AUDIO: Blip de texto apareciendo]
             yield return new WaitForSeconds(tiempoPorDialogo);
             dialogo.SetActive(false);
         }
 
-        // FUNDIDO A NEGRO PARA SALIR DE UCHU
-        yield return HacerFade(1f);
-        fondoUchu.SetActive(false);
-        // [AUDIO: Regresa el ambiente de la calle/noche]
+        
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
+        // [AUDIO: Sonido de preparar cámara]
+        
+        yield return EjecutarQTE(400f, 135f, 60f, new Vector2(0, -100), false, tiempoLimiteQTE);
+        
+        if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
+        yield return new WaitForSeconds(0.5f); 
 
         
+        yield return HacerFade(1f);
+        fondoUchu.SetActive(false);
+        // [AUDIO: Regresa el ambiente de la calle normal]
+
+       
         yield return HacerFade(0f); 
         yield return new WaitForSeconds(1f);
 
         
         yield return MoverCamara(encuadreMoto.position, 0.3f); 
         
-        // [AUDIO: Arranca el motor de la moto a todo volumen]
+        // [AUDIO: Motor de moto arrancando y acelerando]
         imagenMoto.gameObject.SetActive(true);
         yield return MoverVehiculo(imagenMoto, destinoMoto.position, velocidadMoto);
         imagenMoto.gameObject.SetActive(false); 
 
         
-        yield return MoverCamara(posicionCamaraOriginal, 0.3f);
+        // Si tienes animación de caída ponla aquí, si no, usamos Idle. Baja muy rápido (x3).
+        yield return MoverActor(actorCarrillo, animCarrillo, puntoAterrizaje.position, "Idle", velocidadTrepar * 3f); 
+        // [AUDIO: Sonido de zapatos golpeando el pavimento al caer]
         
         
-        // [AUDIO: Pasos corriendo rápido]
-        yield return MoverActor(actorCarrillo, animCarrillo, puntoSalida.position, "Correr", velocidadCaminar * 1.5f); // Corre un poco más rápido
-        // [AUDIO: Detener pasos]
+        // [AUDIO: Pasos corriendo INICIO]
+        yield return MoverActor(actorCarrillo, animCarrillo, puntoSalida.position, "Correr", velocidadCaminar * 1.5f); 
+        // [AUDIO: Pasos corriendo FIN]
 
-        // 8. TRANSICIÓN FINAL AL SIGUIENTE NIVEL
+        
         yield return HacerFade(1f);
         SceneManager.LoadScene(siguienteEscena);
     }
 
-    // --- FUNCIONES HELPERS ---
+    
 
     IEnumerator MoverActor(Transform actor, Animator anim, Vector3 destino, string animName, float vel)
     {
         anim.Play(animName); 
         while (Vector2.Distance(actor.position, destino) > 0.1f)
         {
-            actor.position = Vector2.MoveTowards(actor.position, destino, vel * Time.deltaTime);
+            Vector3 destinoConZ = new Vector3(destino.x, destino.y, actor.position.z);
+            actor.position = Vector3.MoveTowards(actor.position, destinoConZ, vel * Time.deltaTime);
             yield return null; 
         }
         anim.Play("Idle");
@@ -130,10 +151,10 @@ public class CinematicIntermedio2 : MonoBehaviour
 
     IEnumerator SubirMuro(Transform actor, Vector3 destinoArriba, float vel)
     {
-        // Movimiento puramente vertical/diagonal simulando escalar
         while (Vector2.Distance(actor.position, destinoArriba) > 0.1f)
         {
-            actor.position = Vector2.MoveTowards(actor.position, destinoArriba, vel * Time.deltaTime);
+            Vector3 destinoConZ = new Vector3(destinoArriba.x, destinoArriba.y, actor.position.z);
+            actor.position = Vector3.MoveTowards(actor.position, destinoConZ, vel * Time.deltaTime);
             yield return null;
         }
     }
@@ -142,7 +163,8 @@ public class CinematicIntermedio2 : MonoBehaviour
     {
         while (Vector2.Distance(vehiculo.position, destino) > 0.1f)
         {
-            vehiculo.position = Vector2.MoveTowards(vehiculo.position, destino, velocidad * Time.deltaTime);
+            Vector3 destinoConZ = new Vector3(destino.x, destino.y, vehiculo.position.z);
+            vehiculo.position = Vector3.MoveTowards(vehiculo.position, destinoConZ, velocidad * Time.deltaTime);
             yield return null;
         }
     }
@@ -162,7 +184,6 @@ public class CinematicIntermedio2 : MonoBehaviour
         mainCamera.transform.position = posFinal;
     }
 
-    // NUEVO: Función modular para prender/apagar la pantalla negra fácilmente
     IEnumerator HacerFade(float targetAlpha)
     {
         if (transitionPanel == null) yield break;
@@ -182,7 +203,56 @@ public class CinematicIntermedio2 : MonoBehaviour
         }
         canvasGroup.alpha = targetAlpha;
         
-        // Si se volvió transparente por completo, podemos apagar el panel para que no estorbe
         if (targetAlpha == 0f) transitionPanel.SetActive(false);
+    }
+
+    IEnumerator EjecutarQTE(float vel, float angulo, float tamaño, Vector2 pos, bool esInfinito, float tiempoLimite)
+    {
+        bool qteResuelto = false;
+
+        while (!qteResuelto)
+        {
+            bool intentoTerminado = false;
+            bool exitoQTE = false;
+            float tiempoActual = 0f; 
+
+            qteUI.StartQTE(vel, angulo, tamaño, pos, 
+                () => { exitoQTE = true; intentoTerminado = true; }, 
+                () => { exitoQTE = false; intentoTerminado = true; });
+
+            while (!intentoTerminado)
+            {
+                if (tiempoLimite > 0f)
+                {
+                    tiempoActual += Time.unscaledDeltaTime; 
+                    if (tiempoActual >= tiempoLimite)
+                    {
+                        qteUI.gameObject.SetActive(false); 
+                        exitoQTE = false;
+                        intentoTerminado = true;
+                    }
+                }
+                yield return null; 
+            }
+
+            if (exitoQTE)
+            {
+                // [AUDIO: ¡Click perfecto de la cámara!]
+                qteResuelto = true; 
+            }
+            else
+            {
+                // [AUDIO: ¡Fallo de foto!]
+                if (esInfinito)
+                {
+                    qteUI.gameObject.SetActive(false);
+                    yield return new WaitForSeconds(1f); 
+                }
+                else
+                {
+                    qteResuelto = true; 
+                }
+            }
+        }
     }
 }
