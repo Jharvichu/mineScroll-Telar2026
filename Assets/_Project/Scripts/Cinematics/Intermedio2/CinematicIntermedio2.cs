@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// using FMODUnity; 
+using FMODUnity; 
 
 public class CinematicIntermedio2 : MonoBehaviour
 {
@@ -14,12 +14,12 @@ public class CinematicIntermedio2 : MonoBehaviour
     public GameObject fondoUchu; 
     [Tooltip("Pon los PNGs en el orden que hablan (Uchu, Sicario, Uchu...)")]
     public GameObject[] dialogosConversacion; 
-    public float tiempoPorDialogo = 3f; 
+    public float tiempoPorDialogo = 6f; 
 
     [Header("Interfaz y POV (Para la foto de la visión)")]
     public CircularQTE qteUI;
     public GameObject hudCamaraPOV; 
-    public float tiempoLimiteQTE = 1.5f;
+    public float tiempoLimiteQTE = 3f;
 
     [Header("Escena Moto (Sicario)")]
     public Transform imagenMoto; 
@@ -41,7 +41,16 @@ public class CinematicIntermedio2 : MonoBehaviour
     [Header("Transiciones y Escena")]
     public GameObject transitionPanel;
     public float transitionTime = 1f;
-    public string siguienteEscena = "Intermedio3"; 
+    public string siguienteEscena = "Intermedio3";
+
+    [Header("Audio")]
+    [SerializeField] EventReference sfxPrepareCamera;
+    [SerializeField] EventReference sfxCameraShot;
+    [SerializeField] EventReference sfxCameraShotFail;
+
+    [SerializeField] EventReference sfxMoto;
+
+    private FMOD.Studio.EventInstance instanciaMoto;
 
     private Vector3 posicionCamaraOriginal;
 
@@ -61,7 +70,8 @@ public class CinematicIntermedio2 : MonoBehaviour
 
     IEnumerator SecuenciaIntermedio2()
     {
-        
+
+
         // [AUDIO: Pasos Carrillo INICIO]
         actorCarrillo.position = puntoEntrada.position;
         yield return MoverActor(actorCarrillo, animCarrillo, puntoBaseMuro.position, "Correr", velocidadCaminar);
@@ -80,12 +90,11 @@ public class CinematicIntermedio2 : MonoBehaviour
         
         yield return HacerFade(1f);
 
-        
+
         // [AUDIO: Ambiente tenso / Música de los malos]
         fondoUchu.SetActive(true);
-        yield return HacerFade(0f); 
+        yield return HacerFade(0f);
 
-        
         foreach (GameObject dialogo in dialogosConversacion)
         {
             dialogo.SetActive(true);
@@ -96,8 +105,12 @@ public class CinematicIntermedio2 : MonoBehaviour
 
         
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(true);
-        // [AUDIO: Sonido de preparar cámara]
-        
+
+
+        AudioManager.Instance.PlaySFX(sfxPrepareCamera);
+
+        AudioManager.Instance.SetBGMParameter("QuickTimeEvent", 1f);
+
         yield return EjecutarQTE(400f, 135f, 60f, new Vector2(0, -100), false, tiempoLimiteQTE);
         
         if(hudCamaraPOV != null) hudCamaraPOV.SetActive(false);
@@ -105,6 +118,7 @@ public class CinematicIntermedio2 : MonoBehaviour
 
         
         yield return HacerFade(1f);
+
         fondoUchu.SetActive(false);
         // [AUDIO: Regresa el ambiente de la calle normal]
 
@@ -117,20 +131,33 @@ public class CinematicIntermedio2 : MonoBehaviour
         
         // [AUDIO: Motor de moto arrancando y acelerando]
         imagenMoto.gameObject.SetActive(true);
+        instanciaMoto = FMODUnity.RuntimeManager.CreateInstance(sfxMoto);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(
+            instanciaMoto,
+            imagenMoto.gameObject
+        );
+        instanciaMoto.start();
         yield return MoverVehiculo(imagenMoto, destinoMoto.position, velocidadMoto);
-        imagenMoto.gameObject.SetActive(false); 
+        imagenMoto.gameObject.SetActive(false);
+        instanciaMoto.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        instanciaMoto.release();
 
-        
+
+
+
+
+        AudioManager.Instance.SetBGMParameter("QuickTimeEvent", 0f);
+
         // Si tienes animación de caída ponla aquí, si no, usamos Idle. Baja muy rápido (x3).
         yield return MoverActor(actorCarrillo, animCarrillo, puntoAterrizaje.position, "Idle", velocidadTrepar * 3f); 
         // [AUDIO: Sonido de zapatos golpeando el pavimento al caer]
         
         
         // [AUDIO: Pasos corriendo INICIO]
-        yield return MoverActor(actorCarrillo, animCarrillo, puntoSalida.position, "Correr", velocidadCaminar * 1.5f); 
+        yield return MoverActor(actorCarrillo, animCarrillo, puntoSalida.position, "Correr", velocidadCaminar * 1.5f);
         // [AUDIO: Pasos corriendo FIN]
 
-        
+
         yield return HacerFade(1f);
         SceneManager.LoadScene(siguienteEscena);
     }
@@ -237,12 +264,12 @@ public class CinematicIntermedio2 : MonoBehaviour
 
             if (exitoQTE)
             {
-                // [AUDIO: ¡Click perfecto de la cámara!]
+                AudioManager.Instance.PlaySFX(sfxCameraShot); // ← éxito
                 qteResuelto = true; 
             }
             else
             {
-                // [AUDIO: ¡Fallo de foto!]
+                AudioManager.Instance.PlaySFX(sfxCameraShotFail); // ← fallo
                 if (esInfinito)
                 {
                     qteUI.gameObject.SetActive(false);

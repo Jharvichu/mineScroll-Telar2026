@@ -356,7 +356,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083395990824670
+  lastModified: 639083561480282106
   FileSizes:
   - Name: 
     Value: 2584
@@ -658,7 +658,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2579895866476248121}
   cacheVersion: 131858
-  cacheTime: 639083665348502465
+  cacheTime: 639083719227515254
   SerializableEventsDict:
   - key: event:/CampAband_o_CampPrinc
     index: 0
@@ -860,6 +860,8 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 8881078328278575151}
+  - {fileID: 7836313754597298128}
+  - {fileID: 7397142793505247790}
   MinDistance: 1
   MaxDistance: 20
   Length: 88000
@@ -1085,7 +1087,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639083313271606503
+  lastModified: 639083561480271953
   FileSizes: []
   Exists: 1
 --- !u!114 &5706670207237109307
@@ -1236,7 +1238,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639083665348421365
+  lastModified: 639083719227515254
   FileSizes: []
   Exists: 1
 --- !u!114 &6422425231777052102
@@ -1278,8 +1280,56 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639083665348502465
+  lastModified: 639083689546084762
   FileSizes: []
+  Exists: 1
+--- !u!114 &7397142793505247790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ninas/escondido
+  m_EditorClassIdentifier: 
+  Name: escondido
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2060316229
+    data2: 3656847902
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7836313754597298128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ninas/player_chase
+  m_EditorClassIdentifier: 
+  Name: player_chase
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 495171922
+    data2: 4019678570
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &8125322815936940093
 MonoBehaviour:
@@ -1296,7 +1346,7 @@ MonoBehaviour:
   Path: Assets/_Project/FMOD/Desktop/AMBIANCE.bank
   Name: AMBIANCE
   StudioPath: bank:/AMBIANCE
-  lastModified: 639083395989421884
+  lastModified: 639083561481364320
   FileSizes: []
   Exists: 1
 --- !u!114 &8600949703349748133
