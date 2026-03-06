@@ -1447,6 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdea4b8b35badeb429c8dc56e985c932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  availableTargets: []
   parallaxLayers:
   - background: {fileID: 1292304995}
     parallaxEffect: 0
@@ -1456,7 +1457,6 @@ MonoBehaviour:
     parallaxEffect: 0.7
   - background: {fileID: 165829667}
     parallaxEffect: 0.85
-  camera: {fileID: 0}
 --- !u!1001 &317334671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5571,7 +5571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1230518986984831556, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.130608
+      value: 10.467445
       objectReference: {fileID: 0}
     - target: {fileID: 1230518986984831556, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_LocalPosition.y

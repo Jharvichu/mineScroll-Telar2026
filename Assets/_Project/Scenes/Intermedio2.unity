@@ -726,10 +726,10 @@ MonoBehaviour:
   - {fileID: 568454426}
   - {fileID: 1532114667}
   - {fileID: 1714228000}
-  tiempoPorDialogo: 3
+  tiempoPorDialogo: 6
   qteUI: {fileID: 1705436396}
   hudCamaraPOV: {fileID: 1200687899}
-  tiempoLimiteQTE: 2
+  tiempoLimiteQTE: 3
   imagenMoto: {fileID: 336760950}
   destinoMoto: {fileID: 1934797510}
   encuadreMoto: {fileID: 1033074734}
@@ -744,6 +744,34 @@ MonoBehaviour:
   transitionPanel: {fileID: 1734195503}
   transitionTime: 1
   siguienteEscena: Intermedio3
+  sfxPrepareCamera:
+    Guid:
+      Data1: 1592829649
+      Data2: 1079535492
+      Data3: -231373679
+      Data4: -1331452283
+    Path: event:/SFX_PLAYER_PrepareCamera
+  sfxCameraShot:
+    Guid:
+      Data1: 1567837163
+      Data2: 1094886116
+      Data3: -1436961109
+      Data4: 240540850
+    Path: event:/SFX_PLAYER_CameraShot
+  sfxCameraShotFail:
+    Guid:
+      Data1: 1410105367
+      Data2: 1300703481
+      Data3: 921126529
+      Data4: -329482021
+    Path: event:/SFX_PLAYER_CameraShotFail
+  sfxMoto:
+    Guid:
+      Data1: 1363202696
+      Data2: 1154577591
+      Data3: 511175096
+      Data4: -2089419463
+    Path: event:/SFX_MOTOS
 --- !u!1 &444243562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1942,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1146817666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146817668}
+  - component: {fileID: 1146817667}
+  m_Layer: 0
+  m_Name: SceneAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1146817667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146817666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f5ea5c0e5fdf4393b7289e5b4d665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmEvent:
+    Guid:
+      Data1: -2030695370
+      Data2: 1088809697
+      Data3: 1904591240
+      Data4: -1979282322
+    Path: event:/Uchu
+  bgmFadeTime: 1
+  ambienceEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ambienceFadeTime: 2
+--- !u!4 &1146817668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146817666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11976081, y: 4.1010623, z: -0.10223692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1200687899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,66 +2486,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1515354189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1515354191}
-  - component: {fileID: 1515354190}
-  m_Layer: 0
-  m_Name: SceneAudio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1515354190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515354189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4f5ea5c0e5fdf4393b7289e5b4d665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmEvent:
-    Guid:
-      Data1: -1530460662
-      Data2: 1124834202
-      Data3: -1393489489
-      Data4: 580798848
-    Path: event:/CampAband_o_CampPrinc
-  bgmFadeTime: 2
-  ambienceEvent:
-    Guid:
-      Data1: -1682653659
-      Data2: 1288218551
-      Data3: -169022843
-      Data4: 1970738728
-    Path: event:/AMB_Viento
-  ambienceFadeTime: 2
---- !u!4 &1515354191
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515354189}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11976081, y: 4.1010623, z: -0.10223692}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532114667
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,7 +4168,6 @@ SceneRoots:
   - {fileID: 401905210}
   - {fileID: 1854411069}
   - {fileID: 1808234843}
-  - {fileID: 1515354191}
   - {fileID: 336760950}
   - {fileID: 96216963}
   - {fileID: 535389779}
@@ -4157,3 +4184,4 @@ SceneRoots:
   - {fileID: 2077637198}
   - {fileID: 629064873}
   - {fileID: 208468005}
+  - {fileID: 1146817668}
