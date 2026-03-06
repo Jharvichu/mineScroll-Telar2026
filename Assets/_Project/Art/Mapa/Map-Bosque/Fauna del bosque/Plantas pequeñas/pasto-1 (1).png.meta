@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5b4ccbf56b3ad6949b4d672f2e4a18b0
+guid: 06e124fa34878f2429d2238a983532e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7302308700990362612
-    second: arbusto-de-helechos-4_0
+      213: -9075969598891319931
+    second: pasto-1 (1)_0
+  - first:
+      213: 6149362986719892240
+    second: pasto-1 (1)_1
+  - first:
+      213: -5086597140375583077
+    second: pasto-1 (1)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arbusto-de-helechos-4_0
+      name: pasto-1 (1)_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 3
-        width: 303
-        height: 232
+        x: 23
+        y: 57
+        width: 115
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0ca93dfcecf8aa90800000000000000
-      internalID: -7302308700990362612
+      spriteID: 58d96d18cbdab0280800000000000000
+      internalID: -9075969598891319931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasto-1 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 14
+        width: 199
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013df524e0de65550800000000000000
+      internalID: 6149362986719892240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pasto-1 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 68
+        width: 134
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96456cc9d6c869b0800000000000000
+      internalID: -5086597140375583077
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      arbusto-de-helechos-4_0: -7302308700990362612
+      pasto-1 (1)_0: -9075969598891319931
+      pasto-1 (1)_1: 6149362986719892240
+      pasto-1 (1)_2: -5086597140375583077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
