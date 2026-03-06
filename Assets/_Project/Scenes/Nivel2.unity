@@ -2968,6 +2968,66 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!1 &1047680253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047680255}
+  - component: {fileID: 1047680254}
+  m_Layer: 0
+  m_Name: SceneAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1047680254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047680253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f5ea5c0e5fdf4393b7289e5b4d665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmEvent:
+    Guid:
+      Data1: -1530460662
+      Data2: 1124834202
+      Data3: -1393489489
+      Data4: 580798848
+    Path: event:/CampAband_o_CampPrinc
+  bgmFadeTime: 2
+  ambienceEvent:
+    Guid:
+      Data1: -1682653659
+      Data2: 1288218551
+      Data3: -169022843
+      Data4: 1970738728
+    Path: event:/AMB_Viento
+  ambienceFadeTime: 2
+--- !u!4 &1047680255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047680253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11976081, y: 4.1010623, z: -0.10223692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071272237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,6 +3949,100 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 202.6, y: 2, z: 0}
   m_LocalScale: {x: 8.05, y: 8.05, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1260263524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260263527}
+  - component: {fileID: 1260263526}
+  - component: {fileID: 1260263525}
+  m_Layer: 0
+  m_Name: TriggerCambioMusica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1260263525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260263524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03ea00625ed5ce4bb2b228cb5f5bba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parametro: aband_o_princ
+  valorIzquierda: 0
+  valorDerecha: 1
+--- !u!61 &1260263526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260263524}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.65257263}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.1, y: 25.075108}
+  m_EdgeRadius: 0
+--- !u!4 &1260263527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260263524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.15, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5128,6 +5282,18 @@ PrefabInstance:
       value: event:/SFX_PLAYER_Trepar
       objectReference: {fileID: 0}
     - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: deathEvent.Path
+      value: event:/SFX_PLAYER_DEATH
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: godownEvent.Path
+      value: event:/SFX_PLAYER_Bajar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: ledgegrabEvent.Path
+      value: event:/SFX_PLAYER_Ledge
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: climbEvent.Guid.Data1
       value: -165413570
       objectReference: {fileID: 0}
@@ -5142,6 +5308,54 @@ PrefabInstance:
     - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: climbEvent.Guid.Data4
       value: 942692078
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: deathEvent.Guid.Data1
+      value: 327451246
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: deathEvent.Guid.Data2
+      value: 1179430278
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: deathEvent.Guid.Data3
+      value: -965258083
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: deathEvent.Guid.Data4
+      value: -2070268623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: godownEvent.Guid.Data1
+      value: 252915224
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: godownEvent.Guid.Data2
+      value: 1317933971
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: godownEvent.Guid.Data3
+      value: 282474407
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: godownEvent.Guid.Data4
+      value: 593879306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: ledgegrabEvent.Guid.Data1
+      value: 1415469029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: ledgegrabEvent.Guid.Data2
+      value: 1168142287
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: ledgegrabEvent.Guid.Data3
+      value: 2038804374
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066177088298742993, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
+      propertyPath: ledgegrabEvent.Guid.Data4
+      value: 2126637763
       objectReference: {fileID: 0}
     - target: {fileID: 2468238149358495018, guid: 5fe0a4d8c8f226845b97d4a051bc94f5, type: 3}
       propertyPath: m_LayerOverridePriority
@@ -7446,3 +7660,5 @@ SceneRoots:
   - {fileID: 915641052}
   - {fileID: 852055454}
   - {fileID: 867981326}
+  - {fileID: 1047680255}
+  - {fileID: 1260263527}

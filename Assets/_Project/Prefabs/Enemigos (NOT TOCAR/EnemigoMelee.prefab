@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1759901805458922527}
   - component: {fileID: 8559620402913282425}
   - component: {fileID: 3181942947772890046}
+  - component: {fileID: 8222857313640187858}
   m_Layer: 9
   m_Name: EnemigoMachete
   m_TagString: Untagged
@@ -306,5 +307,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   catchDistance: 1.5
+  visionHeightOffset: -0.5
   reactionTime: 0.3
   searchTime: 3
+--- !u!114 &8222857313640187858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526764668018578480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8166e3b0c013994584019034d67133d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 648960164
+      Data2: 1139688493
+      Data3: 113746873
+      Data4: 13510095
+    Path: event:/SFX_ENEMY_Pasos_NoArma
+  swingEvent:
+    Guid:
+      Data1: -970649608
+      Data2: 1289671721
+      Data3: 790214565
+      Data4: -2079011266
+    Path: event:/SFX_ENEMY_Cuchillo_Swosh
