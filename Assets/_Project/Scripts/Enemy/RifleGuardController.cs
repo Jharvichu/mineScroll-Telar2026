@@ -69,6 +69,7 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.Aiming:
+                AudioManager.Instance.SetBGMParameter("player_chase", 1f);
                 timer += Time.deltaTime;
                 if (timer >= aimTime)
                 {
@@ -98,6 +99,7 @@ public class RifleGuardController : MonoBehaviour
                 break;
 
             case State.Return:
+                AudioManager.Instance.SetBGMParameter("player_chase", 0f);
                 MoveTowards(currentPatrolTarget.position, patrolSpeed);
                 
                 if (Mathf.Abs(transform.position.x - currentPatrolTarget.position.x) < 0.5f)

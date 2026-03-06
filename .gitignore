@@ -103,3 +103,7 @@ crashlytics-build.properties
 *.bak
 *.rar
 sysinfo.txt
+fmod_editor.log
+fmod_editor.log
+fmod_editor.log
+*.log

@@ -97,9 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1230518986984831556}
   - component: {fileID: 6916198957023407052}
-  - component: {fileID: 4729488022003474086}
   - component: {fileID: 6140565466346650208}
   - component: {fileID: 5680111476924164374}
+  - component: {fileID: 766083958086058687}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 5641504033893921068}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.9099998, z: -10}
+  m_LocalPosition: {x: -0.00002670288, y: 8.737969, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,7 +157,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -173,14 +173,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4729488022003474086
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5641504033893921068}
-  m_Enabled: 1
 --- !u!114 &6140565466346650208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +231,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &766083958086058687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641504033893921068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 0
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!1 &6735019576082440676
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +274,7 @@ GameObject:
   - component: {fileID: 8615705938258818857}
   - component: {fileID: 4787652665594514448}
   - component: {fileID: 5065995409666095780}
+  - component: {fileID: 2066177088298742993}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Character
@@ -349,6 +374,60 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2066177088298742993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6735019576082440676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae7667e46fb3ec47b43b0efe99e9047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 710275715
+      Data2: 1160692655
+      Data3: -1593429865
+      Data4: 1997000302
+    Path: event:/SFX_PLAYER_Pasos
+  climbEvent:
+    Guid:
+      Data1: -165413570
+      Data2: 1194281298
+      Data3: 1301202367
+      Data4: 942692078
+    Path: event:/SFX_PLAYER_Trepar
+  heartbeatEvent:
+    Guid:
+      Data1: -447397233
+      Data2: 1249780538
+      Data3: 1806857632
+      Data4: -482132383
+    Path: event:/SFX_PLAYER_HeartBeat
+  ledgegrabEvent:
+    Guid:
+      Data1: 1415469029
+      Data2: 1168142287
+      Data3: 2038804374
+      Data4: 2126637763
+    Path: event:/SFX_PLAYER_Ledge
+  godownEvent:
+    Guid:
+      Data1: 252915224
+      Data2: 1317933971
+      Data3: 282474407
+      Data4: 593879306
+    Path: event:/SFX_PLAYER_Bajar
+  deathEvent:
+    Guid:
+      Data1: 327451246
+      Data2: 1179430278
+      Data3: -965258083
+      Data4: -2070268623
+    Path: event:/SFX_PLAYER_DEATH
 --- !u!1 &8016099838247155664
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +443,7 @@ GameObject:
   - component: {fileID: 3473824887599670673}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rootStateMachine: {fileID: 11400000, guid: 23263a4299f804442935a0945c2fad4e, type: 2}
   canControl: 1
-  Sombra: {fileID: 0}
+  Sombra: {fileID: 4056058242068804794}
   canHide: 0
   isHidden: 0
   isCrouching: 0
@@ -474,13 +553,7 @@ MonoBehaviour:
   isDroppingToLedge: 0
   isDropping: 0
   isCeilingBlocked: 0
-  footstepEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+  isEntryHidding: 0
 --- !u!114 &3473824887599670673
 MonoBehaviour:
   m_ObjectHideFlags: 0

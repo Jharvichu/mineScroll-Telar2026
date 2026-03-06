@@ -388,7 +388,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 1
+      Value: 0
       HasValue: 1
     OverlayPosition:
       Value: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   TargetBankFolder: 
   EventLinkage: 0
   SerializeGUIDsOnly: 0
-  LoggingLevel: 2
+  LoggingLevel: 0
   SpeakerModeSettings: []
   SampleRateSettings: []
   LiveUpdateSettings: []

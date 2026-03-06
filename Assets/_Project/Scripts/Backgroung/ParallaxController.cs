@@ -10,15 +10,20 @@ public class ParallaxLayer
 
 public class ParallaxController : MonoBehaviour
 {
-    [SerializeField] public List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
-    [SerializeField] private GameObject camera;
+    [Header("Configuración de Seguimiento")]
+    [Tooltip("El objeto que el parallax seguirá (Cámara, Jugador, etc.)")]
+    public List<Transform> availableTargets = new List<Transform>();
 
+    [Header("Capas")]
+    [SerializeField] public List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
+
+    private Transform _currentTarget;
     private Dictionary<GameObject, float> startPositions = new Dictionary<GameObject, float>();
     private Dictionary<GameObject, float> lengths = new Dictionary<GameObject, float>();
 
     void Start()
     {
-        if (camera == null) camera = Camera.main.gameObject;
+        UpdateActiveTarget();
 
         foreach (ParallaxLayer pl in parallaxLayers)
         {
@@ -36,6 +41,15 @@ public class ParallaxController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (_currentTarget == null || !_currentTarget.gameObject.activeInHierarchy)
+        {
+            UpdateActiveTarget();
+        }
+
+        if (_currentTarget == null) return;
+
+        float targetPosX = _currentTarget.position.x;
+
         foreach (ParallaxLayer pl in parallaxLayers)
         {
             if (pl.background == null) continue;
@@ -43,16 +57,33 @@ public class ParallaxController : MonoBehaviour
             float length = lengths[pl.background];
             float startPos = startPositions[pl.background];
 
-            float temp = (camera.transform.position.x * (1 - pl.parallaxEffect));
+            float temp = (targetPosX * (1 - pl.parallaxEffect));
+            float dist = (targetPosX * pl.parallaxEffect);
 
-            float dist = (camera.transform.position.x * pl.parallaxEffect);
-
-            pl.background.transform.position = new Vector3(startPos + dist, pl.background.transform.position.y, pl.background.transform.position.z);
+            pl.background.transform.position = new Vector3(
+                startPos + dist,
+                pl.background.transform.position.y,
+                pl.background.transform.position.z
+            );
 
             if (temp > startPos + length)
                 startPositions[pl.background] += length;
             else if (temp < startPos - length)
                 startPositions[pl.background] -= length;
         }
+    }
+
+    private void UpdateActiveTarget()
+    {
+        foreach (Transform t in availableTargets)
+        {
+            if (t != null && t.gameObject.activeInHierarchy)
+            {
+                _currentTarget = t;
+                return;
+            }
+        }
+
+        if (Camera.main != null) _currentTarget = Camera.main.transform;
     }
 }

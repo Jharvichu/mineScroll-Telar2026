@@ -16,7 +16,7 @@ public class LevelExitTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!yaActivado && collision.CompareTag("Player"))
+        if (!yaActivado && collision.CompareTag("Character"))
         {
             yaActivado = true;
             Debug.Log("1. ¡Roldan tocó la puerta!");

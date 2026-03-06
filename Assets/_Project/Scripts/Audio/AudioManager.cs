@@ -131,4 +131,9 @@ public class AudioManager : MonoBehaviour {
 
     public void PlaySFX3D(EventReference sfxEvent, Vector3 position)
         => RuntimeManager.PlayOneShot(sfxEvent, position);
+
+    public EventInstance GetBGMInstance() {
+        return activeBGM;
+    }
+
 }
