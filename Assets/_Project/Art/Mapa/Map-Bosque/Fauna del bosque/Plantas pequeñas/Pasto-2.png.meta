@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: fbff9712698280e46acbbe030d3d5525
+guid: 01f318f2484af794eaa97482a0011cd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6937817954938267909
-    second: 2_0
+      213: -3328875435441040979
+    second: Pasto-2_0
   - first:
-      213: 3191122964850554743
-    second: 2_1
-  - first:
-      213: 5382512944479897801
-    second: 2_2
-  - first:
-      213: -5515383189529662604
-    second: 2_3
+      213: 4964401754570604824
+    second: Pasto-2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_0
+      name: Pasto-2_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 23
-        width: 1454
-        height: 1247
+        x: 13
+        y: 9
+        width: 221
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5092c600ca4184060800000000000000
-      internalID: 6937817954938267909
+      spriteID: da15309bd657dc1d0800000000000000
+      internalID: -3328875435441040979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2_1
+      name: Pasto-2_1
       rect:
         serializedVersion: 2
-        x: 1523
-        y: 822
-        width: 21
-        height: 20
+        x: 240
+        y: 26
+        width: 108
+        height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,52 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7773282ed65294c20800000000000000
-      internalID: 3191122964850554743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2_2
-      rect:
-        serializedVersion: 2
-        x: 1551
-        y: 814
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c88aa6510782ba40800000000000000
-      internalID: 5382512944479897801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 2_3
-      rect:
-        serializedVersion: 2
-        x: 1284
-        y: 18
-        width: 62
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47b6cebf53c6573b0800000000000000
-      internalID: -5515383189529662604
+      spriteID: 811c18fd71915e440800000000000000
+      internalID: 4964401754570604824
       vertices: []
       indices: 
       edges: []
@@ -210,10 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2_0: 6937817954938267909
-      2_1: 3191122964850554743
-      2_2: 5382512944479897801
-      2_3: -5515383189529662604
+      Pasto-2_0: -3328875435441040979
+      Pasto-2_1: 4964401754570604824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
